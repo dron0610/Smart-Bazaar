@@ -1,0 +1,754 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shop Dashboard</title>
+
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/shop-d.css">
+<link rel="stylesheet" href="css/dashboard.css">
+
+<style>
+.section {
+    display: none;
+}
+
+.card {
+    background: white;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+button {
+    margin: 5px;
+    cursor: pointer;
+}
+
+.stock-input {
+    width: 100px;
+    padding: 8px;
+    margin: 5px;
+}
+
+.product-form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 15px 0;
+    align-items: center;
+}
+
+.product-form input {
+    padding: 10px;
+    max-width: 220px;
+}
+
+.stock-available {
+    color: green;
+    font-weight: bold;
+}
+
+.stock-low {
+    color: #c77c00;
+    font-weight: bold;
+}
+
+.stock-out {
+    color: red;
+    font-weight: bold;
+}
+
+/* ===== MANAGE PRODUCT STOCK: VERTICAL PRODUCT LIST ===== */
+
+#stock {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+#stockList {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: stretch !important;
+    gap: 12px !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    overflow-x: hidden !important;
+    box-sizing: border-box !important;
+}
+
+#stockList > .stock-card {
+    display: grid !important;
+    grid-template-columns:
+        minmax(150px, 1.6fr)
+        minmax(100px, 1fr)
+        minmax(120px, 1fr)
+        minmax(110px, 1fr)
+        minmax(100px, 120px)
+        minmax(90px, 110px) !important;
+
+    align-items: center !important;
+    gap: 12px !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    box-sizing: border-box !important;
+    margin: 0 !important;
+    padding: 14px 16px !important;
+    overflow: hidden !important;
+}
+
+#stockList > .stock-card > * {
+    min-width: 0;
+    margin: 0 !important;
+    overflow-wrap: anywhere;
+}
+
+#stockList > .stock-card h3 {
+    font-size: 16px;
+    line-height: 1.35;
+}
+
+#stockList > .stock-card .stock-input {
+    width: 100% !important;
+    max-width: 120px;
+    min-width: 0 !important;
+    box-sizing: border-box !important;
+    margin: 0 !important;
+}
+
+#stockList > .stock-card button {
+    width: 100%;
+    min-width: 0;
+    margin: 0 !important;
+    white-space: normal;
+}
+
+@media (max-width: 900px) {
+    #stockList > .stock-card {
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    }
+
+    #stockList > .stock-card h3 {
+        grid-column: 1 / -1;
+    }
+}
+
+@media (max-width: 520px) {
+    #stockList > .stock-card {
+        grid-template-columns: minmax(0, 1fr) !important;
+    }
+
+    #stockList > .stock-card h3 {
+        grid-column: auto;
+    }
+
+    #stockList > .stock-card button {
+        width: 100%;
+    }
+}
+
+/* ===== END STOCK LIST LAYOUT ===== */
+
+
+/* ===== ADD PRODUCT: VERTICAL PRODUCT LIST ===== */
+
+#products {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+#productList {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: stretch !important;
+    gap: 12px !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    overflow-x: hidden !important;
+    box-sizing: border-box !important;
+}
+
+#productList > .card {
+    display: grid !important;
+    grid-template-columns:
+        minmax(180px, 1.5fr)
+        minmax(130px, 1fr)
+        minmax(120px, 1fr)
+        minmax(120px, 1fr) !important;
+
+    align-items: center !important;
+    gap: 12px !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    box-sizing: border-box !important;
+    margin: 0 !important;
+    padding: 14px 16px !important;
+    overflow-wrap: anywhere;
+}
+
+#productList > .card > * {
+    min-width: 0;
+    margin: 0 !important;
+    overflow-wrap: anywhere;
+}
+
+#productList > .card h3 {
+    font-size: 16px;
+    line-height: 1.35;
+}
+
+@media (max-width: 900px) {
+    #productList > .card {
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    }
+}
+
+@media (max-width: 520px) {
+    #productList > .card {
+        grid-template-columns: minmax(0, 1fr) !important;
+    }
+}
+
+/* ===== END ADD PRODUCT LAYOUT ===== */
+
+</style>
+</head>
+
+<body>
+
+<header class="navbar">
+    <div class="logo">
+        <h2>Smart Bazaar</h2>
+        <p>Local Market Solutions</p>
+    </div>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="shops.html">Categories</a></li>
+            <li><a href="#">Dashboard</a></li>
+            <li><a href="login.html" onclick="logout()">Logout</a></li>
+        </ul>
+    </nav>
+</header>
+
+<div class="dashboard">
+
+    <!-- SIDEBAR -->
+    <div class="sidebar">
+        <h2>Shop Panel</h2>
+
+        <ul>
+            <li onclick="showSection('price')">💰 Bargains</li>
+            <li onclick="showSection('orders')">📦 Orders</li>
+            <li onclick="showSection('visit')">🏪 Visits</li>
+            <li onclick="showSection('products')">➕ Products</li>
+            <li onclick="showSection('stock')">📊 Manage Stock</li>
+            <li onclick="showSection('acceptedOrders')">✅ Accepted Orders</li>
+        </ul>
+    </div>
+
+    <!-- MAIN -->
+    <div class="main">
+
+        <h2 id="shopName"></h2>
+        <h1>Shop Dashboard</h1>
+
+        <!-- BARGAINS -->
+        <div id="price" class="section">
+            <h2>💰 Bargain Requests</h2>
+            <div id="priceRequests"></div>
+        </div>
+
+        <!-- ORDERS -->
+        <div id="orders" class="section">
+            <h2>📦 Orders</h2>
+            <div id="bookOrders"></div>
+        </div>
+
+        <!-- VISITS -->
+        <div id="visit" class="section">
+            <h2>🏪 Visit Requests</h2>
+            <div id="visitRequests"></div>
+        </div>
+
+        <!-- ADD PRODUCTS -->
+        <div id="products" class="section">
+            <h2>➕ Add Product</h2>
+
+            <div class="product-form">
+                <input id="pname" type="text" placeholder="Product Name">
+                <input id="pprice" type="number" min="0.01" step="0.01" placeholder="Price (₹)">
+                <input id="pstock" type="number" min="0" step="1" placeholder="Initial Stock">
+                <button onclick="addProduct()">Add Product</button>
+            </div>
+
+            <p>Enter the initial quantity available in your shop.</p>
+            <div id="productList"></div>
+        </div>
+
+        <!-- MANAGE STOCK -->
+        <div id="stock" class="section">
+            <h2>📊 Manage Product Stock</h2>
+            <p>Check your current stock and update the quantity when inventory changes.</p>
+            <div id="stockList" class="stock-list"></div>
+        </div>
+
+        <!-- ACCEPTED ORDERS -->
+        <div id="acceptedOrders" class="section">
+            <h2>✅ Accepted Orders</h2>
+            <div id="acceptedList"></div>
+        </div>
+
+    </div>
+</div>
+
+<script>
+const API = "http://localhost:3000";
+const currentShop = localStorage.getItem("currentShop");
+
+const shopNameElement = document.getElementById("shopName");
+
+if (currentShop) {
+    shopNameElement.innerText = "🏪 " + currentShop;
+} else {
+    shopNameElement.innerText = "No Shop Found ❌";
+}
+
+// LOGOUT
+function logout() {
+    localStorage.clear();
+    alert("Logged out");
+}
+
+// HANDLE JSON OR TEXT API RESPONSES
+async function readResponse(response) {
+    const text = await response.text();
+
+    let data;
+
+    try {
+        data = JSON.parse(text);
+    } catch {
+        data = text;
+    }
+
+    if (!response.ok) {
+        const message =
+            typeof data === "string"
+                ? data
+                : data.message || data.error || "Request failed";
+
+        throw new Error(message);
+    }
+
+    return data;
+}
+
+function getMessage(data) {
+    if (typeof data === "string") return data;
+    return data.message || data.error || "Operation successful";
+}
+
+// SECTION SWITCH
+function showSection(id) {
+    document.querySelectorAll(".section").forEach(section => {
+        section.style.display = "none";
+    });
+
+    const selected = document.getElementById(id);
+    if (selected) selected.style.display = "block";
+
+    if (id === "products" || id === "stock") {
+        loadProducts();
+    }
+
+    if (id === "orders" ||
+        id === "price" ||
+        id === "visit" ||
+        id === "acceptedOrders") {
+        loadDashboard();
+    }
+}
+
+// LOAD ORDERS, BARGAINS AND VISITS
+async function loadDashboard() {
+    if (!currentShop) return;
+
+    try {
+        const response = await fetch(
+            `${API}/owner-orders/${encodeURIComponent(currentShop)}`
+        );
+
+        const data = await readResponse(response);
+
+        const priceDiv = document.getElementById("priceRequests");
+        const orderDiv = document.getElementById("bookOrders");
+        const visitDiv = document.getElementById("visitRequests");
+        const acceptedDiv = document.getElementById("acceptedList");
+
+        priceDiv.innerHTML = "";
+        orderDiv.innerHTML = "";
+        visitDiv.innerHTML = "";
+        acceptedDiv.innerHTML = "";
+
+        if (!Array.isArray(data)) {
+            throw new Error("Unexpected orders response from server");
+        }
+
+        if (data.length === 0) {
+            priceDiv.innerHTML = "<h3>No Bargain Requests</h3>";
+            orderDiv.innerHTML = "<h3>No Orders Yet</h3>";
+            visitDiv.innerHTML = "<h3>No Visit Requests</h3>";
+            acceptedDiv.innerHTML = "<h3>No Accepted Orders</h3>";
+            return;
+        }
+
+        data.forEach(item => {
+            const card = document.createElement("div");
+            card.className = "card";
+
+            const heading = document.createElement("h3");
+            heading.textContent = item.product || "Product";
+            card.appendChild(heading);
+
+            [
+                `👤 Customer: ${item.customer || "N/A"}`,
+                `🏪 Shop: ${item.shop || currentShop}`,
+                `💰 Price: ₹${item.price ?? "N/A"}`,
+                `Type: ${item.type || "N/A"}`,
+                `Status: ${item.status || "N/A"}`
+            ].forEach(line => {
+                const p = document.createElement("p");
+                p.textContent = line;
+                card.appendChild(p);
+            });
+
+            if (item.status === "Pending") {
+                const acceptButton = document.createElement("button");
+                acceptButton.textContent = "✅ Accept";
+                acceptButton.onclick = () => updateStatus(item.id, "Accepted");
+
+                const rejectButton = document.createElement("button");
+                rejectButton.textContent = "❌ Reject";
+                rejectButton.onclick = () => updateStatus(item.id, "Rejected");
+
+                card.appendChild(acceptButton);
+                card.appendChild(rejectButton);
+            }
+
+            if (item.type === "price") {
+                priceDiv.appendChild(card.cloneNode(true));
+                addOrderActions(priceDiv.lastElementChild, item);
+
+            } else if (item.type === "booking") {
+                orderDiv.appendChild(card.cloneNode(true));
+                addOrderActions(orderDiv.lastElementChild, item);
+
+            } else if (item.type === "visit") {
+                visitDiv.appendChild(card.cloneNode(true));
+                addOrderActions(visitDiv.lastElementChild, item);
+            }
+
+            if (item.status === "Accepted") {
+                acceptedDiv.appendChild(card.cloneNode(true));
+            }
+        });
+
+        if (!priceDiv.children.length) {
+            priceDiv.innerHTML = "<h3>No Bargain Requests</h3>";
+        }
+
+        if (!orderDiv.children.length) {
+            orderDiv.innerHTML = "<h3>No Orders Yet</h3>";
+        }
+
+        if (!visitDiv.children.length) {
+            visitDiv.innerHTML = "<h3>No Visit Requests</h3>";
+        }
+
+        if (!acceptedDiv.children.length) {
+            acceptedDiv.innerHTML = "<h3>No Accepted Orders</h3>";
+        }
+
+    } catch (error) {
+        console.error("Dashboard error:", error);
+    }
+}
+
+// ADD BUTTON HANDLERS TO A CLONED CARD
+function addOrderActions(card, item) {
+    if (item.status !== "Pending") return;
+
+    const buttons = card.querySelectorAll("button");
+
+    if (buttons[0]) {
+        buttons[0].onclick = () => updateStatus(item.id, "Accepted");
+    }
+
+    if (buttons[1]) {
+        buttons[1].onclick = () => updateStatus(item.id, "Rejected");
+    }
+}
+
+// ACCEPT OR REJECT AN ORDER
+async function updateStatus(id, status) {
+    if (!confirm(`Are you sure you want to ${status.toLowerCase()} this request?`)) {
+        return;
+    }
+
+    try {
+        const response = await fetch(`${API}/update-order`, {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({ id, status })
+        });
+
+        const data = await readResponse(response);
+
+        alert(getMessage(data));
+
+        await loadDashboard();
+        await loadProducts();
+
+    } catch (error) {
+        alert("Could not update request: " + error.message);
+        console.error(error);
+    }
+}
+
+// ADD A PRODUCT WITH INITIAL STOCK
+async function addProduct() {
+    const name = document.getElementById("pname").value.trim();
+    const price = Number(document.getElementById("pprice").value);
+    const stockValue = document.getElementById("pstock").value.trim();
+    const stock = Number(stockValue);
+
+    if (!currentShop) {
+        alert("No shop found. Please log in again.");
+        return;
+    }
+
+    if (!name || document.getElementById("pprice").value.trim() === "" ||
+        stockValue === "") {
+        alert("Please enter product name, price and initial stock.");
+        return;
+    }
+
+    if (!Number.isFinite(price) || price <= 0) {
+        alert("Price must be greater than zero.");
+        return;
+    }
+
+    if (!Number.isInteger(stock) || stock < 0) {
+        alert("Stock must be a whole number equal to or greater than zero.");
+        return;
+    }
+
+    try {
+        const response = await fetch(`${API}/add-product`, {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                name,
+                price,
+                image: "",
+                shop: currentShop,
+                stock
+            })
+        });
+
+        const data = await readResponse(response);
+
+        alert(getMessage(data));
+
+        document.getElementById("pname").value = "";
+        document.getElementById("pprice").value = "";
+        document.getElementById("pstock").value = "";
+
+        await loadProducts();
+
+    } catch (error) {
+        alert("Could not add product: " + error.message);
+        console.error(error);
+    }
+}
+
+// LOAD PRODUCTS AND STOCK
+async function loadProducts() {
+    if (!currentShop) return;
+
+    try {
+        const response = await fetch(
+            `${API}/products/${encodeURIComponent(currentShop)}`
+        );
+
+        const products = await readResponse(response);
+
+        if (!Array.isArray(products)) {
+            throw new Error("Unexpected products response from server");
+        }
+
+        const productList = document.getElementById("productList");
+        const stockList = document.getElementById("stockList");
+
+        productList.innerHTML = "";
+        stockList.innerHTML = "";
+
+        if (products.length === 0) {
+            productList.innerHTML = "<h3>No Products Added Yet</h3>";
+            stockList.innerHTML = "<h3>No Products Available</h3>";
+            return;
+        }
+
+        products.forEach(product => {
+            const quantity = Number(product.stock ?? 0);
+
+            let stockClass = "stock-available";
+            let stockLabel = "Available";
+
+            if (quantity === 0) {
+                stockClass = "stock-out";
+                stockLabel = "Out of Stock";
+
+            } else if (quantity <= 5) {
+                stockClass = "stock-low";
+                stockLabel = "Low Stock";
+            }
+
+            // PRODUCT CARD
+            const productCard = document.createElement("div");
+            productCard.className = "card";
+
+            const productTitle = document.createElement("h3");
+            productTitle.textContent = product.name;
+
+            const productPrice = document.createElement("p");
+            productPrice.textContent = `Price: ₹${product.price}`;
+
+            const productQuantity = document.createElement("p");
+            productQuantity.textContent = `Stock: ${quantity}`;
+
+            const productStatus = document.createElement("p");
+            productStatus.className = stockClass;
+            productStatus.textContent = stockLabel;
+
+            productCard.append(
+                productTitle,
+                productPrice,
+                productQuantity,
+                productStatus
+            );
+
+            productList.appendChild(productCard);
+
+            // STOCK MANAGEMENT CARD
+            const stockCard = document.createElement("div");
+            stockCard.className = "card stock-card";
+
+            const stockTitle = document.createElement("h3");
+            stockTitle.textContent = product.name;
+
+            const stockPrice = document.createElement("p");
+            stockPrice.textContent = `Price: ₹${product.price}`;
+
+            const currentQuantity = document.createElement("p");
+            currentQuantity.textContent = `Current Stock: ${quantity}`;
+
+            const status = document.createElement("p");
+            status.className = stockClass;
+            status.textContent = stockLabel;
+
+            const input = document.createElement("input");
+            input.type = "number";
+            input.min = "0";
+            input.step = "1";
+            input.value = quantity;
+            input.className = "stock-input";
+            input.setAttribute("aria-label", `New stock for ${product.name}`);
+
+            const updateButton = document.createElement("button");
+            updateButton.textContent = "Update Stock";
+            updateButton.onclick = () => updateStock(product.id, input.value);
+
+            stockCard.append(
+                stockTitle,
+                stockPrice,
+                currentQuantity,
+                status,
+                input,
+                updateButton
+            );
+
+            stockList.appendChild(stockCard);
+        });
+
+    } catch (error) {
+        console.error("Product loading error:", error);
+
+        document.getElementById("productList").innerHTML =
+            "<p>Could not load products. Check the backend and database.</p>";
+
+        document.getElementById("stockList").innerHTML =
+            "<p>Could not load stock. Check the backend and database.</p>";
+    }
+}
+
+// UPDATE EXISTING PRODUCT STOCK
+async function updateStock(productId, stockValue) {
+    const stock = Number(stockValue);
+
+    if (!Number.isInteger(stock) || stock < 0) {
+        alert("Enter a valid whole-number stock quantity (0 or more).");
+        return;
+    }
+
+    try {
+        const response = await fetch(`${API}/update-stock`, {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                id: productId,
+                stock
+            })
+        });
+
+        const data = await readResponse(response);
+
+        alert(getMessage(data));
+
+        await loadProducts();
+
+    } catch (error) {
+        alert("Could not update stock: " + error.message);
+        console.error(error);
+    }
+}
+
+// INITIAL LOAD
+showSection("orders");
+loadDashboard();
+loadProducts();
+
+// REFRESH ORDERS PERIODICALLY
+setInterval(loadDashboard, 10000);
+</script>
+
+</body>
+</html>

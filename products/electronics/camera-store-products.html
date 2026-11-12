@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>Camera Store</title>
+<link rel="stylesheet" href="../../css/product.css">
+<link rel="stylesheet" href="../../css/style.css">
+</head>
+
+<body>
+
+<header class="navbar">
+
+<div class="logo">
+<h2>Smart Bazaar</h2>
+<p>Local Market Solutions</p>
+</div>
+
+<nav>
+<ul>
+<li><a class="active" href="../../index.html">Home</a></li>
+<li><a href="../../shops/electronics-shops.html">Shops</a></li>
+
+<li><a href="../../cart.html">Cart</a></li>
+<li><a href="../../customer-dashboard.html">Dashboard</a></li>
+<li><a href="../../parking.html">Parking</a></li>
+<li><a href="../../login.html" onclick="logout()">Logout</a></li>
+</ul>
+</nav>
+
+</header>
+
+<section class="shop-header">
+<h1>Camera Store</h1>
+<p>Capture Every Moment 📸</p>
+</section>
+
+<!-- FILTER -->
+<div class="filter-bar">
+<button class="filter-btn active" data-category="all">All</button>
+<button class="filter-btn" data-category="camera">Cameras</button>
+<button class="filter-btn" data-category="lens">Lenses</button>
+<button class="filter-btn" data-category="accessory">Accessories</button>
+</div>
+
+<div class="product-grid">
+
+<!-- CAMERAS -->
+
+<div class="product-card" data-category="camera">
+<div class="info-btn">i</div>
+<img src="https://images.unsplash.com/photo-1516035069371-29a1b244cc32?auto=format&fit=crop&w=400&q=80">
+<h3>Canon EOS 1500D</h3>
+<p>₹45,000</p>
+<div class="btns">
+<button onclick="setCurrentProduct(this);openPricePopup()">💰 Get Best Price</button>
+<button onclick="setCurrentProduct(this);bookNow(this)">📦 Book Now</button>
+<button onclick="setCurrentProduct(this);openVisitPopup()">🏪 Visit Shop</button>
+<button onclick="setCurrentProduct(this);addToCart(this)">🛒 Add to Cart</button></div>
+</div>
+
+<div class="product-card" data-category="camera">
+<div class="info-btn">i</div>
+<img src="https://images.unsplash.com/photo-1632738866644-5c9a59bfd1ef?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8bmlra29uJTIwY2FtZXJhfGVufDB8fDB8fHww?auto=format&fit=crop&w=400&q=80">
+<h3>Nikon D5600</h3>
+<p>₹55,000</p>
+<div class="btns">
+<button onclick="setCurrentProduct(this);openPricePopup()">💰 Get Best Price</button>
+<button onclick="setCurrentProduct(this);bookNow(this)">📦 Book Now</button>
+<button onclick="setCurrentProduct(this);openVisitPopup()">🏪 Visit Shop</button>
+<button onclick="setCurrentProduct(this);addToCart(this)">🛒 Add to Cart</button></div>
+</div>
+
+<div class="product-card" data-category="camera">
+<div class="info-btn">i</div>
+<img src="https://images.unsplash.com/photo-1516035069371-29a1b244cc32?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8c29ueSUyMGNhbWVyYXxlbnwwfHwwfHx8MA%3D%3D?auto=format&fit=crop&w=400&q=80">
+<h3>Sony Alpha A6400</h3>
+<p>₹85,000</p>
+<div class="btns">
+<button onclick="setCurrentProduct(this);openPricePopup()">💰 Get Best Price</button>
+<button onclick="setCurrentProduct(this);bookNow(this)">📦 Book Now</button>
+<button onclick="setCurrentProduct(this);openVisitPopup()">🏪 Visit Shop</button>
+<button onclick="setCurrentProduct(this);addToCart(this)">🛒 Add to Cart</button></div>
+</div>
+
+<div class="product-card" data-category="camera">
+<div class="info-btn">i</div>
+<img src="https://images.unsplash.com/photo-1454179659346-524fcc7bd5e7?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8ZnVqaWZpbG18ZW58MHx8MHx8fDA%3D?auto=format&fit=crop&w=400&q=80">
+<h3>Fujifilm X-T4</h3>
+<p>₹1,20,000</p>
+<div class="btns">
+<button onclick="setCurrentProduct(this);openPricePopup()">💰 Get Best Price</button>
+<button onclick="setCurrentProduct(this);bookNow(this)">📦 Book Now</button>
+<button onclick="setCurrentProduct(this);openVisitPopup()">🏪 Visit Shop</button>
+<button onclick="setCurrentProduct(this);addToCart(this)">🛒 Add to Cart</button></div>
+</div>
+
+<div class="product-card" data-category="camera">
+<div class="info-btn">i</div>
+<img src="https://images.unsplash.com/photo-1510127034890-ba27508e9f1c?auto=format&fit=crop&w=400&q=80">
+<h3>GoPro Hero 11</h3>
+<p>₹40,000</p>
+<div class="btns">
+<button onclick="setCurrentProduct(this);openPricePopup()">💰 Get Best Price</button>
+<button onclick="setCurrentProduct(this);bookNow(this)">📦 Book Now</button>
+<button onclick="setCurrentProduct(this);openVisitPopup()">🏪 Visit Shop</button>
+<button onclick="setCurrentProduct(this);addToCart(this)">🛒 Add to Cart</button></div>
+</div>
+
+<!-- LENSES -->
+
+<div class="product-card" data-category="lens">
+<div class="info-btn">i</div>
+<img src="https://images.unsplash.com/photo-1581594693702-fbdc51b2763b?auto=format&fit=crop&w=400&q=80">
+<h3>Canon 50mm Lens</h3>
+<p>₹12,000</p>
+<div class="btns">
+<button onclick="setCurrentProduct(this);openPricePopup()">💰 Get Best Price</button>
+<button onclick="setCurrentProduct(this);bookNow(this)">📦 Book Now</button>
+<button onclick="setCurrentProduct(this);openVisitPopup()">🏪 Visit Shop</button>
+<button onclick="setCurrentProduct(this);addToCart(this)">🛒 Add to Cart</button></div>
+</div>
+
+<div class="product-card" data-category="lens">
+<div class="info-btn">i</div>
+<img src="https://images.unsplash.com/photo-1556883248-e500f78f59b6?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D?auto=format&fit=crop&w=400&q=80">
+<h3>Nikon Zoom Lens</h3>
+<p>₹25,000</p>
+<div class="btns">
+<button onclick="setCurrentProduct(this);openPricePopup()">💰 Get Best Price</button>
+<button onclick="setCurrentProduct(this);bookNow(this)">📦 Book Now</button>
+<button onclick="setCurrentProduct(this);openVisitPopup()">🏪 Visit Shop</button>
+<button onclick="setCurrentProduct(this);addToCart(this)">🛒 Add to Cart</button></div>
+</div>
+
+<div class="product-card" data-category="lens">
+<div class="info-btn">i</div>
+<img src="https://images.unsplash.com/photo-1526178613552-2b45c6c302f0?auto=format&fit=crop&w=400&q=80">
+<h3>Sony Prime Lens</h3>
+<p>₹30,000</p>
+<div class="btns">
+<button onclick="setCurrentProduct(this);openPricePopup()">💰 Get Best Price</button>
+<button onclick="setCurrentProduct(this);bookNow(this)">📦 Book Now</button>
+<button onclick="setCurrentProduct(this);openVisitPopup()">🏪 Visit Shop</button>
+<button onclick="setCurrentProduct(this);addToCart(this)">🛒 Add to Cart</button></div>
+</div>
+
+<!-- ACCESSORIES -->
+
+<div class="product-card" data-category="accessory">
+<div class="info-btn">i</div>
+<img src="https://images.unsplash.com/photo-1526178613552-2b45c6c302f0?auto=format&fit=crop&w=400&q=80">
+<h3>Tripod Stand</h3>
+<p>₹2,500</p>
+<div class="btns">
+<button onclick="setCurrentProduct(this);openPricePopup()">💰 Get Best Price</button>
+<button onclick="setCurrentProduct(this);bookNow(this)">📦 Book Now</button>
+<button onclick="setCurrentProduct(this);openVisitPopup()">🏪 Visit Shop</button>
+<button onclick="setCurrentProduct(this);addToCart(this)">🛒 Add to Cart</button></div>
+<div class="popup"><div class="popup-content"><span class="close-btn">×</span><h2>Tripod</h2><p>Stable Shooting</p></div></div>
+</div>
+
+<div class="product-card" data-category="accessory">
+<div class="info-btn">i</div>
+<img src="https://images.unsplash.com/photo-1519183071298-a2962be90b8e?auto=format&fit=crop&w=400&q=80">
+<h3>Camera Bag</h3>
+<p>₹1,800</p>
+<div class="btns">
+<button onclick="setCurrentProduct(this);openPricePopup()">💰 Get Best Price</button>
+<button onclick="setCurrentProduct(this);bookNow(this)">📦 Book Now</button>
+<button onclick="setCurrentProduct(this);openVisitPopup()">🏪 Visit Shop</button>
+<button onclick="setCurrentProduct(this);addToCart(this)">🛒 Add to Cart</button></div>
+</div>
+
+<div class="product-card" data-category="accessory">
+<div class="info-btn">i</div>
+<img src="https://images.unsplash.com/photo-1510127034890-ba27508e9f1c?auto=format&fit=crop&w=400&q=80">
+<h3>Memory Card</h3>
+<p>₹1,000</p>
+<div class="btns">
+<button onclick="setCurrentProduct(this);openPricePopup()">💰 Get Best Price</button>
+<button onclick="setCurrentProduct(this);bookNow(this)">📦 Book Now</button>
+<button onclick="setCurrentProduct(this);openVisitPopup()">🏪 Visit Shop</button>
+<button onclick="setCurrentProduct(this);addToCart(this)">🛒 Add to Cart</button></div>
+</div>
+
+<div class="product-card" data-category="accessory">
+<div class="info-btn">i</div>
+<img src="https://images.unsplash.com/photo-1502920917128-1aa500764ce7?auto=format&fit=crop&w=400&q=80">
+<h3>LED Ring Light</h3>
+<p>₹2,200</p>
+<div class="btns">
+<button onclick="setCurrentProduct(this);openPricePopup()">💰 Get Best Price</button>
+<button onclick="setCurrentProduct(this);bookNow(this)">📦 Book Now</button>
+<button onclick="setCurrentProduct(this);openVisitPopup()">🏪 Visit Shop</button>
+<button onclick="setCurrentProduct(this);addToCart(this)">🛒 Add to Cart</button></div>
+</div>
+
+</div>
+
+<script src="../../js/products.js"></script>
+
+
+<!-- PRICE POPUP -->
+<div id="pricePopup" class="popup">
+<div class="popup-content">
+<h3>Enter Your Price</h3>
+<input type="number" id="userPrice" placeholder="Enter price">
+<button onclick="submitPrice()">Submit</button>
+<button onclick="closePopup()">Close</button>
+</div>
+</div>
+
+<!-- VISIT POPUP -->
+<div id="visitPopup" class="popup">
+<div class="popup-content">
+<h3>Select Visit Time</h3>
+<input type="date" id="visitDate">
+<input type="time" id="visitTime">
+<button onclick="confirmVisit()">Confirm</button>
+<button onclick="closePopup()">Close</button>
+</div>
+</div>
+<script>
+localStorage.setItem("currentShop", "Camera Store");
+</script>
+</body>
+</html>
+
+</body>
+</html>

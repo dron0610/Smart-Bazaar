@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>Raj Electronics</title>
+<link rel="stylesheet" href="../../css/style.css">
+<link rel="stylesheet" href="../../css/product.css">
+</head>
+
+<body>
+
+<header class="navbar">
+
+<div class="logo">
+<h2>Smart Bazaar</h2>
+<p>Local Market Solutions</p>
+</div>
+
+<nav>
+<ul>
+<li><a class="active" href="../../index.html">Home</a></li>
+<li><a href="../../shops/electronics-shops.html">Shops</a></li>
+
+<li><a href="../../cart.html">Cart</a></li>
+<li><a href="../../customer-dashboard.html">Dashboard</a></li>
+<li><a href="../../parking.html">Parking</a></li>
+<li><a href="../../login.html" onclick="logout()">Logout</a></li>
+</ul>
+</nav>
+
+</header>
+
+<section class="shop-header">
+<h1>Raj Electronics</h1>
+</section>
+
+<!-- FILTER -->
+<div class="filter-bar">
+<button class="filter-btn active" data-category="all">All</button>
+<button class="filter-btn" data-category="mobile">Mobile</button>
+<button class="filter-btn" data-category="laptop">Laptop</button>
+<button class="filter-btn" data-category="tv">TV</button>
+<button class="filter-btn" data-category="accessory">Accessories</button>
+</div>
+
+<div class="product-grid">
+
+<!-- PRODUCT TEMPLATE START -->
+
+<div class="product-card" data-category="mobile">
+<div class="info-btn">i</div>
+<img src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&w=400&q=80">
+<h3>iPhone 14</h3>
+<p>₹70,000</p>
+
+<div class="btns">
+<button onclick="setCurrentProduct(this);openPricePopup()">💰 Get Best Price</button>
+<button onclick="setCurrentProduct(this);bookNow(this)">📦 Book Now</button>
+<button onclick="setCurrentProduct(this);openVisitPopup()">🏪 Visit Shop</button>
+<button onclick="setCurrentProduct(this);addToCart(this)">🛒 Add to Cart</button></div>
+
+<div class="popup">
+<div class="popup-content">
+<span class="close-btn">×</span>
+<h2>iPhone 14</h2>
+<p>128GB | A15 Chip | 12MP Camera</p>
+</div>
+</div>
+</div>
+
+
+<div class="product-card" data-category="mobile">
+<div class="info-btn">i</div>
+<img src="https://images.unsplash.com/photo-1580910051074-3eb694886505?auto=format&fit=crop&w=400&q=80">
+<h3>Samsung S23</h3>
+<p>₹65,000</p>
+<div class="btns">
+<button onclick="setCurrentProduct(this);openPricePopup()">💰 Get Best Price</button>
+<button onclick="setCurrentProduct(this);bookNow(this)">📦 Book Now</button>
+<button onclick="setCurrentProduct(this);openVisitPopup()">🏪 Visit Shop</button>
+<button onclick="setCurrentProduct(this);addToCart(this)">🛒 Add to Cart</button></div>
+<div class="popup">
+<div class="popup-content">
+<span class="close-btn">×</span>
+<h2>Samsung S23</h2>
+<p>Snapdragon | 5G | AMOLED Display</p>
+</div>
+</div>
+</div>
+
+
+<div class="product-card" data-category="laptop">
+<div class="info-btn">i</div>
+<img src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8?auto=format&fit=crop&w=400&q=80">
+<h3>MacBook Air</h3>
+<p>₹90,000</p>
+<div class="btns">
+<button onclick="setCurrentProduct(this);openPricePopup()">💰 Get Best Price</button>
+<button onclick="setCurrentProduct(this);bookNow(this)">📦 Book Now</button>
+<button onclick="setCurrentProduct(this);openVisitPopup()">🏪 Visit Shop</button>
+<button onclick="setCurrentProduct(this);addToCart(this)">🛒 Add to Cart</button></div>
+<div class="popup">
+<div class="popup-content">
+<span class="close-btn">×</span>
+<h2>MacBook Air</h2>
+<p>M1 Chip | 13 inch | Lightweight</p>
+</div>
+</div>
+</div>
+
+
+<div class="product-card" data-category="laptop">
+<div class="info-btn">i</div>
+<img src="https://images.unsplash.com/photo-1588872657578-7efd1f1555ed?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8ZGVsbCUyMGxhcHRvcHxlbnwwfHwwfHx8MA%3D%3D?auto=format&fit=crop&w=400&q=80">
+<h3>Dell Inspiron</h3>
+<p>₹60,000</p>
+<div class="btns">
+<button onclick="setCurrentProduct(this);openPricePopup()">💰 Get Best Price</button>
+<button onclick="setCurrentProduct(this);bookNow(this)">📦 Book Now</button>
+<button onclick="setCurrentProduct(this);openVisitPopup()">🏪 Visit Shop</button>
+<button onclick="setCurrentProduct(this);addToCart(this)">🛒 Add to Cart</button></div>
+<div class="popup">
+<div class="popup-content">
+<span class="close-btn">×</span>
+<h2>Dell Inspiron</h2>
+<p>Intel i5 | 8GB RAM | SSD</p>
+</div>
+</div>
+</div>
+
+
+<div class="product-card" data-category="tv">
+<div class="info-btn">i</div>
+<img src="https://images.unsplash.com/photo-1593784991095-a205069470b6?auto=format&fit=crop&w=400&q=80">
+<h3>Sony Bravia</h3>
+<p>₹75,000</p>
+<div class="btns">
+<button onclick="setCurrentProduct(this);openPricePopup()">💰 Get Best Price</button>
+<button onclick="setCurrentProduct(this);bookNow(this)">📦 Book Now</button>
+<button onclick="setCurrentProduct(this);openVisitPopup()">🏪 Visit Shop</button>
+<button onclick="setCurrentProduct(this);addToCart(this)">🛒 Add to Cart</button></div>
+<div class="popup">
+<div class="popup-content">
+<span class="close-btn">×</span>
+<h2>Sony Bravia</h2>
+<p>55 inch | 4K Smart TV</p>
+</div>
+</div>
+</div>
+
+
+<div class="product-card" data-category="tv">
+<div class="info-btn">i</div>
+<img src="https://images.unsplash.com/photo-1606813907291-d86efa9b94db?auto=format&fit=crop&w=400&q=80">
+<h3>LG Smart TV</h3>
+<p>₹65,000</p>
+<div class="btns">
+<button onclick="setCurrentProduct(this);openPricePopup()">💰 Get Best Price</button>
+<button onclick="setCurrentProduct(this);bookNow(this)">📦 Book Now</button>
+<button onclick="setCurrentProduct(this);openVisitPopup()">🏪 Visit Shop</button>
+<button onclick="setCurrentProduct(this);addToCart(this)">🛒 Add to Cart</button></div>
+<div class="popup">
+<div class="popup-content">
+<span class="close-btn">×</span>
+<h2>LG TV</h2>
+<p>UHD | Smart | 50 inch</p>
+</div>
+</div>
+</div>
+
+
+<div class="product-card" data-category="accessory">
+<div class="info-btn">i</div>
+<img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8aGVhZHBob25lc3xlbnwwfHwwfHx8MA%3D%3D?auto=format&fit=crop&w=400&q=80">
+<h3>Boat Headphones</h3>
+<p>₹2000</p>
+<div class="btns">
+<button onclick="setCurrentProduct(this);openPricePopup()">💰 Get Best Price</button>
+<button onclick="setCurrentProduct(this);bookNow(this)">📦 Book Now</button>
+<button onclick="setCurrentProduct(this);openVisitPopup()">🏪 Visit Shop</button>
+<button onclick="setCurrentProduct(this);addToCart(this)">🛒 Add to Cart</button></div>
+
+
+<div class="popup">
+<div class="popup-content">
+<span class="close-btn">×</span>
+<h2>Boat Headphones</h2>
+<p>Wireless | Noise Cancellation</p>
+</div>
+</div>
+</div>
+
+
+<div class="product-card" data-category="accessory">
+<div class="info-btn">i</div>
+<img src="https://images.unsplash.com/photo-1589256469067-ea99122bbdc4?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8amJsJTIwc3BlYWtlcnxlbnwwfHwwfHx8MA%3D%3D?auto=format&fit=crop&w=400&q=80">
+<h3>JBL Speaker</h3>
+<p>₹4000</p>
+<div class="btns">
+<button onclick="setCurrentProduct(this);openPricePopup()">💰 Get Best Price</button>
+<button onclick="setCurrentProduct(this);bookNow(this)">📦 Book Now</button>
+<button onclick="setCurrentProduct(this);openVisitPopup()">🏪 Visit Shop</button>
+<button onclick="setCurrentProduct(this);addToCart(this)">🛒 Add to Cart</button></div>
+<div class="popup">
+<div class="popup-content">
+<span class="close-btn">×</span>
+<h2>JBL Speaker</h2>
+<p>Bluetooth | Bass Boost</p>
+</div>
+</div>
+</div>
+
+<!-- ADD MORE SAME BLOCKS FOR 40+ -->
+
+</div>
+
+<script src="../../js/products.js"></script>
+
+
+<!-- PRICE POPUP -->
+<div id="pricePopup" class="popup">
+<div class="popup-content">
+<h3>Enter Your Price</h3>
+<input type="number" id="userPrice" placeholder="Enter price">
+<button onclick="submitPrice()">Submit</button>
+<button onclick="closePopup()">Close</button>
+</div>
+</div>
+
+<!-- VISIT POPUP -->
+<div id="visitPopup" class="popup">
+<div class="popup-content">
+<h3>Select Visit Time</h3>
+<input type="date" id="visitDate">
+<input type="time" id="visitTime">
+<button onclick="confirmVisit()">Confirm</button>
+<button onclick="closePopup()">Close</button>
+</div>
+</div>
+
+<script>
+localStorage.setItem("currentShop", "Raj Electronics");
+</script>
+<script>
+// OPEN POPUP
+document.querySelectorAll(".info-btn").forEach(btn => {
+  btn.addEventListener("click", function () {
+    const card = this.closest(".product-card");
+    const popup = card.querySelector(".popup");
+    popup.style.display = "flex";
+  });
+});
+
+// CLOSE POPUP
+document.querySelectorAll(".close-btn").forEach(btn => {
+  btn.addEventListener("click", function () {
+    this.closest(".popup").style.display = "none";
+  });
+});
+</script>
+</body>
+</html>

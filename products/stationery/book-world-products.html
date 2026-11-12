@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>Book World</title>
+
+<link rel="stylesheet" href="../../css/product.css">
+<link rel="stylesheet" href="../../css/style.css">
+
+</head>
+
+<body>
+
+<header class="navbar">
+
+<div class="logo">
+<h2>Smart Bazaar</h2>
+<p>Local Market Solutions</p>
+</div>
+
+<nav>
+<ul>
+<li><a class="active" href="../../index.html">Home</a></li>
+<li><a href="../../shops/stationery-shops.html">Shops</a></li>
+
+<li><a href="../../cart.html">Cart</a></li>
+<li><a href="../../customer-dashboard.html">Dashboard</a></li>
+<li><a href="../../parking.html">Parking</a></li>
+<li><a href="../../login.html" onclick="logout()">Logout</a></li>
+</ul>
+</nav>
+
+</header>
+
+<section class="shop-header">
+<h1>Book World</h1>
+<p>Explore the World Through Books 📚🌍</p>
+</section>
+
+<!-- FILTER -->
+<div class="filter-bar">
+<button class="filter-btn active" data-category="all">All</button>
+<button class="filter-btn" data-category="fiction">Fiction</button>
+<button class="filter-btn" data-category="education">Education</button>
+<button class="filter-btn" data-category="kids">Kids</button>
+<button class="filter-btn" data-category="business">Business</button>
+<button class="filter-btn" data-category="comics">Comics</button>
+</div>
+
+<div class="product-grid">
+
+<!-- FICTION -->
+<div class="product-card" data-category="fiction">
+<img src="https://source.unsplash.com/400x400/?mystery-novel">
+<h3>Mystery Novel</h3>
+<p>₹320</p>
+<div class="btns">
+<button onclick="setCurrentProduct(this);openPricePopup()">💰 Get Best Price</button>
+<button onclick="setCurrentProduct(this);bookNow(this)">📦 Book Now</button>
+<button onclick="setCurrentProduct(this);openVisitPopup()">🏪 Visit Shop</button>
+<button onclick="setCurrentProduct(this);addToCart(this)">🛒 Add to Cart</button></div>
+</div>
+
+<div class="product-card" data-category="fiction">
+<img src="https://source.unsplash.com/400x400/?fantasy-book">
+<h3>Fantasy Book</h3>
+<p>₹350</p>
+<div class="btns">
+<button onclick="setCurrentProduct(this);openPricePopup()">💰 Get Best Price</button>
+<button onclick="setCurrentProduct(this);bookNow(this)">📦 Book Now</button>
+<button onclick="setCurrentProduct(this);openVisitPopup()">🏪 Visit Shop</button>
+<button onclick="setCurrentProduct(this);addToCart(this)">🛒 Add to Cart</button></div>
+</div>
+
+<!-- EDUCATION -->
+<div class="product-card" data-category="education">
+<img src="https://source.unsplash.com/400x400/?college-books">
+<h3>College Textbook</h3>
+<p>₹550</p>
+<div class="btns">
+<button onclick="setCurrentProduct(this);openPricePopup()">💰 Get Best Price</button>
+<button onclick="setCurrentProduct(this);bookNow(this)">📦 Book Now</button>
+<button onclick="setCurrentProduct(this);openVisitPopup()">🏪 Visit Shop</button>
+<button onclick="setCurrentProduct(this);addToCart(this)">🛒 Add to Cart</button></div>
+</div>
+
+<div class="product-card" data-category="education">
+<img src="https://source.unsplash.com/400x400/?engineering-books">
+<h3>Engineering Book</h3>
+<p>₹650</p>
+<div class="btns">
+<button onclick="setCurrentProduct(this);openPricePopup()">💰 Get Best Price</button>
+<button onclick="setCurrentProduct(this);bookNow(this)">📦 Book Now</button>
+<button onclick="setCurrentProduct(this);openVisitPopup()">🏪 Visit Shop</button>
+<button onclick="setCurrentProduct(this);addToCart(this)">🛒 Add to Cart</button></div>
+</div>
+
+<!-- KIDS -->
+<div class="product-card" data-category="kids">
+<img src="https://source.unsplash.com/400x400/?kids-learning-book">
+<h3>Learning Book</h3>
+<p>₹180</p>
+<div class="btns">
+<button onclick="setCurrentProduct(this);openPricePopup()">💰 Get Best Price</button>
+<button onclick="setCurrentProduct(this);bookNow(this)">📦 Book Now</button>
+<button onclick="setCurrentProduct(this);openVisitPopup()">🏪 Visit Shop</button>
+<button onclick="setCurrentProduct(this);addToCart(this)">🛒 Add to Cart</button></div>
+</div>
+
+<div class="product-card" data-category="kids">
+<img src="https://source.unsplash.com/400x400/?fairy-tale-book">
+<h3>Fairy Tale Book</h3>
+<p>₹200</p>
+<div class="btns">
+<button onclick="setCurrentProduct(this);openPricePopup()">💰 Get Best Price</button>
+<button onclick="setCurrentProduct(this);bookNow(this)">📦 Book Now</button>
+<button onclick="setCurrentProduct(this);openVisitPopup()">🏪 Visit Shop</button>
+<button onclick="setCurrentProduct(this);addToCart(this)">🛒 Add to Cart</button></div>
+</div>
+
+<!-- BUSINESS -->
+<div class="product-card" data-category="business">
+<img src="https://source.unsplash.com/400x400/?business-book">
+<h3>Business Strategy Book</h3>
+<p>₹400</p>
+<div class="btns">
+<button onclick="setCurrentProduct(this);openPricePopup()">💰 Get Best Price</button>
+<button onclick="setCurrentProduct(this);bookNow(this)">📦 Book Now</button>
+<button onclick="setCurrentProduct(this);openVisitPopup()">🏪 Visit Shop</button>
+<button onclick="setCurrentProduct(this);addToCart(this)">🛒 Add to Cart</button></div>
+</div>
+
+<div class="product-card" data-category="business">
+<img src="https://source.unsplash.com/400x400/?finance-book">
+<h3>Finance Book</h3>
+<p>₹420</p>
+<div class="btns">
+<button onclick="setCurrentProduct(this);openPricePopup()">💰 Get Best Price</button>
+<button onclick="setCurrentProduct(this);bookNow(this)">📦 Book Now</button>
+<button onclick="setCurrentProduct(this);openVisitPopup()">🏪 Visit Shop</button>
+<button onclick="setCurrentProduct(this);addToCart(this)">🛒 Add to Cart</button></div>
+</div>
+
+<!-- COMICS -->
+<div class="product-card" data-category="comics">
+<img src="https://source.unsplash.com/400x400/?comic-book">
+<h3>Comic Collection</h3>
+<p>₹150</p>
+<div class="btns">
+<button onclick="setCurrentProduct(this);openPricePopup()">💰 Get Best Price</button>
+<button onclick="setCurrentProduct(this);bookNow(this)">📦 Book Now</button>
+<button onclick="setCurrentProduct(this);openVisitPopup()">🏪 Visit Shop</button>
+<button onclick="setCurrentProduct(this);addToCart(this)">🛒 Add to Cart</button></div>
+</div>
+
+<div class="product-card" data-category="comics">
+<img src="https://source.unsplash.com/400x400/?marvel-comics">
+<h3>Superhero Comics</h3>
+<p>₹200</p>
+<div class="btns">
+<button onclick="setCurrentProduct(this);openPricePopup()">💰 Get Best Price</button>
+<button onclick="setCurrentProduct(this);bookNow(this)">📦 Book Now</button>
+<button onclick="setCurrentProduct(this);openVisitPopup()">🏪 Visit Shop</button>
+<button onclick="setCurrentProduct(this);addToCart(this)">🛒 Add to Cart</button></div>
+</div>
+
+</div>
+
+<script src="../../js/products.js"></script>
+<!-- PRICE POPUP -->
+<div id="pricePopup" class="popup">
+<div class="popup-content">
+<h3>Enter Your Price</h3>
+<input type="number" id="userPrice" placeholder="Enter price">
+<button onclick="submitPrice()">Submit</button>
+<button onclick="closePopup()">Close</button>
+</div>
+</div>
+
+<!-- VISIT POPUP -->
+<div id="visitPopup" class="popup">
+<div class="popup-content">
+<h3>Select Visit Time</h3>
+<input type="date" id="visitDate">
+<input type="time" id="visitTime">
+<button onclick="confirmVisit()">Confirm</button>
+<button onclick="closePopup()">Close</button>
+</div>
+</div>
+<script>
+localStorage.setItem("currentShop", "Book World");
+</script>
+</body>
+</html>

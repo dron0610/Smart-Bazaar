@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>Cake World</title>
+
+<link rel="stylesheet" href="../../css/product.css">
+<link rel="stylesheet" href="../../css/style.css">
+
+</head>
+
+<body>
+
+<header class="navbar">
+
+<div class="logo">
+<h2>Smart Bazaar</h2>
+<p>Local Market Solutions</p>
+</div>
+
+<nav>
+<ul>
+<li><a class="active" href="../../index.html">Home</a></li>
+<li><a href="../../shops/sweets-shops.html">Shops</a></li>
+
+<li><a href="../../cart.html">Cart</a></li>
+<li><a href="../../customer-dashboard.html">Dashboard</a></li>
+<li><a href="../../parking.html">Parking</a></li>
+<li><a href="../../login.html" onclick="logout()">Logout</a></li>
+</ul>
+</nav>
+
+</header>
+
+<section class="shop-header">
+<h1>Cake World</h1>
+<p>Delicious Cakes for Every Occasion 🎂✨</p>
+</section>
+
+<!-- FILTER -->
+<div class="filter-bar">
+<button class="filter-btn active" data-category="all">All</button>
+<button class="filter-btn" data-category="birthday">Birthday Cakes</button>
+<button class="filter-btn" data-category="designer">Designer Cakes</button>
+<button class="filter-btn" data-category="pastries">Pastries</button>
+<button class="filter-btn" data-category="cupcakes">Cupcakes</button>
+<button class="filter-btn" data-category="dessert">Desserts</button>
+</div>
+
+<div class="product-grid">
+
+<!-- BIRTHDAY -->
+<div class="product-card" data-category="birthday">
+<img src="https://source.unsplash.com/400x400/?birthday-cake">
+<h3>Birthday Cake</h3>
+<p>₹700</p>
+<div class="btns">
+<button onclick="setCurrentProduct(this);openPricePopup()">💰 Get Best Price</button>
+<button onclick="setCurrentProduct(this);bookNow(this)">📦 Book Now</button>
+<button onclick="setCurrentProduct(this);openVisitPopup()">🏪 Visit Shop</button>
+<button onclick="setCurrentProduct(this);addToCart(this)">🛒 Add to Cart</button></div>
+</div>
+
+<div class="product-card" data-category="birthday">
+<img src="https://source.unsplash.com/400x400/?chocolate-birthday-cake">
+<h3>Chocolate Birthday Cake</h3>
+<p>₹800</p>
+<div class="btns">
+<button onclick="setCurrentProduct(this);openPricePopup()">💰 Get Best Price</button>
+<button onclick="setCurrentProduct(this);bookNow(this)">📦 Book Now</button>
+<button onclick="setCurrentProduct(this);openVisitPopup()">🏪 Visit Shop</button>
+<button onclick="setCurrentProduct(this);addToCart(this)">🛒 Add to Cart</button></div>
+</div>
+
+<!-- DESIGNER -->
+<div class="product-card" data-category="designer">
+<img src="https://source.unsplash.com/400x400/?designer-cake">
+<h3>Designer Cake</h3>
+<p>₹1200</p>
+<div class="btns">
+<button onclick="setCurrentProduct(this);openPricePopup()">💰 Get Best Price</button>
+<button onclick="setCurrentProduct(this);bookNow(this)">📦 Book Now</button>
+<button onclick="setCurrentProduct(this);openVisitPopup()">🏪 Visit Shop</button>
+<button onclick="setCurrentProduct(this);addToCart(this)">🛒 Add to Cart</button></div>
+</div>
+
+<div class="product-card" data-category="designer">
+<img src="https://source.unsplash.com/400x400/?theme-cake">
+<h3>Theme Cake</h3>
+<p>₹1400</p>
+<div class="btns">
+<button onclick="setCurrentProduct(this);openPricePopup()">💰 Get Best Price</button>
+<button onclick="setCurrentProduct(this);bookNow(this)">📦 Book Now</button>
+<button onclick="setCurrentProduct(this);openVisitPopup()">🏪 Visit Shop</button>
+<button onclick="setCurrentProduct(this);addToCart(this)">🛒 Add to Cart</button></div>
+</div>
+
+<!-- PASTRIES -->
+<div class="product-card" data-category="pastries">
+<img src="https://source.unsplash.com/400x400/?chocolate-pastry">
+<h3>Chocolate Pastry</h3>
+<p>₹100</p>
+<div class="btns">
+<button onclick="setCurrentProduct(this);openPricePopup()">💰 Get Best Price</button>
+<button onclick="setCurrentProduct(this);bookNow(this)">📦 Book Now</button>
+<button onclick="setCurrentProduct(this);openVisitPopup()">🏪 Visit Shop</button>
+<button onclick="setCurrentProduct(this);addToCart(this)">🛒 Add to Cart</button></div>
+</div>
+
+<div class="product-card" data-category="pastries">
+<img src="https://source.unsplash.com/400x400/?fruit-pastry">
+<h3>Fruit Pastry</h3>
+<p>₹110</p>
+<div class="btns">
+<button onclick="setCurrentProduct(this);openPricePopup()">💰 Get Best Price</button>
+<button onclick="setCurrentProduct(this);bookNow(this)">📦 Book Now</button>
+<button onclick="setCurrentProduct(this);openVisitPopup()">🏪 Visit Shop</button>
+<button onclick="setCurrentProduct(this);addToCart(this)">🛒 Add to Cart</button></div>
+</div>
+
+<!-- CUPCAKES -->
+<div class="product-card" data-category="cupcakes">
+<img src="https://source.unsplash.com/400x400/?cupcakes">
+<h3>Cupcake Pack</h3>
+<p>₹250</p>
+<div class="btns">
+<button onclick="setCurrentProduct(this);openPricePopup()">💰 Get Best Price</button>
+<button onclick="setCurrentProduct(this);bookNow(this)">📦 Book Now</button>
+<button onclick="setCurrentProduct(this);openVisitPopup()">🏪 Visit Shop</button>
+<button onclick="setCurrentProduct(this);addToCart(this)">🛒 Add to Cart</button></div>
+</div>
+
+<div class="product-card" data-category="cupcakes">
+<img src="https://source.unsplash.com/400x400/?chocolate-cupcake">
+<h3>Chocolate Cupcake</h3>
+<p>₹120</p>
+<div class="btns">
+<button onclick="setCurrentProduct(this);openPricePopup()">💰 Get Best Price</button>
+<button onclick="setCurrentProduct(this);bookNow(this)">📦 Book Now</button>
+<button onclick="setCurrentProduct(this);openVisitPopup()">🏪 Visit Shop</button>
+<button onclick="setCurrentProduct(this);addToCart(this)">🛒 Add to Cart</button></div>
+</div>
+
+<!-- DESSERT -->
+<div class="product-card" data-category="dessert">
+<img src="https://source.unsplash.com/400x400/?brownie">
+<h3>Chocolate Brownie</h3>
+<p>₹150</p>
+<div class="btns">
+<button onclick="setCurrentProduct(this);openPricePopup()">💰 Get Best Price</button>
+<button onclick="setCurrentProduct(this);bookNow(this)">📦 Book Now</button>
+<button onclick="setCurrentProduct(this);openVisitPopup()">🏪 Visit Shop</button>
+<button onclick="setCurrentProduct(this);addToCart(this)">🛒 Add to Cart</button></div>
+</div>
+
+<div class="product-card" data-category="dessert">
+<img src="https://source.unsplash.com/400x400/?ice-cream-dessert">
+<h3>Ice Cream Dessert</h3>
+<p>₹180</p>
+<div class="btns">
+<button onclick="setCurrentProduct(this);openPricePopup()">💰 Get Best Price</button>
+<button onclick="setCurrentProduct(this);bookNow(this)">📦 Book Now</button>
+<button onclick="setCurrentProduct(this);openVisitPopup()">🏪 Visit Shop</button>
+<button onclick="setCurrentProduct(this);addToCart(this)">🛒 Add to Cart</button></div>
+</div>
+
+</div>
+
+<script src="../../js/products.js"></script>
+
+<!-- PRICE POPUP -->
+<div id="pricePopup" class="popup">
+<div class="popup-content">
+<h3>Enter Your Price</h3>
+<input type="number" id="userPrice" placeholder="Enter price">
+<button onclick="submitPrice()">Submit</button>
+<button onclick="closePopup()">Close</button>
+</div>
+</div>
+
+<!-- VISIT POPUP -->
+<div id="visitPopup" class="popup">
+<div class="popup-content">
+<h3>Select Visit Time</h3>
+<input type="date" id="visitDate">
+<input type="time" id="visitTime">
+<button onclick="confirmVisit()">Confirm</button>
+<button onclick="closePopup()">Close</button>
+</div>
+</div>
+<script>
+localStorage.setItem("currentShop", "Cake World");
+</script>
+</body>
+</html>

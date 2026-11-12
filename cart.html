@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>My Cart</title>
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/product.css">
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<header class="navbar">
+
+<div class="logo">
+<h2>Smart Bazaar</h2>
+<p>Local Market Solutions</p>
+</div>
+
+<nav>
+<ul>
+<li><a href="index.html">Home</a></li>
+<li><a href="shops.html">Categories</a></li>
+
+<li><a class="active" href="cart.html">Cart</a></li>
+<li><a href="customer-dashboard.html">Dashboard</a></li>
+<li><a href="parking.html">Parking</a></li>
+<li><a href="login.html" onclick="logout()">Logout</a></li>
+</ul>
+</nav>
+
+</header>
+
+<!-- HEADER -->
+<section class="shop-header">
+<h1>Your Cart Items</h1>
+<p>Review your selected products</p>
+</section>
+
+<!-- CART ITEMS -->
+<section class="cart-container">
+
+<div class="product-grid" id="cartItems">
+<!-- Products will come here dynamically -->
+</div>
+
+</section>
+
+<!-- JS -->
+<script src="js/cart.js"></script>
+<script>
+function logout(){
+  localStorage.clear();
+  alert("Logged out");
+}
+</script>
+</body>
+</html>

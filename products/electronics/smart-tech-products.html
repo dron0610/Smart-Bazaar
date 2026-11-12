@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>Smart Tech</title>
+<link rel="stylesheet" href="../../css/product.css">
+<link rel="stylesheet" href="../../css/style.css">
+</head>
+
+<body>
+
+<header class="navbar">
+
+<div class="logo">
+<h2>Smart Bazaar</h2>
+<p>Local Market Solutions</p>
+</div>
+
+<nav>
+<ul>
+<li><a class="active" href="../../index.html">Home</a></li>
+<li><a href="../../shops/electronics-shops.html">Shops</a></li>
+
+<li><a href="../../cart.html">Cart</a></li>
+<li><a href="../../customer-dashboard.html">Dashboard</a></li>
+<li><a href="../../parking.html">Parking</a></li>
+<li><a href="../../login.html" onclick="logout()">Logout</a></li>
+</ul>
+</nav>
+</header>
+
+<section class="shop-header">
+<h1>Smart Tech Store</h1>
+<p>Future Technology Today 🤖</p>
+</section>
+
+<!-- FILTER -->
+<div class="filter-bar">
+<button class="filter-btn active" data-category="all">All</button>
+<button class="filter-btn" data-category="wearable">Wearables</button>
+<button class="filter-btn" data-category="home">Smart Home</button>
+<button class="filter-btn" data-category="gadget">Gadgets</button>
+</div>
+
+<div class="product-grid">
+
+<!-- WEARABLES -->
+
+<div class="product-card" data-category="wearable">
+<div class="info-btn">i</div>
+<img src="https://images.unsplash.com/photo-1519744346363-dc9f4c4e0e9b?auto=format&fit=crop&w=400&q=80">
+<h3>Apple Watch Series 9</h3>
+<p>₹45,000</p>
+<div class="btns">
+<button onclick="setCurrentProduct(this);openPricePopup()">💰 Get Best Price</button>
+<button onclick="setCurrentProduct(this);bookNow(this)">📦 Book Now</button>
+<button onclick="setCurrentProduct(this);openVisitPopup()">🏪 Visit Shop</button>
+<button onclick="setCurrentProduct(this);addToCart(this)">🛒 Add to Cart</button></div>
+<div class="popup"><div class="popup-content"><span class="close-btn">×</span><h2>Apple Watch</h2><p>Health Tracking | GPS</p></div></div>
+</div>
+
+<div class="product-card" data-category="wearable">
+<div class="info-btn">i</div>
+<img src="https://images.unsplash.com/photo-1516574187841-cb9cc2ca948b?auto=format&fit=crop&w=400&q=80">
+<h3>Samsung Galaxy Watch</h3>
+<p>₹30,000</p>
+<div class="btns">
+<button onclick="setCurrentProduct(this);openPricePopup()">💰 Get Best Price</button>
+<button onclick="setCurrentProduct(this);bookNow(this)">📦 Book Now</button>
+<button onclick="setCurrentProduct(this);openVisitPopup()">🏪 Visit Shop</button>
+<button onclick="setCurrentProduct(this);addToCart(this)">🛒 Add to Cart</button></div>
+<div class="popup"><div class="popup-content"><span class="close-btn">×</span><h2>Galaxy Watch</h2><p>Fitness Tracking</p></div></div>
+</div>
+
+<div class="product-card" data-category="wearable">
+<div class="info-btn">i</div>
+<img src="https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?auto=format&fit=crop&w=400&q=80">
+<h3>Mi Smart Band</h3>
+<p>₹3,000</p>
+<div class="btns">
+<button onclick="setCurrentProduct(this);openPricePopup()">💰 Get Best Price</button>
+<button onclick="setCurrentProduct(this);bookNow(this)">📦 Book Now</button>
+<button onclick="setCurrentProduct(this);openVisitPopup()">🏪 Visit Shop</button>
+<button onclick="setCurrentProduct(this);addToCart(this)">🛒 Add to Cart</button></div>
+<div class="popup"><div class="popup-content"><span class="close-btn">×</span><h2>Mi Band</h2><p>Affordable Fitness Band</p></div></div>
+</div>
+
+<!-- SMART HOME -->
+
+<div class="product-card" data-category="home">
+<div class="info-btn">i</div>
+<img src="https://images.unsplash.com/photo-1558002038-1055907df827?auto=format&fit=crop&w=400&q=80">
+<h3>Smart LED Bulb</h3>
+<p>₹1,000</p>
+<div class="btns">
+<button onclick="setCurrentProduct(this);openPricePopup()">💰 Get Best Price</button>
+<button onclick="setCurrentProduct(this);bookNow(this)">📦 Book Now</button>
+<button onclick="setCurrentProduct(this);openVisitPopup()">🏪 Visit Shop</button>
+<button onclick="setCurrentProduct(this);addToCart(this)">🛒 Add to Cart</button></div>
+<div class="popup"><div class="popup-content"><span class="close-btn">×</span><h2>Smart Bulb</h2><p>App Control | RGB</p></div></div>
+</div>
+
+<div class="product-card" data-category="home">
+<div class="info-btn">i</div>
+<img src="https://images.unsplash.com/photo-1558089687-f282ffcbc0d4?auto=format&fit=crop&w=400&q=80">
+<h3>Amazon Alexa</h3>
+<p>₹5,000</p>
+<div class="btns">
+<button onclick="setCurrentProduct(this);openPricePopup()">💰 Get Best Price</button>
+<button onclick="setCurrentProduct(this);bookNow(this)">📦 Book Now</button>
+<button onclick="setCurrentProduct(this);openVisitPopup()">🏪 Visit Shop</button>
+<button onclick="setCurrentProduct(this);addToCart(this)">🛒 Add to Cart</button></div>
+<div class="popup"><div class="popup-content"><span class="close-btn">×</span><h2>Alexa</h2><p>Voice Assistant</p></div></div>
+</div>
+
+<div class="product-card" data-category="home">
+<div class="info-btn">i</div>
+<img src="https://images.unsplash.com/photo-1581092334428-2cddc1bfa1c4?auto=format&fit=crop&w=400&q=80">
+<h3>Smart CCTV Camera</h3>
+<p>₹3,500</p>
+<div class="btns">
+<button onclick="setCurrentProduct(this);openPricePopup()">💰 Get Best Price</button>
+<button onclick="setCurrentProduct(this);bookNow(this)">📦 Book Now</button>
+<button onclick="setCurrentProduct(this);openVisitPopup()">🏪 Visit Shop</button>
+<button onclick="setCurrentProduct(this);addToCart(this)">🛒 Add to Cart</button></div>
+<div class="popup"><div class="popup-content"><span class="close-btn">×</span><h2>CCTV</h2><p>Home Security</p></div></div>
+</div>
+
+<!-- GADGETS -->
+
+<div class="product-card" data-category="gadget">
+<div class="info-btn">i</div>
+<img src="https://images.unsplash.com/photo-1585386959984-a4155224a1c1?auto=format&fit=crop&w=400&q=80">
+<h3>Wireless Charger</h3>
+<p>₹2,500</p>
+<div class="btns">
+<button onclick="setCurrentProduct(this);openPricePopup()">💰 Get Best Price</button>
+<button onclick="setCurrentProduct(this);bookNow(this)">📦 Book Now</button>
+<button onclick="setCurrentProduct(this);openVisitPopup()">🏪 Visit Shop</button>
+<button onclick="setCurrentProduct(this);addToCart(this)">🛒 Add to Cart</button></div>
+<div class="popup"><div class="popup-content"><span class="close-btn">×</span><h2>Wireless Charger</h2><p>Fast Charging</p></div></div>
+</div>
+
+<div class="product-card" data-category="gadget">
+<div class="info-btn">i</div>
+<img src="https://images.unsplash.com/photo-1518444028785-8fbcd101ebb9?auto=format&fit=crop&w=400&q=80">
+<h3>Noise Earbuds</h3>
+<p>₹2,000</p>
+<div class="btns">
+<button onclick="setCurrentProduct(this);openPricePopup()">💰 Get Best Price</button>
+<button onclick="setCurrentProduct(this);bookNow(this)">📦 Book Now</button>
+<button onclick="setCurrentProduct(this);openVisitPopup()">🏪 Visit Shop</button>
+<button onclick="setCurrentProduct(this);addToCart(this)">🛒 Add to Cart</button></div>
+<div class="popup"><div class="popup-content"><span class="close-btn">×</span><h2>Earbuds</h2><p>Bluetooth 5.0</p></div></div>
+</div>
+
+<div class="product-card" data-category="gadget">
+<div class="info-btn">i</div>
+<img src="https://images.unsplash.com/photo-1583394838336-acd977736f90?auto=format&fit=crop&w=400&q=80">
+<h3>Power Bank</h3>
+<p>₹1,500</p>
+<div class="btns">
+<button onclick="setCurrentProduct(this);openPricePopup()">💰 Get Best Price</button>
+<button onclick="setCurrentProduct(this);bookNow(this)">📦 Book Now</button>
+<button onclick="setCurrentProduct(this);openVisitPopup()">🏪 Visit Shop</button>
+<button onclick="setCurrentProduct(this);addToCart(this)">🛒 Add to Cart</button></div>
+<div class="popup"><div class="popup-content"><span class="close-btn">×</span><h2>Power Bank</h2><p>10000mAh</p></div></div>
+</div>
+
+<div class="product-card" data-category="gadget">
+<div class="info-btn">i</div>
+<img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=400&q=80">
+<h3>Smart Plug</h3>
+<p>₹800</p>
+<div class="btns">
+<button onclick="setCurrentProduct(this);openPricePopup()">💰 Get Best Price</button>
+<button onclick="setCurrentProduct(this);bookNow(this)">📦 Book Now</button>
+<button onclick="setCurrentProduct(this);openVisitPopup()">🏪 Visit Shop</button>
+<button onclick="setCurrentProduct(this);addToCart(this)">🛒 Add to Cart</button></div>
+<div class="popup"><div class="popup-content"><span class="close-btn">×</span><h2>Smart Plug</h2><p>Remote Control</p></div></div>
+</div>
+
+<div class="product-card" data-category="gadget">
+<div class="info-btn">i</div>
+<img src="https://images.unsplash.com/photo-1593642632823-8f785ba67e45?auto=format&fit=crop&w=400&q=80">
+<h3>VR Headset</h3>
+<p>₹20,000</p>
+<div class="btns">
+<button onclick="setCurrentProduct(this);openPricePopup()">💰 Get Best Price</button>
+<button onclick="setCurrentProduct(this);bookNow(this)">📦 Book Now</button>
+<button onclick="setCurrentProduct(this);openVisitPopup()">🏪 Visit Shop</button>
+<button onclick="setCurrentProduct(this);addToCart(this)">🛒 Add to Cart</button></div>
+<div class="popup"><div class="popup-content"><span class="close-btn">×</span><h2>VR Headset</h2><p>Virtual Reality Experience</p></div></div>
+</div>
+
+</div>
+
+<script src="../../js/products.js"></script>
+
+
+<!-- PRICE POPUP -->
+<div id="pricePopup" class="popup">
+<div class="popup-content">
+<h3>Enter Your Price</h3>
+<input type="number" id="userPrice" placeholder="Enter price">
+<button onclick="submitPrice()">Submit</button>
+<button onclick="closePopup()">Close</button>
+</div>
+</div>
+
+<!-- VISIT POPUP -->
+<div id="visitPopup" class="popup">
+<div class="popup-content">
+<h3>Select Visit Time</h3>
+<input type="date" id="visitDate">
+<input type="time" id="visitTime">
+<button onclick="confirmVisit()">Confirm</button>
+<button onclick="closePopup()">Close</button>
+</div>
+</div>
+<script>
+localStorage.setItem("currentShop", "Smart Tech");
+</script>
+</body>
+</html>

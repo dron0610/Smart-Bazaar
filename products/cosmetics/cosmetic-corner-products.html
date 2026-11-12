@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>Cosmetic Corner</title>
+
+<!-- ✅ CSS LINKS -->
+<link rel="stylesheet" href="../../css/product.css">
+<link rel="stylesheet" href="../../css/style.css">
+
+</head>
+
+<body>
+
+<header class="navbar">
+
+<div class="logo">
+<h2>Smart Bazaar</h2>
+<p>Local Market Solutions</p>
+</div>
+
+<nav>
+<ul>
+<li><a class="active" href="../../index.html">Home</a></li>
+<li><a href="../../shops/cosmetics-shops.html">Shops</a></li>
+
+<li><a href="../../cart.html">Cart</a></li>
+<li><a href="../../customer-dashboard.html">Dashboard</a></li>
+<li><a href="../../parking.html">Parking</a></li>
+<li><a href="../../login.html" onclick="logout()">Logout</a></li>
+</ul>
+</nav>
+
+</header>
+
+<section class="shop-header">
+<h1>Cosmetic Corner</h1>
+<p>Your Daily Beauty Essentials 💄✨</p>
+</section>
+
+<!-- FILTER -->
+<div class="filter-bar">
+<button class="filter-btn active" data-category="all">All</button>
+<button class="filter-btn" data-category="makeup">Makeup</button>
+<button class="filter-btn" data-category="skincare">Skincare</button>
+<button class="filter-btn" data-category="hair">Haircare</button>
+<button class="filter-btn" data-category="tools">Tools</button>
+</div>
+
+<div class="product-grid">
+
+<!-- MAKEUP -->
+
+<div class="product-card" data-category="makeup">
+<div class="info-btn">i</div>
+<img src="https://images.unsplash.com/photo-1612817288484-6f916006741a?auto=format&fit=crop&w=400&q=80">
+<h3>Liquid Foundation</h3>
+<p>₹1,100</p>
+<div class="btns">
+<button onclick="setCurrentProduct(this);openPricePopup()">💰 Get Best Price</button>
+<button onclick="setCurrentProduct(this);bookNow(this)">📦 Book Now</button>
+<button onclick="setCurrentProduct(this);openVisitPopup()">🏪 Visit Shop</button>
+<button onclick="setCurrentProduct(this);addToCart(this)">🛒 Add to Cart</button></div>
+<div class="popup"><div class="popup-content"><span class="close-btn">×</span><h2>Foundation</h2><p>Flawless coverage</p></div></div>
+</div>
+
+<div class="product-card" data-category="makeup">
+<div class="info-btn">i</div>
+<img src="https://images.unsplash.com/photo-1629198735660-e39ea93f5f3f?auto=format&fit=crop&w=400&q=80">
+<h3>Lip Gloss</h3>
+<p>₹600</p>
+<div class="btns">
+<button onclick="setCurrentProduct(this);openPricePopup()">💰 Get Best Price</button>
+<button onclick="setCurrentProduct(this);bookNow(this)">📦 Book Now</button>
+<button onclick="setCurrentProduct(this);openVisitPopup()">🏪 Visit Shop</button>
+<button onclick="setCurrentProduct(this);addToCart(this)">🛒 Add to Cart</button></div>
+<div class="popup"><div class="popup-content"><span class="close-btn">×</span><h2>Lip Gloss</h2><p>Shiny finish</p></div></div>
+</div>
+
+<div class="product-card" data-category="makeup">
+<div class="info-btn">i</div>
+<img src="https://images.unsplash.com/photo-1586495777744-4413f21062fa?auto=format&fit=crop&w=400&q=80">
+<h3>Kajal Pencil</h3>
+<p>₹300</p>
+<div class="btns">
+<button onclick="setCurrentProduct(this);openPricePopup()">💰 Get Best Price</button>
+<button onclick="setCurrentProduct(this);bookNow(this)">📦 Book Now</button>
+<button onclick="setCurrentProduct(this);openVisitPopup()">🏪 Visit Shop</button>
+<button onclick="setCurrentProduct(this);addToCart(this)">🛒 Add to Cart</button></div>
+<div class="popup"><div class="popup-content"><span class="close-btn">×</span><h2>Kajal</h2><p>Smudge proof</p></div></div>
+</div>
+
+<div class="product-card" data-category="makeup">
+<div class="info-btn">i</div>
+<img src="https://images.unsplash.com/photo-1607604276583-eef5d076aa5f?auto=format&fit=crop&w=400&q=80">
+<h3>Eyeshadow Palette</h3>
+<p>₹1,600</p>
+<div class="btns">
+<button onclick="setCurrentProduct(this);openPricePopup()">💰 Get Best Price</button>
+<button onclick="setCurrentProduct(this);bookNow(this)">📦 Book Now</button>
+<button onclick="setCurrentProduct(this);openVisitPopup()">🏪 Visit Shop</button>
+<button onclick="setCurrentProduct(this);addToCart(this)">🛒 Add to Cart</button></div>
+<div class="popup"><div class="popup-content"><span class="close-btn">×</span><h2>Eyeshadow</h2><p>Multi-color palette</p></div></div>
+</div>
+
+<!-- SKINCARE -->
+
+<div class="product-card" data-category="skincare">
+<div class="info-btn">i</div>
+<img src="https://images.unsplash.com/photo-1596755389378-c31d21fd1273?auto=format&fit=crop&w=400&q=80">
+<h3>Hydrating Cream</h3>
+<p>₹850</p>
+<div class="btns">
+<button onclick="setCurrentProduct(this);openPricePopup()">💰 Get Best Price</button>
+<button onclick="setCurrentProduct(this);bookNow(this)">📦 Book Now</button>
+<button onclick="setCurrentProduct(this);openVisitPopup()">🏪 Visit Shop</button>
+<button onclick="setCurrentProduct(this);addToCart(this)">🛒 Add to Cart</button></div>
+<div class="popup"><div class="popup-content"><span class="close-btn">×</span><h2>Cream</h2><p>Soft skin formula</p></div></div>
+</div>
+
+<div class="product-card" data-category="skincare">
+<div class="info-btn">i</div>
+<img src="https://images.unsplash.com/photo-1556228578-8c89e6adf883?auto=format&fit=crop&w=400&q=80">
+<h3>Face Wash Gel</h3>
+<p>₹400</p>
+<div class="btns">
+<button onclick="setCurrentProduct(this);openPricePopup()">💰 Get Best Price</button>
+<button onclick="setCurrentProduct(this);bookNow(this)">📦 Book Now</button>
+<button onclick="setCurrentProduct(this);openVisitPopup()">🏪 Visit Shop</button>
+<button onclick="setCurrentProduct(this);addToCart(this)">🛒 Add to Cart</button></div>
+<div class="popup"><div class="popup-content"><span class="close-btn">×</span><h2>Face Wash</h2><p>Deep clean</p></div></div>
+</div>
+
+<div class="product-card" data-category="skincare">
+<div class="info-btn">i</div>
+<img src="https://images.unsplash.com/photo-1601049541289-9b1b7bbbfe19?auto=format&fit=crop&w=400&q=80">
+<h3>Sunscreen Cream</h3>
+<p>₹650</p>
+<div class="btns">
+<button onclick="setCurrentProduct(this);openPricePopup()">💰 Get Best Price</button>
+<button onclick="setCurrentProduct(this);bookNow(this)">📦 Book Now</button>
+<button onclick="setCurrentProduct(this);openVisitPopup()">🏪 Visit Shop</button>
+<button onclick="setCurrentProduct(this);addToCart(this)">🛒 Add to Cart</button></div>
+<div class="popup"><div class="popup-content"><span class="close-btn">×</span><h2>Sunscreen</h2><p>SPF 50+</p></div></div>
+</div>
+
+<div class="product-card" data-category="skincare">
+<div class="info-btn">i</div>
+<img src="https://images.unsplash.com/photo-1571781926291-c477ebfd024b?auto=format&fit=crop&w=400&q=80">
+<h3>Glow Serum</h3>
+<p>₹1,250</p>
+<div class="btns">
+<button onclick="setCurrentProduct(this);openPricePopup()">💰 Get Best Price</button>
+<button onclick="setCurrentProduct(this);bookNow(this)">📦 Book Now</button>
+<button onclick="setCurrentProduct(this);openVisitPopup()">🏪 Visit Shop</button>
+<button onclick="setCurrentProduct(this);addToCart(this)">🛒 Add to Cart</button></div>
+<div class="popup"><div class="popup-content"><span class="close-btn">×</span><h2>Serum</h2><p>Vitamin enriched</p></div></div>
+</div>
+
+<!-- HAIRCARE -->
+
+<div class="product-card" data-category="hair">
+<div class="info-btn">i</div>
+<img src="https://images.unsplash.com/photo-1595341595379-cf0f94c0b1c3?auto=format&fit=crop&w=400&q=80">
+<h3>Hair Shampoo</h3>
+<p>₹500</p>
+<div class="btns">
+<button onclick="setCurrentProduct(this);openPricePopup()">💰 Get Best Price</button>
+<button onclick="setCurrentProduct(this);bookNow(this)">📦 Book Now</button>
+<button onclick="setCurrentProduct(this);openVisitPopup()">🏪 Visit Shop</button>
+<button onclick="setCurrentProduct(this);addToCart(this)">🛒 Add to Cart</button></div>
+<div class="popup"><div class="popup-content"><span class="close-btn">×</span><h2>Shampoo</h2><p>Strong hair formula</p></div></div>
+</div>
+
+<div class="product-card" data-category="hair">
+<div class="info-btn">i</div>
+<img src="https://images.unsplash.com/photo-1600180758895-6b94519a8ba6?auto=format&fit=crop&w=400&q=80">
+<h3>Hair Oil</h3>
+<p>₹350</p>
+<div class="btns">
+<button onclick="setCurrentProduct(this);openPricePopup()">💰 Get Best Price</button>
+<button onclick="setCurrentProduct(this);bookNow(this)">📦 Book Now</button>
+<button onclick="setCurrentProduct(this);openVisitPopup()">🏪 Visit Shop</button>
+<button onclick="setCurrentProduct(this);addToCart(this)">🛒 Add to Cart</button></div>
+<div class="popup"><div class="popup-content"><span class="close-btn">×</span><h2>Hair Oil</h2><p>Nourishing oil</p></div></div>
+</div>
+
+<div class="product-card" data-category="hair">
+<div class="info-btn">i</div>
+<img src="https://images.unsplash.com/photo-1585386959984-a4155224a1c1?auto=format&fit=crop&w=400&q=80">
+<h3>Hair Straightener</h3>
+<p>₹2,400</p>
+<div class="btns">
+<button onclick="setCurrentProduct(this);openPricePopup()">💰 Get Best Price</button>
+<button onclick="setCurrentProduct(this);bookNow(this)">📦 Book Now</button>
+<button onclick="setCurrentProduct(this);openVisitPopup()">🏪 Visit Shop</button>
+<button onclick="setCurrentProduct(this);addToCart(this)">🛒 Add to Cart</button></div>
+<div class="popup"><div class="popup-content"><span class="close-btn">×</span><h2>Straightener</h2><p>Smooth styling</p></div></div>
+</div>
+
+<!-- TOOLS -->
+
+<div class="product-card" data-category="tools">
+<div class="info-btn">i</div>
+<img src="https://images.unsplash.com/photo-1598511727750-8d1c0e1a9e3e?auto=format&fit=crop&w=400&q=80">
+<h3>Hair Dryer</h3>
+<p>₹1,700</p>
+<div class="btns">
+<button onclick="setCurrentProduct(this);openPricePopup()">💰 Get Best Price</button>
+<button onclick="setCurrentProduct(this);bookNow(this)">📦 Book Now</button>
+<button onclick="setCurrentProduct(this);openVisitPopup()">🏪 Visit Shop</button>
+<button onclick="setCurrentProduct(this);addToCart(this)">🛒 Add to Cart</button></div>
+<div class="popup"><div class="popup-content"><span class="close-btn">×</span><h2>Dryer</h2><p>Quick dry</p></div></div>
+</div>
+
+<div class="product-card" data-category="tools">
+<div class="info-btn">i</div>
+<img src="https://images.unsplash.com/photo-1583241800698-6db3e43b4e2e?auto=format&fit=crop&w=400&q=80">
+<h3>Brush Set</h3>
+<p>₹1,300</p>
+<div class="btns">
+<button onclick="setCurrentProduct(this);openPricePopup()">💰 Get Best Price</button>
+<button onclick="setCurrentProduct(this);bookNow(this)">📦 Book Now</button>
+<button onclick="setCurrentProduct(this);openVisitPopup()">🏪 Visit Shop</button>
+<button onclick="setCurrentProduct(this);addToCart(this)">🛒 Add to Cart</button></div>
+<div class="popup"><div class="popup-content"><span class="close-btn">×</span><h2>Brush Set</h2><p>Makeup tools</p></div></div>
+</div>
+
+<div class="product-card" data-category="tools">
+<div class="info-btn">i</div>
+<img src="https://images.unsplash.com/photo-1619451688673-1b8c5c4b7e3d?auto=format&fit=crop&w=400&q=80">
+<h3>Beauty Blender</h3>
+<p>₹300</p>
+<div class="btns">
+<button onclick="setCurrentProduct(this);openPricePopup()">💰 Get Best Price</button>
+<button onclick="setCurrentProduct(this);bookNow(this)">📦 Book Now</button>
+<button onclick="setCurrentProduct(this);openVisitPopup()">🏪 Visit Shop</button>
+<button onclick="setCurrentProduct(this);addToCart(this)">🛒 Add to Cart</button></div>
+<div class="popup"><div class="popup-content"><span class="close-btn">×</span><h2>Blender</h2><p>Soft sponge</p></div></div>
+</div>
+
+</div>
+
+<script src="../../js/products.js"></script>
+
+<!-- PRICE POPUP -->
+<div id="pricePopup" class="popup">
+<div class="popup-content">
+<h3>Enter Your Price</h3>
+<input type="number" id="userPrice" placeholder="Enter price">
+<button onclick="submitPrice()">Submit</button>
+<button onclick="closePopup()">Close</button>
+</div>
+</div>
+
+<!-- VISIT POPUP -->
+<div id="visitPopup" class="popup">
+<div class="popup-content">
+<h3>Select Visit Time</h3>
+<input type="date" id="visitDate">
+<input type="time" id="visitTime">
+<button onclick="confirmVisit()">Confirm</button>
+<button onclick="closePopup()">Close</button>
+</div>
+</div>
+<script>
+localStorage.setItem("currentShop", "Cosmetic Corner");
+</script>
+</body>
+</html>

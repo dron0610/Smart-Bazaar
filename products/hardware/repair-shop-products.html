@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>Repair Shop</title>
+
+<link rel="stylesheet" href="../../css/product.css">
+<link rel="stylesheet" href="../../css/style.css">
+
+</head>
+
+<body>
+
+<header class="navbar">
+
+<div class="logo">
+<h2>Smart Bazaar</h2>
+<p>Local Market Solutions</p>
+</div>
+
+<nav>
+<ul>
+<li><a class="active" href="../../index.html">Home</a></li>
+<li><a href="../../shops/hardware-shops.html">Shops</a></li>
+
+<li><a href="../../cart.html">Cart</a></li>
+<li><a href="../../customer-dashboard.html">Dashboard</a></li>
+<li><a href="../../parking.html">Parking</a></li>
+<li><a href="../../login.html" onclick="logout()">Logout</a></li>
+</ul>
+</nav>
+
+</header>
+
+<section class="shop-header">
+<h1>Repair Shop</h1>
+<p>Fix Everything Easily 🔧</p>
+</section>
+
+<!-- FILTER -->
+<div class="filter-bar">
+<button class="filter-btn active" data-category="all">All</button>
+<button class="filter-btn" data-category="mobile">Mobile Repair</button>
+<button class="filter-btn" data-category="electric">Electrical</button>
+<button class="filter-btn" data-category="home">Home Repair</button>
+<button class="filter-btn" data-category="tools">Tools</button>
+</div>
+
+<div class="product-grid">
+
+<!-- MOBILE REPAIR -->
+<div class="product-card" data-category="mobile">
+<div class="info-btn">i</div>
+<img src="https://images.unsplash.com/photo-1580910051074-3eb694886505?auto=format&fit=crop&w=400&q=80">
+<h3>Screen Replacement</h3>
+<p>₹1500</p>
+<div class="btns">
+<button onclick="setCurrentProduct(this);openPricePopup()">💰 Get Best Price</button>
+<button onclick="setCurrentProduct(this);bookNow(this)">📦 Book Now</button>
+<button onclick="setCurrentProduct(this);openVisitPopup()">🏪 Visit Shop</button>
+<button onclick="setCurrentProduct(this);addToCart(this)">🛒 Add to Cart</button></div>
+<div class="popup"><div class="popup-content"><span class="close-btn">×</span><h2>Screen Repair</h2><p>Mobile screen fixing service</p></div></div>
+</div>
+
+<div class="product-card" data-category="mobile">
+<div class="info-btn">i</div>
+<img src="https://images.unsplash.com/photo-1510557880182-3eec7c4d47f7?auto=format&fit=crop&w=400&q=80">
+<h3>Battery Replacement</h3>
+<p>₹800</p>
+<div class="btns">
+<button onclick="setCurrentProduct(this);openPricePopup()">💰 Get Best Price</button>
+<button onclick="setCurrentProduct(this);bookNow(this)">📦 Book Now</button>
+<button onclick="setCurrentProduct(this);openVisitPopup()">🏪 Visit Shop</button>
+<button onclick="setCurrentProduct(this);addToCart(this)">🛒 Add to Cart</button></div>
+<div class="popup"><div class="popup-content"><span class="close-btn">×</span><h2>Battery</h2><p>Quick battery replacement</p></div></div>
+</div>
+
+<!-- ELECTRICAL -->
+<div class="product-card" data-category="electric">
+<div class="info-btn">i</div>
+<img src="https://images.unsplash.com/photo-1581092334421-0c4c3acd3789?auto=format&fit=crop&w=400&q=80">
+<h3>Fan Repair</h3>
+<p>₹500</p>
+<div class="btns">
+<button onclick="setCurrentProduct(this);openPricePopup()">💰 Get Best Price</button>
+<button onclick="setCurrentProduct(this);bookNow(this)">📦 Book Now</button>
+<button onclick="setCurrentProduct(this);openVisitPopup()">🏪 Visit Shop</button>
+<button onclick="setCurrentProduct(this);addToCart(this)">🛒 Add to Cart</button></div>
+<div class="popup"><div class="popup-content"><span class="close-btn">×</span><h2>Fan Repair</h2><p>Fix fan issues</p></div></div>
+</div>
+
+<div class="product-card" data-category="electric">
+<div class="info-btn">i</div>
+<img src="https://images.unsplash.com/photo-1593941707882-a56bbc8c3a3a?auto=format&fit=crop&w=400&q=80">
+<h3>Switch Repair</h3>
+<p>₹200</p>
+<div class="btns">
+<button onclick="setCurrentProduct(this);openPricePopup()">💰 Get Best Price</button>
+<button onclick="setCurrentProduct(this);bookNow(this)">📦 Book Now</button>
+<button onclick="setCurrentProduct(this);openVisitPopup()">🏪 Visit Shop</button>
+<button onclick="setCurrentProduct(this);addToCart(this)">🛒 Add to Cart</button></div>
+<div class="popup"><div class="popup-content"><span class="close-btn">×</span><h2>Switch</h2><p>Fix wiring issues</p></div></div>
+</div>
+
+<!-- HOME REPAIR -->
+<div class="product-card" data-category="home">
+<div class="info-btn">i</div>
+<img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=400&q=80">
+<h3>Plumbing Service</h3>
+<p>₹700</p>
+<div class="btns">
+<button onclick="setCurrentProduct(this);openPricePopup()">💰 Get Best Price</button>
+<button onclick="setCurrentProduct(this);bookNow(this)">📦 Book Now</button>
+<button onclick="setCurrentProduct(this);openVisitPopup()">🏪 Visit Shop</button>
+<button onclick="setCurrentProduct(this);addToCart(this)">🛒 Add to Cart</button></div>
+<div class="popup"><div class="popup-content"><span class="close-btn">×</span><h2>Plumbing</h2><p>Fix leakage & pipes</p></div></div>
+</div>
+
+<div class="product-card" data-category="home">
+<div class="info-btn">i</div>
+<img src="https://images.unsplash.com/photo-1600607687644-c7171b42498b?auto=format&fit=crop&w=400&q=80">
+<h3>Door Repair</h3>
+<p>₹400</p>
+<div class="btns">
+<button onclick="setCurrentProduct(this);openPricePopup()">💰 Get Best Price</button>
+<button onclick="setCurrentProduct(this);bookNow(this)">📦 Book Now</button>
+<button onclick="setCurrentProduct(this);openVisitPopup()">🏪 Visit Shop</button>
+<button onclick="setCurrentProduct(this);addToCart(this)">🛒 Add to Cart</button></div>
+<div class="popup"><div class="popup-content"><span class="close-btn">×</span><h2>Door Fix</h2><p>Repair hinges & locks</p></div></div>
+</div>
+
+<!-- TOOLS -->
+<div class="product-card" data-category="tools">
+<div class="info-btn">i</div>
+<img src="https://images.unsplash.com/photo-1603791440384-56cd371ee9a7?auto=format&fit=crop&w=400&q=80">
+<h3>Repair Tool Kit</h3>
+<p>₹1500</p>
+<div class="btns">
+<button onclick="setCurrentProduct(this);openPricePopup()">💰 Get Best Price</button>
+<button onclick="setCurrentProduct(this);bookNow(this)">📦 Book Now</button>
+<button onclick="setCurrentProduct(this);openVisitPopup()">🏪 Visit Shop</button>
+<button onclick="setCurrentProduct(this);addToCart(this)">🛒 Add to Cart</button></div>
+<div class="popup"><div class="popup-content"><span class="close-btn">×</span><h2>Tool Kit</h2><p>All-in-one repair kit</p></div></div>
+</div>
+
+<div class="product-card" data-category="tools">
+<div class="info-btn">i</div>
+<img src="https://images.unsplash.com/photo-1581093458791-9f3c3900f6c3?auto=format&fit=crop&w=400&q=80">
+<h3>Hammer</h3>
+<p>₹300</p>
+<div class="btns">
+<button onclick="setCurrentProduct(this);openPricePopup()">💰 Get Best Price</button>
+<button onclick="setCurrentProduct(this);bookNow(this)">📦 Book Now</button>
+<button onclick="setCurrentProduct(this);openVisitPopup()">🏪 Visit Shop</button>
+<button onclick="setCurrentProduct(this);addToCart(this)">🛒 Add to Cart</button></div>
+<div class="popup"><div class="popup-content"><span class="close-btn">×</span><h2>Hammer</h2><p>Basic tool</p></div></div>
+</div>
+
+<!-- EXTRA -->
+<div class="product-card" data-category="mobile">
+<div class="info-btn">i</div>
+<img src="https://images.unsplash.com/photo-1512496015851-a90fb38ba796?auto=format&fit=crop&w=400&q=80">
+<h3>Charging Port Repair</h3>
+<p>₹600</p>
+<div class="btns">
+<button onclick="setCurrentProduct(this);openPricePopup()">💰 Get Best Price</button>
+<button onclick="setCurrentProduct(this);bookNow(this)">📦 Book Now</button>
+<button onclick="setCurrentProduct(this);openVisitPopup()">🏪 Visit Shop</button>
+<button onclick="setCurrentProduct(this);addToCart(this)">🛒 Add to Cart</button></div>
+<div class="popup"><div class="popup-content"><span class="close-btn">×</span><h2>Charging Port</h2><p>Fix charging issue</p></div></div>
+</div>
+
+<div class="product-card" data-category="home">
+<div class="info-btn">i</div>
+<img src="https://images.unsplash.com/photo-1581578017421-d94d0c6e51a0?auto=format&fit=crop&w=400&q=80">
+<h3>Pipe Fixing</h3>
+<p>₹500</p>
+<div class="btns">
+<button onclick="setCurrentProduct(this);openPricePopup()">💰 Get Best Price</button>
+<button onclick="setCurrentProduct(this);bookNow(this)">📦 Book Now</button>
+<button onclick="setCurrentProduct(this);openVisitPopup()">🏪 Visit Shop</button>
+<button onclick="setCurrentProduct(this);addToCart(this)">🛒 Add to Cart</button></div>
+<div class="popup"><div class="popup-content"><span class="close-btn">×</span><h2>Pipe</h2><p>Leak repair service</p></div></div>
+</div>
+
+</div>
+
+<script src="../../js/products.js"></script>
+
+<!-- PRICE POPUP -->
+<div id="pricePopup" class="popup">
+<div class="popup-content">
+<h3>Enter Your Price</h3>
+<input type="number" id="userPrice" placeholder="Enter price">
+<button onclick="submitPrice()">Submit</button>
+<button onclick="closePopup()">Close</button>
+</div>
+</div>
+
+<!-- VISIT POPUP -->
+<div id="visitPopup" class="popup">
+<div class="popup-content">
+<h3>Select Visit Time</h3>
+<input type="date" id="visitDate">
+<input type="time" id="visitTime">
+<button onclick="confirmVisit()">Confirm</button>
+<button onclick="closePopup()">Close</button>
+</div>
+</div>
+<script>
+localStorage.setItem("currentShop", "Repair Shop");
+</script>
+</body>
+</html>

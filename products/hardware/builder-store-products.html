@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>Builder Store</title>
+
+<!-- ✅ CSS -->
+<link rel="stylesheet" href="../../css/product.css">
+<link rel="stylesheet" href="../../css/style.css">
+
+</head>
+
+<body>
+
+<header class="navbar">
+
+<div class="logo">
+<h2>Smart Bazaar</h2>
+<p>Local Market Solutions</p>
+</div>
+
+<nav>
+<ul>
+<li><a class="active" href="../../index.html">Home</a></li>
+<li><a href="../../shops/hardware-shops.html">Shops</a></li>
+
+<li><a href="../../cart.html">Cart</a></li>
+<li><a href="../../customer-dashboard.html">Dashboard</a></li>
+<li><a href="../../parking.html">Parking</a></li>
+<li><a href="../../login.html" onclick="logout()">Logout</a></li>
+</ul>
+</nav>
+
+</header>
+
+<section class="shop-header">
+<h1>Builder Store</h1>
+<p>Professional Construction Materials 🏗️</p>
+</section>
+
+<!-- FILTER -->
+<div class="filter-bar">
+<button class="filter-btn active" data-category="all">All</button>
+<button class="filter-btn" data-category="tools">Tools</button>
+<button class="filter-btn" data-category="cement">Cement</button>
+<button class="filter-btn" data-category="paint">Paint</button>
+<button class="filter-btn" data-category="electrical">Electrical</button>
+<button class="filter-btn" data-category="plumbing">Plumbing</button>
+</div>
+
+<div class="product-grid">
+
+<!-- TOOLS -->
+<div class="product-card" data-category="tools">
+<div class="info-btn">i</div>
+<img src="https://images.unsplash.com/photo-1581093458791-9f3c3900f6c3?auto=format&fit=crop&w=400&q=80">
+<h3>Heavy Hammer</h3>
+<p>₹450</p>
+<div class="btns">
+<button onclick="setCurrentProduct(this);openPricePopup()">💰 Get Best Price</button>
+<button onclick="setCurrentProduct(this);bookNow(this)">📦 Book Now</button>
+<button onclick="setCurrentProduct(this);openVisitPopup()">🏪 Visit Shop</button>
+<button onclick="setCurrentProduct(this);addToCart(this)">🛒 Add to Cart</button></div>
+<div class="popup"><div class="popup-content"><span class="close-btn">×</span><h2>Hammer</h2><p>Industrial quality</p></div></div>
+</div>
+
+<div class="product-card" data-category="tools">
+<div class="info-btn">i</div>
+<img src="https://images.unsplash.com/photo-1581092160619-6c4e6bb5f7d4?auto=format&fit=crop&w=400&q=80">
+<h3>Drill Machine</h3>
+<p>₹2500</p>
+<div class="btns">
+<button onclick="setCurrentProduct(this);openPricePopup()">💰 Get Best Price</button>
+<button onclick="setCurrentProduct(this);bookNow(this)">📦 Book Now</button>
+<button onclick="setCurrentProduct(this);openVisitPopup()">🏪 Visit Shop</button>
+<button onclick="setCurrentProduct(this);addToCart(this)">🛒 Add to Cart</button></div>
+<div class="popup"><div class="popup-content"><span class="close-btn">×</span><h2>Drill</h2><p>Powerful drilling</p></div></div>
+</div>
+
+<!-- CEMENT -->
+<div class="product-card" data-category="cement">
+<div class="info-btn">i</div>
+<img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=400&q=80">
+<h3>Grey Cement</h3>
+<p>₹370</p>
+<div class="btns">
+<button onclick="setCurrentProduct(this);openPricePopup()">💰 Get Best Price</button>
+<button onclick="setCurrentProduct(this);bookNow(this)">📦 Book Now</button>
+<button onclick="setCurrentProduct(this);openVisitPopup()">🏪 Visit Shop</button>
+<button onclick="setCurrentProduct(this);addToCart(this)">🛒 Add to Cart</button></div>
+<div class="popup"><div class="popup-content"><span class="close-btn">×</span><h2>Cement</h2><p>Strong bonding</p></div></div>
+</div>
+
+<div class="product-card" data-category="cement">
+<div class="info-btn">i</div>
+<img src="https://images.unsplash.com/photo-1581093588401-16f3b7d10a4b?auto=format&fit=crop&w=400&q=80">
+<h3>White Cement</h3>
+<p>₹420</p>
+<div class="btns">
+<button onclick="setCurrentProduct(this);openPricePopup()">💰 Get Best Price</button>
+<button onclick="setCurrentProduct(this);bookNow(this)">📦 Book Now</button>
+<button onclick="setCurrentProduct(this);openVisitPopup()">🏪 Visit Shop</button>
+<button onclick="setCurrentProduct(this);addToCart(this)">🛒 Add to Cart</button></div>
+<div class="popup"><div class="popup-content"><span class="close-btn">×</span><h2>White Cement</h2><p>Smooth finish</p></div></div>
+</div>
+
+<!-- PAINT -->
+<div class="product-card" data-category="paint">
+<div class="info-btn">i</div>
+<img src="https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?auto=format&fit=crop&w=400&q=80">
+<h3>Wall Paint Bucket</h3>
+<p>₹950</p>
+<div class="btns">
+<button onclick="setCurrentProduct(this);openPricePopup()">💰 Get Best Price</button>
+<button onclick="setCurrentProduct(this);bookNow(this)">📦 Book Now</button>
+<button onclick="setCurrentProduct(this);openVisitPopup()">🏪 Visit Shop</button>
+<button onclick="setCurrentProduct(this);addToCart(this)">🛒 Add to Cart</button></div>
+<div class="popup"><div class="popup-content"><span class="close-btn">×</span><h2>Paint</h2><p>Premium quality</p></div></div>
+</div>
+
+<div class="product-card" data-category="paint">
+<div class="info-btn">i</div>
+<img src="https://images.unsplash.com/photo-1562259949-e8e7689d7828?auto=format&fit=crop&w=400&q=80">
+<h3>Paint Roller</h3>
+<p>₹300</p>
+<div class="btns">
+<button onclick="setCurrentProduct(this);openPricePopup()">💰 Get Best Price</button>
+<button onclick="setCurrentProduct(this);bookNow(this)">📦 Book Now</button>
+<button onclick="setCurrentProduct(this);openVisitPopup()">🏪 Visit Shop</button>
+<button onclick="setCurrentProduct(this);addToCart(this)">🛒 Add to Cart</button></div>
+<div class="popup"><div class="popup-content"><span class="close-btn">×</span><h2>Roller</h2><p>Easy painting</p></div></div>
+</div>
+
+<!-- ELECTRICAL -->
+<div class="product-card" data-category="electrical">
+<div class="info-btn">i</div>
+<img src="https://images.unsplash.com/photo-1581092334421-0c4c3acd3789?auto=format&fit=crop&w=400&q=80">
+<h3>LED Bulb</h3>
+<p>₹120</p>
+<div class="btns">
+<button onclick="setCurrentProduct(this);openPricePopup()">💰 Get Best Price</button>
+<button onclick="setCurrentProduct(this);bookNow(this)">📦 Book Now</button>
+<button onclick="setCurrentProduct(this);openVisitPopup()">🏪 Visit Shop</button>
+<button onclick="setCurrentProduct(this);addToCart(this)">🛒 Add to Cart</button></div>
+<div class="popup"><div class="popup-content"><span class="close-btn">×</span><h2>LED</h2><p>Energy saving</p></div></div>
+</div>
+
+<div class="product-card" data-category="electrical">
+<div class="info-btn">i</div>
+<img src="https://images.unsplash.com/photo-1581091870627-3a3f8d0f8e8c?auto=format&fit=crop&w=400&q=80">
+<h3>Extension Board</h3>
+<p>₹350</p>
+<div class="btns">
+<button onclick="setCurrentProduct(this);openPricePopup()">💰 Get Best Price</button>
+<button onclick="setCurrentProduct(this);bookNow(this)">📦 Book Now</button>
+<button onclick="setCurrentProduct(this);openVisitPopup()">🏪 Visit Shop</button>
+<button onclick="setCurrentProduct(this);addToCart(this)">🛒 Add to Cart</button></div>
+<div class="popup"><div class="popup-content"><span class="close-btn">×</span><h2>Board</h2><p>Multi plug</p></div></div>
+</div>
+
+<!-- PLUMBING -->
+<div class="product-card" data-category="plumbing">
+<div class="info-btn">i</div>
+<img src="https://images.unsplash.com/photo-1581578017421-d94d0c6e51a0?auto=format&fit=crop&w=400&q=80">
+<h3>Water Pipe</h3>
+<p>₹600</p>
+<div class="btns">
+<button onclick="setCurrentProduct(this);openPricePopup()">💰 Get Best Price</button>
+<button onclick="setCurrentProduct(this);bookNow(this)">📦 Book Now</button>
+<button onclick="setCurrentProduct(this);openVisitPopup()">🏪 Visit Shop</button>
+<button onclick="setCurrentProduct(this);addToCart(this)">🛒 Add to Cart</button></div>
+<div class="popup"><div class="popup-content"><span class="close-btn">×</span><h2>Pipe</h2><p>Durable PVC</p></div></div>
+</div>
+
+<div class="product-card" data-category="plumbing">
+<div class="info-btn">i</div>
+<img src="https://images.unsplash.com/photo-1581578017421-d94d0c6e51a0?auto=format&fit=crop&w=400&q=80">
+<h3>Tap Set</h3>
+<p>₹450</p>
+<div class="btns">
+<button onclick="setCurrentProduct(this);openPricePopup()">💰 Get Best Price</button>
+<button onclick="setCurrentProduct(this);bookNow(this)">📦 Book Now</button>
+<button onclick="setCurrentProduct(this);openVisitPopup()">🏪 Visit Shop</button>
+<button onclick="setCurrentProduct(this);addToCart(this)">🛒 Add to Cart</button></div>
+<div class="popup"><div class="popup-content"><span class="close-btn">×</span><h2>Tap</h2><p>Leak proof</p></div></div>
+</div>
+
+<!-- EXTRA -->
+<div class="product-card" data-category="tools">
+<div class="info-btn">i</div>
+<img src="https://images.unsplash.com/photo-1581093588401-16f3b7d10a4b?auto=format&fit=crop&w=400&q=80">
+<h3>Tool Kit</h3>
+<p>₹1500</p>
+<div class="btns">
+<button onclick="setCurrentProduct(this);openPricePopup()">💰 Get Best Price</button>
+<button onclick="setCurrentProduct(this);bookNow(this)">📦 Book Now</button>
+<button onclick="setCurrentProduct(this);openVisitPopup()">🏪 Visit Shop</button>
+<button onclick="setCurrentProduct(this);addToCart(this)">🛒 Add to Cart</button></div>
+<div class="popup"><div class="popup-content"><span class="close-btn">×</span><h2>Tool Kit</h2><p>All-in-one kit</p></div></div>
+</div>
+
+<div class="product-card" data-category="paint">
+<div class="info-btn">i</div>
+<img src="https://images.unsplash.com/photo-1562259949-e8e7689d7828?auto=format&fit=crop&w=400&q=80">
+<h3>Wall Putty</h3>
+<p>₹320</p>
+<div class="btns">
+<button onclick="setCurrentProduct(this);openPricePopup()">💰 Get Best Price</button>
+<button onclick="setCurrentProduct(this);bookNow(this)">📦 Book Now</button>
+<button onclick="setCurrentProduct(this);openVisitPopup()">🏪 Visit Shop</button>
+<button onclick="setCurrentProduct(this);addToCart(this)">🛒 Add to Cart</button></div>
+<div class="popup"><div class="popup-content"><span class="close-btn">×</span><h2>Putty</h2><p>Smooth finish</p></div></div>
+</div>
+
+</div>
+
+<script src="../../js/products.js"></script>
+
+<!-- PRICE POPUP -->
+<div id="pricePopup" class="popup">
+<div class="popup-content">
+<h3>Enter Your Price</h3>
+<input type="number" id="userPrice" placeholder="Enter price">
+<button onclick="submitPrice()">Submit</button>
+<button onclick="closePopup()">Close</button>
+</div>
+</div>
+
+<!-- VISIT POPUP -->
+<div id="visitPopup" class="popup">
+<div class="popup-content">
+<h3>Select Visit Time</h3>
+<input type="date" id="visitDate">
+<input type="time" id="visitTime">
+<button onclick="confirmVisit()">Confirm</button>
+<button onclick="closePopup()">Close</button>
+</div>
+</div>
+<script>
+localStorage.setItem("currentShop", "Builder Store");
+</script>
+</body>
+</html>

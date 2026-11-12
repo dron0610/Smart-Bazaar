@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>Tool Point</title>
+
+<link rel="stylesheet" href="../../css/product.css">
+<link rel="stylesheet" href="../../css/style.css">
+
+</head>
+
+<body>
+
+<header class="navbar">
+
+<div class="logo">
+<h2>Smart Bazaar</h2>
+<p>Local Market Solutions</p>
+</div>
+
+<nav>
+<ul>
+<li><a class="active" href="../../index.html">Home</a></li>
+<li><a href="../../shops/hardware-shops.html">Shops</a></li>
+
+<li><a href="../../cart.html">Cart</a></li>
+<li><a href="../../customer-dashboard.html">Dashboard</a></li>
+<li><a href="../../parking.html">Parking</a></li>
+<li><a href="../../login.html" onclick="logout()">Logout</a></li>
+</ul>
+</nav>
+
+</header>
+<section class="shop-header">
+<h1>Tool Point</h1>
+<p>Smart Tools for Everyday Work 🛠️</p>
+</section>
+
+<!-- FILTER -->
+<div class="filter-bar">
+<button class="filter-btn active" data-category="all">All</button>
+<button class="filter-btn" data-category="hand">Hand Tools</button>
+<button class="filter-btn" data-category="power">Power Tools</button>
+<button class="filter-btn" data-category="measuring">Measuring</button>
+<button class="filter-btn" data-category="safety">Safety</button>
+<button class="filter-btn" data-category="cutting">Cutting</button>
+</div>
+
+<div class="product-grid">
+
+<!-- HAND TOOLS -->
+<div class="product-card" data-category="hand">
+<div class="info-btn">i</div>
+<img src="https://images.unsplash.com/photo-1597423491061-9e7b1c4c0f8d?auto=format&fit=crop&w=400&q=80">
+<h3>Pliers</h3>
+<p>₹220</p>
+<div class="btns">
+<button onclick="setCurrentProduct(this);openPricePopup()">💰 Get Best Price</button>
+<button onclick="setCurrentProduct(this);bookNow(this)">📦 Book Now</button>
+<button onclick="setCurrentProduct(this);openVisitPopup()">🏪 Visit Shop</button>
+<button onclick="setCurrentProduct(this);addToCart(this)">🛒 Add to Cart</button></div>
+<div class="popup"><div class="popup-content"><span class="close-btn">×</span><h2>Pliers</h2><p>Grip & cut easily</p></div></div>
+</div>
+
+<div class="product-card" data-category="hand">
+<div class="info-btn">i</div>
+<img src="https://images.unsplash.com/photo-1603791440384-56cd371ee9a7?auto=format&fit=crop&w=400&q=80">
+<h3>Spanner</h3>
+<p>₹300</p>
+<div class="btns">
+<button onclick="setCurrentProduct(this);openPricePopup()">💰 Get Best Price</button>
+<button onclick="setCurrentProduct(this);bookNow(this)">📦 Book Now</button>
+<button onclick="setCurrentProduct(this);openVisitPopup()">🏪 Visit Shop</button>
+<button onclick="setCurrentProduct(this);addToCart(this)">🛒 Add to Cart</button></div>
+<div class="popup"><div class="popup-content"><span class="close-btn">×</span><h2>Spanner</h2><p>Adjustable tool</p></div></div>
+</div>
+
+<!-- POWER TOOLS -->
+<div class="product-card" data-category="power">
+<div class="info-btn">i</div>
+<img src="https://images.unsplash.com/photo-1581093588401-16f3b7d10a4b?auto=format&fit=crop&w=400&q=80">
+<h3>Mini Drill</h3>
+<p>₹1800</p>
+<div class="btns">
+<button onclick="setCurrentProduct(this);openPricePopup()">💰 Get Best Price</button>
+<button onclick="setCurrentProduct(this);bookNow(this)">📦 Book Now</button>
+<button onclick="setCurrentProduct(this);openVisitPopup()">🏪 Visit Shop</button>
+<button onclick="setCurrentProduct(this);addToCart(this)">🛒 Add to Cart</button></div>
+<div class="popup"><div class="popup-content"><span class="close-btn">×</span><h2>Drill</h2><p>Compact drilling tool</p></div></div>
+</div>
+
+<div class="product-card" data-category="power">
+<div class="info-btn">i</div>
+<img src="https://images.unsplash.com/photo-1581091870627-3a3f8d0f8e8c?auto=format&fit=crop&w=400&q=80">
+<h3>Grinder</h3>
+<p>₹2800</p>
+<div class="btns">
+<button onclick="setCurrentProduct(this);openPricePopup()">💰 Get Best Price</button>
+<button onclick="setCurrentProduct(this);bookNow(this)">📦 Book Now</button>
+<button onclick="setCurrentProduct(this);openVisitPopup()">🏪 Visit Shop</button>
+<button onclick="setCurrentProduct(this);addToCart(this)">🛒 Add to Cart</button></div>
+<div class="popup"><div class="popup-content"><span class="close-btn">×</span><h2>Grinder</h2><p>Multi-use tool</p></div></div>
+</div>
+
+<!-- MEASURING -->
+<div class="product-card" data-category="measuring">
+<div class="info-btn">i</div>
+<img src="https://images.unsplash.com/photo-1581092334421-0c4c3acd3789?auto=format&fit=crop&w=400&q=80">
+<h3>Measuring Tape</h3>
+<p>₹120</p>
+<div class="btns">
+<button onclick="setCurrentProduct(this);openPricePopup()">💰 Get Best Price</button>
+<button onclick="setCurrentProduct(this);bookNow(this)">📦 Book Now</button>
+<button onclick="setCurrentProduct(this);openVisitPopup()">🏪 Visit Shop</button>
+<button onclick="setCurrentProduct(this);addToCart(this)">🛒 Add to Cart</button></div>
+<div class="popup"><div class="popup-content"><span class="close-btn">×</span><h2>Tape</h2><p>Accurate measurement</p></div></div>
+</div>
+
+<div class="product-card" data-category="measuring">
+<div class="info-btn">i</div>
+<img src="https://images.unsplash.com/photo-1597423491061-9e7b1c4c0f8d?auto=format&fit=crop&w=400&q=80">
+<h3>Level Tool</h3>
+<p>₹250</p>
+<div class="btns">
+<button onclick="setCurrentProduct(this);openPricePopup()">💰 Get Best Price</button>
+<button onclick="setCurrentProduct(this);bookNow(this)">📦 Book Now</button>
+<button onclick="setCurrentProduct(this);openVisitPopup()">🏪 Visit Shop</button>
+<button onclick="setCurrentProduct(this);addToCart(this)">🛒 Add to Cart</button></div>
+<div class="popup"><div class="popup-content"><span class="close-btn">×</span><h2>Level</h2><p>Perfect alignment</p></div></div>
+</div>
+
+<!-- SAFETY -->
+<div class="product-card" data-category="safety">
+<div class="info-btn">i</div>
+<img src="https://images.unsplash.com/photo-1604147706283-3a4b2a3f47a1?auto=format&fit=crop&w=400&q=80">
+<h3>Helmet</h3>
+<p>₹280</p>
+<div class="btns">
+<button onclick="setCurrentProduct(this);openPricePopup()">💰 Get Best Price</button>
+<button onclick="setCurrentProduct(this);bookNow(this)">📦 Book Now</button>
+<button onclick="setCurrentProduct(this);openVisitPopup()">🏪 Visit Shop</button>
+<button onclick="setCurrentProduct(this);addToCart(this)">🛒 Add to Cart</button></div>
+<div class="popup"><div class="popup-content"><span class="close-btn">×</span><h2>Helmet</h2><p>Safety gear</p></div></div>
+</div>
+
+<div class="product-card" data-category="safety">
+<div class="info-btn">i</div>
+<img src="https://images.unsplash.com/photo-1581578017421-d94d0c6e51a0?auto=format&fit=crop&w=400&q=80">
+<h3>Gloves</h3>
+<p>₹150</p>
+<div class="btns">
+<button onclick="setCurrentProduct(this);openPricePopup()">💰 Get Best Price</button>
+<button onclick="setCurrentProduct(this);bookNow(this)">📦 Book Now</button>
+<button onclick="setCurrentProduct(this);openVisitPopup()">🏪 Visit Shop</button>
+<button onclick="setCurrentProduct(this);addToCart(this)">🛒 Add to Cart</button></div>
+<div class="popup"><div class="popup-content"><span class="close-btn">×</span><h2>Gloves</h2><p>Hand protection</p></div></div>
+</div>
+
+<!-- CUTTING -->
+<div class="product-card" data-category="cutting">
+<div class="info-btn">i</div>
+<img src="https://images.unsplash.com/photo-1581093588401-16f3b7d10a4b?auto=format&fit=crop&w=400&q=80">
+<h3>Cutter Tool</h3>
+<p>₹900</p>
+<div class="btns">
+<button onclick="setCurrentProduct(this);openPricePopup()">💰 Get Best Price</button>
+<button onclick="setCurrentProduct(this);bookNow(this)">📦 Book Now</button>
+<button onclick="setCurrentProduct(this);openVisitPopup()">🏪 Visit Shop</button>
+<button onclick="setCurrentProduct(this);addToCart(this)">🛒 Add to Cart</button></div>
+<div class="popup"><div class="popup-content"><span class="close-btn">×</span><h2>Cutter</h2><p>Sharp cutting tool</p></div></div>
+</div>
+
+<div class="product-card" data-category="cutting">
+<div class="info-btn">i</div>
+<img src="https://images.unsplash.com/photo-1581091870627-3a3f8d0f8e8c?auto=format&fit=crop&w=400&q=80">
+<h3>Electric Saw</h3>
+<p>₹3000</p>
+<div class="btns">
+<button onclick="setCurrentProduct(this);openPricePopup()">💰 Get Best Price</button>
+<button onclick="setCurrentProduct(this);bookNow(this)">📦 Book Now</button>
+<button onclick="setCurrentProduct(this);openVisitPopup()">🏪 Visit Shop</button>
+<button onclick="setCurrentProduct(this);addToCart(this)">🛒 Add to Cart</button></div>
+<div class="popup"><div class="popup-content"><span class="close-btn">×</span><h2>Saw</h2><p>Fast cutting</p></div></div>
+</div>
+
+<!-- EXTRA -->
+<div class="product-card" data-category="power">
+<div class="info-btn">i</div>
+<img src="https://images.unsplash.com/photo-1581092160619-6c4e6bb5f7d4?auto=format&fit=crop&w=400&q=80">
+<h3>Tool Kit</h3>
+<p>₹1500</p>
+<div class="btns">
+<button onclick="setCurrentProduct(this);openPricePopup()">💰 Get Best Price</button>
+<button onclick="setCurrentProduct(this);bookNow(this)">📦 Book Now</button>
+<button onclick="setCurrentProduct(this);openVisitPopup()">🏪 Visit Shop</button>
+<button onclick="setCurrentProduct(this);addToCart(this)">🛒 Add to Cart</button></div>
+<div class="popup"><div class="popup-content"><span class="close-btn">×</span><h2>Tool Kit</h2><p>All tools in one</p></div></div>
+</div>
+
+</div>
+
+<script src="../../js/products.js"></script>
+
+<!-- PRICE POPUP -->
+<div id="pricePopup" class="popup">
+<div class="popup-content">
+<h3>Enter Your Price</h3>
+<input type="number" id="userPrice" placeholder="Enter price">
+<button onclick="submitPrice()">Submit</button>
+<button onclick="closePopup()">Close</button>
+</div>
+</div>
+
+<!-- VISIT POPUP -->
+<div id="visitPopup" class="popup">
+<div class="popup-content">
+<h3>Select Visit Time</h3>
+<input type="date" id="visitDate">
+<input type="time" id="visitTime">
+<button onclick="confirmVisit()">Confirm</button>
+<button onclick="closePopup()">Close</button>
+</div>
+</div>
+<script>
+localStorage.setItem("currentShop", "Tool Point");
+</script>
+</body>
+</html>

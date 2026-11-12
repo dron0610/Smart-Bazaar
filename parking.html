@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>Parking</title>
+
+<style>
+
+body{
+font-family: Arial;
+background:#f5f6fa;
+margin:0;
+}
+
+.navbar{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:15px 60px;
+background:white;
+}
+
+.logo h2{color:#d98c20;margin:0;}
+.logo p{font-size:12px;color:#666;margin:0;}
+
+nav a{margin:0 10px;text-decoration:none;color:#333;}
+nav a.active{color:#d98c20;}
+
+.parking-area{text-align:center;padding:30px;}
+
+.parking-card{
+background:white;
+padding:30px;
+border-radius:15px;
+width:fit-content;
+margin:auto;
+box-shadow:0 5px 20px rgba(0,0,0,0.1);
+}
+
+.parking-lot{
+display:flex;
+flex-direction:column;
+gap:20px;
+}
+
+.row{
+display:flex;
+justify-content:center;
+gap:20px;
+flex-wrap:wrap;
+}
+
+.slot{
+width:90px;
+height:70px;
+display:flex;
+flex-direction:column;
+align-items:center;
+justify-content:center;
+border-radius:10px;
+cursor:pointer;
+font-weight:bold;
+transition:0.3s;
+}
+
+.available{ background:#63c36b; }
+.occupied{ background:#ffcccc; color:#c0392b; }
+.selected{ border:3px solid black; }
+
+.road{
+text-align:center;
+padding:8px;
+background:#ddd;
+border-radius:8px;
+}
+
+button{
+margin-top:20px;
+padding:10px 25px;
+background:#d98c20;
+color:white;
+border:none;
+border-radius:8px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header class="navbar">
+<div class="logo">
+<h2>Smart Bazaar</h2>
+<p>Local Market Solutions</p>
+</div>
+
+<nav>
+<a href="index.html">Home</a>
+<a href="shops.html">Shops</a>
+<a class="active" href="parking.html">Parking</a>
+<a href="login.html">Logout</a>
+</nav>
+</header>
+
+<section class="parking-area">
+
+<h1>Parking Layout</h1>
+<p>Select a slot (3 hrs)</p>
+
+<div class="parking-card">
+
+<div class="parking-lot" id="parkingLot"></div>
+
+<button onclick="bookSlot()">Book Selected Slot</button>
+
+</div>
+
+</section>
+
+<script>
+
+let parkingLot = document.getElementById("parkingLot");
+let selectedSlot = null;
+let user = localStorage.getItem("currentUser") || "Guest";
+
+let rows = ["A","B","C","D","E","F","G","H","I","J"];
+
+// CREATE GRID
+rows.forEach(row => {
+
+let rowDiv = document.createElement("div");
+rowDiv.className = "row";
+
+for(let i=1;i<=4;i++){
+
+let slotId = row + i;
+
+let div = document.createElement("div");
+div.className = "slot available";
+div.dataset.slot = slotId;
+div.innerHTML = slotId;
+
+div.onclick = function(){
+
+if(div.classList.contains("occupied")){
+alert("Already booked");
+return;
+}
+
+document.querySelectorAll(".slot").forEach(s=>s.classList.remove("selected"));
+div.classList.add("selected");
+selectedSlot = slotId;
+
+};
+
+rowDiv.appendChild(div);
+}
+
+let road = document.createElement("div");
+road.className = "road";
+road.innerText = "Drive Lane";
+
+parkingLot.appendChild(rowDiv);
+parkingLot.appendChild(road);
+
+});
+
+
+// LOAD FROM DB
+function loadSlots(){
+
+fetch("http://localhost:3000/parking-slots")
+.then(res => res.json())
+.then(data => {
+
+document.querySelectorAll(".slot").forEach(div => {
+
+let slotId = div.dataset.slot;
+let found = data.find(s => s.slot_name === slotId);
+
+if(found){
+
+let now = new Date();
+let end = new Date(found.end_time);
+let diff = end - now;
+
+if(diff <= 0){
+div.className = "slot available";
+div.innerHTML = slotId + "<br>🟢 Free";
+return;
+}
+
+let mins = Math.floor(diff/60000);
+let hrs = Math.floor(mins/60);
+mins = mins % 60;
+
+div.className = "slot occupied";
+
+div.innerHTML = `
+${slotId}<br>
+🔴 Booked<br>
+⏳ ${hrs}h ${mins}m
+`;
+
+}else{
+div.className = "slot available";
+div.innerHTML = slotId + "<br>🟢 Free";
+}
+
+});
+
+});
+}
+
+
+// BOOK SLOT
+function bookSlot(){
+
+if(!selectedSlot){
+alert("Select slot first");
+return;
+}
+
+fetch("http://localhost:3000/book-slot", {
+method:"POST",
+headers:{"Content-Type":"application/json"},
+body: JSON.stringify({
+slot: selectedSlot,
+customer: user
+})
+})
+.then(res => res.text())
+.then(msg=>{
+alert(msg);
+loadSlots();
+});
+
+}
+
+
+// INIT
+loadSlots();
+setInterval(loadSlots, 60000);
+
+</script>
+
+</body>
+</html>

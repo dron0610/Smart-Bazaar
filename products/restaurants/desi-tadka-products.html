@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>Desi Tadka</title>
+
+<link rel="stylesheet" href="../../css/product.css">
+<link rel="stylesheet" href="../../css/style.css">
+
+</head>
+
+<body>
+
+<header class="navbar">
+
+<div class="logo">
+<h2>Smart Bazaar</h2>
+<p>Local Market Solutions</p>
+</div>
+
+<nav>
+<ul>
+<li><a class="active" href="../../index.html">Home</a></li>
+<li><a href="../../shops/restaurants-shops.html">Shops</a></li>
+
+<li><a href="../../cart.html">Cart</a></li>
+<li><a href="../../customer-dashboard.html">Dashboard</a></li>
+<li><a href="../../parking.html">Parking</a></li>
+<li><a href="../../login.html" onclick="logout()">Logout</a></li>
+</ul>
+</nav>
+
+</header>
+<section class="shop-header">
+<h1>Desi Tadka</h1>
+<p>Authentic Indian Flavors 🍛🔥</p>
+</section>
+
+<!-- FILTER -->
+<div class="filter-bar">
+<button class="filter-btn active" data-category="all">All</button>
+<button class="filter-btn" data-category="starter">Starters</button>
+<button class="filter-btn" data-category="main">Main Course</button>
+<button class="filter-btn" data-category="bread">Breads</button>
+<button class="filter-btn" data-category="rice">Rice</button>
+<button class="filter-btn" data-category="dessert">Desserts</button>
+</div>
+
+<div class="product-grid">
+
+<!-- STARTERS -->
+<div class="product-card" data-category="starter">
+<div class="info-btn">i</div>
+<img src="https://source.unsplash.com/400x400/?paneer-tikka">
+<h3>Paneer Tikka</h3>
+<p>₹220</p>
+<div class="btns">
+<button onclick="setCurrentProduct(this);openPricePopup()">💰 Get Best Price</button>
+<button onclick="setCurrentProduct(this);bookNow(this)">📦 Book Now</button>
+<button onclick="setCurrentProduct(this);openVisitPopup()">🏪 Visit Shop</button>
+<button onclick="setCurrentProduct(this);addToCart(this)">🛒 Add to Cart</button></div>
+</div>
+
+<div class="product-card" data-category="starter">
+<div class="info-btn">i</div>
+<img src="https://source.unsplash.com/400x400/?samosa">
+<h3>Samosa</h3>
+<p>₹50</p>
+<div class="btns">
+<button onclick="setCurrentProduct(this);openPricePopup()">💰 Get Best Price</button>
+<button onclick="setCurrentProduct(this);bookNow(this)">📦 Book Now</button>
+<button onclick="setCurrentProduct(this);openVisitPopup()">🏪 Visit Shop</button>
+<button onclick="setCurrentProduct(this);addToCart(this)">🛒 Add to Cart</button></div>
+</div>
+
+<!-- MAIN -->
+<div class="product-card" data-category="main">
+<div class="info-btn">i</div>
+<img src="https://source.unsplash.com/400x400/?butter-chicken">
+<h3>Butter Chicken</h3>
+<p>₹320</p>
+<div class="btns">
+<button onclick="setCurrentProduct(this);openPricePopup()">💰 Get Best Price</button>
+<button onclick="setCurrentProduct(this);bookNow(this)">📦 Book Now</button>
+<button onclick="setCurrentProduct(this);openVisitPopup()">🏪 Visit Shop</button>
+<button onclick="setCurrentProduct(this);addToCart(this)">🛒 Add to Cart</button></div>
+</div>
+
+<div class="product-card" data-category="main">
+<div class="info-btn">i</div>
+<img src="https://source.unsplash.com/400x400/?paneer-butter-masala">
+<h3>Paneer Butter Masala</h3>
+<p>₹260</p>
+<div class="btns">
+<button onclick="setCurrentProduct(this);openPricePopup()">💰 Get Best Price</button>
+<button onclick="setCurrentProduct(this);bookNow(this)">📦 Book Now</button>
+<button onclick="setCurrentProduct(this);openVisitPopup()">🏪 Visit Shop</button>
+<button onclick="setCurrentProduct(this);addToCart(this)">🛒 Add to Cart</button></div>
+</div>
+
+<!-- BREAD -->
+<div class="product-card" data-category="bread">
+<div class="info-btn">i</div>
+<img src="https://source.unsplash.com/400x400/?butter-naan">
+<h3>Butter Naan</h3>
+<p>₹40</p>
+<div class="btns">
+<button onclick="setCurrentProduct(this);openPricePopup()">💰 Get Best Price</button>
+<button onclick="setCurrentProduct(this);bookNow(this)">📦 Book Now</button>
+<button onclick="setCurrentProduct(this);openVisitPopup()">🏪 Visit Shop</button>
+<button onclick="setCurrentProduct(this);addToCart(this)">🛒 Add to Cart</button></div>
+</div>
+
+<div class="product-card" data-category="bread">
+<div class="info-btn">i</div>
+<img src="https://source.unsplash.com/400x400/?tandoori-roti">
+<h3>Tandoori Roti</h3>
+<p>₹25</p>
+<div class="btns">
+<button onclick="setCurrentProduct(this);openPricePopup()">💰 Get Best Price</button>
+<button onclick="setCurrentProduct(this);bookNow(this)">📦 Book Now</button>
+<button onclick="setCurrentProduct(this);openVisitPopup()">🏪 Visit Shop</button>
+<button onclick="setCurrentProduct(this);addToCart(this)">🛒 Add to Cart</button></div>
+</div>
+
+<!-- RICE -->
+<div class="product-card" data-category="rice">
+<div class="info-btn">i</div>
+<img src="https://source.unsplash.com/400x400/?chicken-biryani">
+<h3>Chicken Biryani</h3>
+<p>₹300</p>
+<div class="btns">
+<button onclick="setCurrentProduct(this);openPricePopup()">💰 Get Best Price</button>
+<button onclick="setCurrentProduct(this);bookNow(this)">📦 Book Now</button>
+<button onclick="setCurrentProduct(this);openVisitPopup()">🏪 Visit Shop</button>
+<button onclick="setCurrentProduct(this);addToCart(this)">🛒 Add to Cart</button></div>
+</div>
+
+<div class="product-card" data-category="rice">
+<div class="info-btn">i</div>
+<img src="https://source.unsplash.com/400x400/?jeera-rice">
+<h3>Jeera Rice</h3>
+<p>₹150</p>
+<div class="btns">
+<button onclick="setCurrentProduct(this);openPricePopup()">💰 Get Best Price</button>
+<button onclick="setCurrentProduct(this);bookNow(this)">📦 Book Now</button>
+<button onclick="setCurrentProduct(this);openVisitPopup()">🏪 Visit Shop</button>
+<button onclick="setCurrentProduct(this);addToCart(this)">🛒 Add to Cart</button></div>
+</div>
+
+<!-- DESSERT -->
+<div class="product-card" data-category="dessert">
+<div class="info-btn">i</div>
+<img src="https://source.unsplash.com/400x400/?gulab-jamun">
+<h3>Gulab Jamun</h3>
+<p>₹90</p>
+<div class="btns">
+<button onclick="setCurrentProduct(this);openPricePopup()">💰 Get Best Price</button>
+<button onclick="setCurrentProduct(this);bookNow(this)">📦 Book Now</button>
+<button onclick="setCurrentProduct(this);openVisitPopup()">🏪 Visit Shop</button>
+<button onclick="setCurrentProduct(this);addToCart(this)">🛒 Add to Cart</button></div>
+</div>
+
+<div class="product-card" data-category="dessert">
+<div class="info-btn">i</div>
+<img src="https://source.unsplash.com/400x400/?rasgulla">
+<h3>Rasgulla</h3>
+<p>₹100</p>
+<div class="btns">
+<button onclick="setCurrentProduct(this);openPricePopup()">💰 Get Best Price</button>
+<button onclick="setCurrentProduct(this);bookNow(this)">📦 Book Now</button>
+<button onclick="setCurrentProduct(this);openVisitPopup()">🏪 Visit Shop</button>
+<button onclick="setCurrentProduct(this);addToCart(this)">🛒 Add to Cart</button></div>
+</div>
+
+</div>
+
+<script src="../../js/products.js"></script>
+<script>
+localStorage.setItem("currentShop", "Desi Tadka");
+</script>
+
+</body>
+</html>

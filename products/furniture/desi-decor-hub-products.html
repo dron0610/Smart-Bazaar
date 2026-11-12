@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>Desi Decor</title>
+
+<!-- ✅ CSS -->
+<link rel="stylesheet" href="../../css/product.css">
+<link rel="stylesheet" href="../../css/style.css">
+
+</head>
+
+<body>
+
+<header class="navbar">
+
+<div class="logo">
+<h2>Smart Bazaar</h2>
+<p>Local Market Solutions</p>
+</div>
+
+<nav>
+<ul>
+<li><a class="active" href="../../index.html">Home</a></li>
+<li><a href="../../shops/furniture-shops.html">Shops</a></li>
+
+<li><a href="../../cart.html">Cart</a></li>
+<li><a href="../../customer-dashboard.html">Dashboard</a></li>
+<li><a href="../../parking.html">Parking</a></li>
+<li><a href="../../login.html" onclick="logout()">Logout</a></li>
+</ul>
+</nav>
+
+</header>
+<section class="shop-header">
+<h1>Desi Decor</h1>
+<p>Bring Tradition to Your Home 🪔✨</p>
+</section>
+
+<!-- FILTER -->
+<div class="filter-bar">
+<button class="filter-btn active" data-category="all">All</button>
+<button class="filter-btn" data-category="wall">Wall Decor</button>
+<button class="filter-btn" data-category="lamp">Lamps</button>
+<button class="filter-btn" data-category="art">Art & Craft</button>
+<button class="filter-btn" data-category="statue">Statues</button>
+<button class="filter-btn" data-category="handmade">Handmade</button>
+</div>
+
+<div class="product-grid">
+
+<!-- WALL DECOR -->
+
+<div class="product-card" data-category="wall">
+<div class="info-btn">i</div>
+<img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=400&q=80">
+<h3>Wooden Wall Frame</h3>
+<p>₹2,500</p>
+<div class="btns">
+<button onclick="openPricePopup()">💰 Get Best Price</button>
+<button onclick="bookNow(this)">📦 Book Now</button>
+<button onclick="openVisitPopup()">🏪 Visit Shop</button>
+<button onclick="addToCart(this)">🛒 Add to Cart</button></div>
+<div class="popup"><div class="popup-content"><span class="close-btn">×</span><h2>Wall Frame</h2><p>Traditional wooden art</p></div></div>
+</div>
+
+<div class="product-card" data-category="wall">
+<div class="info-btn">i</div>
+<img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=400&q=80">
+<h3>Ethnic Wall Hanging</h3>
+<p>₹1,800</p>
+<div class="btns">
+<button onclick="openPricePopup()">💰 Get Best Price</button>
+<button onclick="bookNow(this)">📦 Book Now</button>
+<button onclick="openVisitPopup()">🏪 Visit Shop</button>
+<button onclick="addToCart(this)">🛒 Add to Cart</button></div>
+<div class="popup"><div class="popup-content"><span class="close-btn">×</span><h2>Wall Hanging</h2><p>Colorful decor</p></div></div>
+</div>
+
+<!-- LAMPS -->
+
+<div class="product-card" data-category="lamp">
+<div class="info-btn">i</div>
+<img src="https://images.unsplash.com/photo-1519710164239-da123dc03ef4?auto=format&fit=crop&w=400&q=80">
+<h3>Decorative Lamp</h3>
+<p>₹1,500</p>
+<div class="btns">
+<button onclick="openPricePopup()">💰 Get Best Price</button>
+<button onclick="bookNow(this)">📦 Book Now</button>
+<button onclick="openVisitPopup()">🏪 Visit Shop</button>
+<button onclick="addToCart(this)">🛒 Add to Cart</button></div>
+<div class="popup"><div class="popup-content"><span class="close-btn">×</span><h2>Lamp</h2><p>Soft lighting</p></div></div>
+</div>
+
+<div class="product-card" data-category="lamp">
+<div class="info-btn">i</div>
+<img src="https://images.unsplash.com/photo-1540574163026-643ea20ade25?auto=format&fit=crop&w=400&q=80">
+<h3>Diya Set</h3>
+<p>₹700</p>
+<div class="btns">
+<button onclick="openPricePopup()">💰 Get Best Price</button>
+<button onclick="bookNow(this)">📦 Book Now</button>
+<button onclick="openVisitPopup()">🏪 Visit Shop</button>
+<button onclick="addToCart(this)">🛒 Add to Cart</button></div>
+<div class="popup"><div class="popup-content"><span class="close-btn">×</span><h2>Diya</h2><p>Festival decor</p></div></div>
+</div>
+
+<!-- ART -->
+
+<div class="product-card" data-category="art">
+<div class="info-btn">i</div>
+<img src="https://images.unsplash.com/photo-1549887534-3ec93abae63b?auto=format&fit=crop&w=400&q=80">
+<h3>Madhubani Painting</h3>
+<p>₹3,500</p>
+<div class="btns">
+<button onclick="openPricePopup()">💰 Get Best Price</button>
+<button onclick="bookNow(this)">📦 Book Now</button>
+<button onclick="openVisitPopup()">🏪 Visit Shop</button>
+<button onclick="addToCart(this)">🛒 Add to Cart</button></div>
+<div class="popup"><div class="popup-content"><span class="close-btn">×</span><h2>Madhubani Art</h2><p>Handmade painting</p></div></div>
+</div>
+
+<div class="product-card" data-category="art">
+<div class="info-btn">i</div>
+<img src="https://images.unsplash.com/photo-1600566752229-250ed79470df?auto=format&fit=crop&w=400&q=80">
+<h3>Rajasthani Art</h3>
+<p>₹2,800</p>
+<div class="btns">
+<button onclick="openPricePopup()">💰 Get Best Price</button>
+<button onclick="bookNow(this)">📦 Book Now</button>
+<button onclick="openVisitPopup()">🏪 Visit Shop</button>
+<button onclick="addToCart(this)">🛒 Add to Cart</button></div>
+<div class="popup"><div class="popup-content"><span class="close-btn">×</span><h2>Rajasthani Art</h2><p>Traditional design</p></div></div>
+</div>
+
+<!-- STATUES -->
+
+<div class="product-card" data-category="statue">
+<div class="info-btn">i</div>
+<img src="https://images.unsplash.com/photo-1603201667230-bd139210db18?auto=format&fit=crop&w=400&q=80">
+<h3>Ganesh Idol</h3>
+<p>₹1,200</p>
+<div class="btns">
+<button onclick="openPricePopup()">💰 Get Best Price</button>
+<button onclick="bookNow(this)">📦 Book Now</button>
+<button onclick="openVisitPopup()">🏪 Visit Shop</button>
+<button onclick="addToCart(this)">🛒 Add to Cart</button></div>
+<div class="popup"><div class="popup-content"><span class="close-btn">×</span><h2>Ganesh Idol</h2><p>Spiritual decor</p></div></div>
+</div>
+
+<div class="product-card" data-category="statue">
+<div class="info-btn">i</div>
+<img src="https://images.unsplash.com/photo-1581349485608-9469926a8e5e?auto=format&fit=crop&w=400&q=80">
+<h3>Buddha Statue</h3>
+<p>₹1,800</p>
+<div class="btns">
+<button onclick="openPricePopup()">💰 Get Best Price</button>
+<button onclick="bookNow(this)">📦 Book Now</button>
+<button onclick="openVisitPopup()">🏪 Visit Shop</button>
+<button onclick="addToCart(this)">🛒 Add to Cart</button></div>
+<div class="popup"><div class="popup-content"><span class="close-btn">×</span><h2>Buddha Statue</h2><p>Peaceful decor</p></div></div>
+</div>
+
+<!-- HANDMADE -->
+
+<div class="product-card" data-category="handmade">
+<div class="info-btn">i</div>
+<img src="https://images.unsplash.com/photo-1610701596061-2ecf227e85b2?auto=format&fit=crop&w=400&q=80">
+<h3>Handmade Basket</h3>
+<p>₹900</p>
+<div class="btns">
+<button onclick="openPricePopup()">💰 Get Best Price</button>
+<button onclick="bookNow(this)">📦 Book Now</button>
+<button onclick="openVisitPopup()">🏪 Visit Shop</button>
+<button onclick="addToCart(this)">🛒 Add to Cart</button></div>
+<div class="popup"><div class="popup-content"><span class="close-btn">×</span><h2>Basket</h2><p>Eco-friendly</p></div></div>
+</div>
+
+<div class="product-card" data-category="handmade">
+<div class="info-btn">i</div>
+<img src="https://images.unsplash.com/photo-1600566752355-35792bedcfea?auto=format&fit=crop&w=400&q=80">
+<h3>Clay Pot Set</h3>
+<p>₹1,100</p>
+<div class="btns">
+<button onclick="openPricePopup()">💰 Get Best Price</button>
+<button onclick="bookNow(this)">📦 Book Now</button>
+<button onclick="openVisitPopup()">🏪 Visit Shop</button>
+<button onclick="addToCart(this)">🛒 Add to Cart</button></div>
+<div class="popup"><div class="popup-content"><span class="close-btn">×</span><h2>Clay Pot</h2><p>Traditional pottery</p></div></div>
+</div>
+
+<!-- EXTRA -->
+
+<div class="product-card" data-category="lamp">
+<div class="info-btn">i</div>
+<img src="https://images.unsplash.com/photo-1519710164239-da123dc03ef4?auto=format&fit=crop&w=400&q=80">
+<h3>Hanging Lantern</h3>
+<p>₹1,300</p>
+<div class="btns">
+<button onclick="openPricePopup()">💰 Get Best Price</button>
+<button onclick="bookNow(this)">📦 Book Now</button>
+<button onclick="openVisitPopup()">🏪 Visit Shop</button>
+<button onclick="addToCart(this)">🛒 Add to Cart</button></div>
+<div class="popup"><div class="popup-content"><span class="close-btn">×</span><h2>Lantern</h2><p>Vintage style</p></div></div>
+</div>
+
+<div class="product-card" data-category="wall">
+<div class="info-btn">i</div>
+<img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=400&q=80">
+<h3>Mirror Wall Decor</h3>
+<p>₹2,200</p>
+<div class="btns">
+<button onclick="openPricePopup()">💰 Get Best Price</button>
+<button onclick="bookNow(this)">📦 Book Now</button>
+<button onclick="openVisitPopup()">🏪 Visit Shop</button>
+<button onclick="addToCart(this)">🛒 Add to Cart</button></div>
+<div class="popup"><div class="popup-content"><span class="close-btn">×</span><h2>Mirror Decor</h2><p>Stylish look</p></div></div>
+</div>
+
+</div>
+
+<script src="../../js/products.js"></script>
+
+<!-- PRICE POPUP -->
+<div id="pricePopup" class="popup">
+<div class="popup-content">
+<h3>Enter Your Price</h3>
+<input type="number" id="userPrice" placeholder="Enter price">
+<button onclick="submitPrice()">Submit</button>
+<button onclick="closePopup()">Close</button>
+</div>
+</div>
+
+<!-- VISIT POPUP -->
+<div id="visitPopup" class="popup">
+<div class="popup-content">
+<h3>Select Visit Time</h3>
+<input type="date" id="visitDate">
+<input type="time" id="visitTime">
+<button onclick="confirmVisit()">Confirm</button>
+<button onclick="closePopup()">Close</button>
+</div>
+</div>
+<script>
+localStorage.setItem("currentShop", "Desi Decor Hub");
+</script>
+</body>
+</html>

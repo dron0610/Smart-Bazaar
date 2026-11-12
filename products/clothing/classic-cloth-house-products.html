@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>Classic Cloth House</title>
+<link rel="stylesheet" href="../../css/product.css">
+<link rel="stylesheet" href="../../css/style.css">
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<header class="navbar">
+
+<div class="logo">
+<h2>Smart Bazaar</h2>
+<p>Local Market Solutions</p>
+</div>
+
+<nav>
+<ul>
+<li><a class="active" href="../../index.html">Home</a></li>
+<li><a href="../../shops/clothing-shops.html">Shops</a></li>
+
+<li><a href="../../cart.html">Cart</a></li>
+<li><a href="../../customer-dashboard.html">Dashboard</a></li>
+<li><a href="../../parking.html">Parking</a></li>
+<li><a href="../../login.html" onclick="logout()">Logout</a></li>
+</ul>
+</nav>
+
+</header>
+
+<section class="shop-header">
+<h1>Classic Cloth House</h1>
+<p>Premium Fashion Collection 👕</p>
+</section>
+
+<!-- FILTER -->
+<div class="filter-bar">
+<button class="filter-btn active" data-category="all">All</button>
+<button class="filter-btn" data-category="men">Men</button>
+<button class="filter-btn" data-category="women">Women</button>
+<button class="filter-btn" data-category="accessory">Accessories</button>
+</div>
+
+<div class="product-grid" id="products-container">
+
+<!-- MEN -->
+
+<div class="product-card" data-category="men">
+<div class="info-btn">i</div>
+<img src="https://images.unsplash.com/photo-1520975916090-3105956dac38?auto=format&fit=crop&w=400&q=80">
+<h3>Men Formal Shirt</h3>
+<p>₹1,200</p>
+<div class="btns">
+<button onclick="setCurrentProduct(this);openPricePopup()">💰 Get Best Price</button>
+<button onclick="setCurrentProduct(this);bookNow(this)">📦 Book Now</button>
+<button onclick="setCurrentProduct(this);openVisitPopup()">🏪 Visit Shop</button>
+<button onclick="setCurrentProduct(this);addToCart(this)">🛒 Add to Cart</button>
+</div>
+<div class="popup"><div class="popup-content"><span class="close-btn">×</span><h2>Formal Shirt</h2><p>Cotton | Slim Fit</p></div></div>
+</div>
+
+<div class="product-card" data-category="men">
+<div class="info-btn">i</div>
+<img src="https://images.unsplash.com/photo-1490114538077-0a7f8cb49891?auto=format&fit=crop&w=400&q=80">
+<h3>Men Jeans</h3>
+<p>₹1,800</p>
+<div class="btns">
+<button onclick="setCurrentProduct(this);openPricePopup()">💰 Get Best Price</button>
+<button onclick="setCurrentProduct(this);bookNow(this)">📦 Book Now</button>
+<button onclick="setCurrentProduct(this);openVisitPopup()">🏪 Visit Shop</button>
+<button onclick="setCurrentProduct(this);addToCart(this)">🛒 Add to Cart</button></div>
+<div class="popup"><div class="popup-content"><span class="close-btn">×</span><h2>Jeans</h2><p>Denim | Stretchable</p></div></div>
+</div>
+
+<div class="product-card" data-category="men">
+<div class="info-btn">i</div>
+<img src="https://images.unsplash.com/photo-1516826957135-700dedea698c?auto=format&fit=crop&w=400&q=80">
+<h3>Casual T-Shirt</h3>
+<p>₹800</p>
+<div class="btns">
+<button onclick="setCurrentProduct(this);openPricePopup()">💰 Get Best Price</button>
+<button onclick="setCurrentProduct(this);bookNow(this)">📦 Book Now</button>
+<button onclick="setCurrentProduct(this);openVisitPopup()">🏪 Visit Shop</button>
+<button onclick="setCurrentProduct(this);addToCart(this)">🛒 Add to Cart</button></div>
+<div class="popup"><div class="popup-content"><span class="close-btn">×</span><h2>T-Shirt</h2><p>Comfort Wear</p></div></div>
+</div>
+
+<div class="product-card" data-category="men">
+<div class="info-btn">i</div>
+<img src="https://images.unsplash.com/photo-1593030761757-71fae45fa0e7?auto=format&fit=crop&w=400&q=80">
+<h3>Blazer</h3>
+<p>₹3,500</p>
+<div class="btns">
+<button onclick="setCurrentProduct(this);openPricePopup()">💰 Get Best Price</button>
+<button onclick="setCurrentProduct(this);bookNow(this)">📦 Book Now</button>
+<button onclick="setCurrentProduct(this);openVisitPopup()">🏪 Visit Shop</button>
+<button onclick="setCurrentProduct(this);addToCart(this)">🛒 Add to Cart</button></div>
+<div class="popup"><div class="popup-content"><span class="close-btn">×</span><h2>Blazer</h2><p>Formal Wear</p></div></div>
+</div>
+
+<!-- WOMEN -->
+
+<div class="product-card" data-category="women">
+<div class="info-btn">i</div>
+<img src="https://images.unsplash.com/photo-1520975922072-4d3c3d0b7d8d?auto=format&fit=crop&w=400&q=80">
+<h3>Women Kurti</h3>
+<p>₹1,000</p>
+<div class="btns">
+<button onclick="setCurrentProduct(this);openPricePopup()">💰 Get Best Price</button>
+<button onclick="setCurrentProduct(this);bookNow(this)">📦 Book Now</button>
+<button onclick="setCurrentProduct(this);openVisitPopup()">🏪 Visit Shop</button>
+<button onclick="setCurrentProduct(this);addToCart(this)">🛒 Add to Cart</button></div>
+<div class="popup"><div class="popup-content"><span class="close-btn">×</span><h2>Kurti</h2><p>Ethnic Wear</p></div></div>
+</div>
+
+<div class="product-card" data-category="women">
+<div class="info-btn">i</div>
+<img src="https://images.unsplash.com/photo-1496747611176-843222e1e57c?auto=format&fit=crop&w=400&q=80">
+<h3>Women Dress</h3>
+<p>₹2,200</p>
+<div class="btns">
+<button onclick="setCurrentProduct(this);openPricePopup()">💰 Get Best Price</button>
+<button onclick="setCurrentProduct(this);bookNow(this)">📦 Book Now</button>
+<button onclick="setCurrentProduct(this);openVisitPopup()">🏪 Visit Shop</button>
+<button onclick="setCurrentProduct(this);addToCart(this)">🛒 Add to Cart</button></div>
+<div class="popup"><div class="popup-content"><span class="close-btn">×</span><h2>Dress</h2><p>Party Wear</p></div></div>
+</div>
+
+<div class="product-card" data-category="women">
+<div class="info-btn">i</div>
+<img src="https://images.unsplash.com/photo-1503341455253-b2e723bb3dbb?auto=format&fit=crop&w=400&q=80">
+<h3>Women Saree</h3>
+<p>₹3,000</p>
+<div class="btns">
+<button onclick="setCurrentProduct(this);openPricePopup()">💰 Get Best Price</button>
+<button onclick="setCurrentProduct(this);bookNow(this)">📦 Book Now</button>
+<button onclick="setCurrentProduct(this);openVisitPopup()">🏪 Visit Shop</button>
+<button onclick="setCurrentProduct(this);addToCart(this)">🛒 Add to Cart</button></div>
+<div class="popup"><div class="popup-content"><span class="close-btn">×</span><h2>Saree</h2><p>Silk Saree</p></div></div>
+</div>
+
+<div class="product-card" data-category="women">
+<div class="info-btn">i</div>
+<img src="https://images.unsplash.com/photo-1585487000160-6ebcfceb0d03?auto=format&fit=crop&w=400&q=80">
+<h3>Top & Skirt</h3>
+<p>₹1,800</p>
+<div class="btns">
+<button onclick="setCurrentProduct(this);openPricePopup()">💰 Get Best Price</button>
+<button onclick="setCurrentProduct(this);bookNow(this)">📦 Book Now</button>
+<button onclick="setCurrentProduct(this);openVisitPopup()">🏪 Visit Shop</button>
+<button onclick="setCurrentProduct(this);addToCart(this)">🛒 Add to Cart</button></div>
+<div class="popup"><div class="popup-content"><span class="close-btn">×</span><h2>Top & Skirt</h2><p>Trendy Outfit</p></div></div>
+</div>
+
+<!-- ACCESSORIES -->
+
+<div class="product-card" data-category="accessory">
+<div class="info-btn">i</div>
+<img src="https://images.unsplash.com/photo-1520974735194-9b5e0c0c1a2c?auto=format&fit=crop&w=400&q=80">
+<h3>Leather Belt</h3>
+<p>₹900</p>
+<div class="btns">
+<button onclick="setCurrentProduct(this);openPricePopup()">💰 Get Best Price</button>
+<button onclick="setCurrentProduct(this);bookNow(this)">📦 Book Now</button>
+<button onclick="setCurrentProduct(this);openVisitPopup()">🏪 Visit Shop</button>
+<button onclick="setCurrentProduct(this);addToCart(this)">🛒 Add to Cart</button></div>
+<div class="popup"><div class="popup-content"><span class="close-btn">×</span><h2>Belt</h2><p>Genuine Leather</p></div></div>
+</div>
+
+<div class="product-card" data-category="accessory">
+<div class="info-btn">i</div>
+<img src="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=400&q=80">
+<h3>Handbag</h3>
+<p>₹2,500</p>
+<div class="btns">
+<button onclick="setCurrentProduct(this);openPricePopup()">💰 Get Best Price</button>
+<button onclick="setCurrentProduct(this);bookNow(this)">📦 Book Now</button>
+<button onclick="setCurrentProduct(this);openVisitPopup()">🏪 Visit Shop</button>
+<button onclick="setCurrentProduct(this);addToCart(this)">🛒 Add to Cart</button></div>
+<div class="popup"><div class="popup-content"><span class="close-btn">×</span><h2>Handbag</h2><p>Stylish & Durable</p></div></div>
+</div>
+
+<div class="product-card" data-category="accessory">
+<div class="info-btn">i</div>
+<img src="https://images.unsplash.com/photo-1528701800489-20be3c1cfd86?auto=format&fit=crop&w=400&q=80">
+<h3>Sunglasses</h3>
+<p>₹1,200</p>
+<div class="btns">
+<button onclick="setCurrentProduct(this);openPricePopup()">💰 Get Best Price</button>
+<button onclick="setCurrentProduct(this);bookNow(this)">📦 Book Now</button>
+<button onclick="setCurrentProduct(this);openVisitPopup()">🏪 Visit Shop</button>
+<button onclick="setCurrentProduct(this);addToCart(this)">🛒 Add to Cart</button></div>
+<div class="popup"><div class="popup-content"><span class="close-btn">×</span><h2>Sunglasses</h2><p>UV Protection</p></div></div>
+</div>
+
+<div class="product-card" data-category="accessory">
+<div class="info-btn">i</div>
+<img src="https://images.unsplash.com/photo-1520975693416-35f3c1c3f3c4?auto=format&fit=crop&w=400&q=80">
+<h3>Wrist Watch</h3>
+<p>₹2,000</p>
+<div class="btns">
+<button onclick="setCurrentProduct(this);openPricePopup()">💰 Get Best Price</button>
+<button onclick="setCurrentProduct(this);bookNow(this)">📦 Book Now</button>
+<button onclick="setCurrentProduct(this);openVisitPopup()">🏪 Visit Shop</button>
+<button onclick="setCurrentProduct(this);addToCart(this)">🛒 Add to Cart</button></div>
+<div class="popup"><div class="popup-content"><span class="close-btn">×</span><h2>Watch</h2><p>Classic Design</p></div></div>
+</div>
+
+</div>
+
+<script src="../../js/products.js"></script>
+
+<!-- PRICE POPUP -->
+<div id="pricePopup" class="popup">
+<div class="popup-content">
+<h3>Enter Your Price</h3>
+<input type="number" id="userPrice" placeholder="Enter price">
+<button onclick="submitPrice()">Submit</button>
+<button onclick="closePopup()">Close</button>
+</div>
+</div>
+
+<!-- VISIT POPUP -->
+<div id="visitPopup" class="popup">
+<div class="popup-content">
+<h3>Select Visit Time</h3>
+<input type="date" id="visitDate">
+<input type="time" id="visitTime">
+<button onclick="confirmVisit()">Confirm</button>
+<button onclick="closePopup()">Close</button>
+</div>
+</div>
+<script>
+localStorage.setItem("currentShop", "Classic Cloth House");
+</script>
+</body>
+</html>

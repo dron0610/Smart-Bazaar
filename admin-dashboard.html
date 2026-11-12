@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>Admin Dashboard</title>
+
+<style>
+body{
+  font-family: Arial;
+  background:#f5f6fa;
+  margin:0;
+}
+
+/* NAVBAR */
+.navbar{
+  display:flex;
+  justify-content:space-between;
+  padding:15px 60px;
+  background:white;
+}
+
+.logo h2{ color:#d98c20; margin:0; }
+nav a{ margin:0 10px; text-decoration:none; color:#333; }
+nav a.active{ color:#d98c20; }
+
+/* MAIN */
+.container{
+  padding:30px;
+}
+
+/* STATS */
+.stats{
+  display:flex;
+  gap:20px;
+}
+
+.card{
+  background:white;
+  padding:20px;
+  border-radius:10px;
+  width:200px;
+  text-align:center;
+  box-shadow:0 5px 10px rgba(0,0,0,0.1);
+}
+
+/* FORM */
+.form-box{
+  background:white;
+  padding:20px;
+  margin-top:20px;
+  border-radius:10px;
+}
+
+input, select{
+  width:100%;
+  padding:10px;
+  margin:10px 0;
+}
+
+button{
+  background:#d98c20;
+  color:white;
+  border:none;
+  padding:10px;
+  cursor:pointer;
+  border-radius:5px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header class="navbar">
+<div class="logo">
+<h2>Smart Bazaar</h2>
+</div>
+
+<nav>
+<a class="active">Admin</a>
+<a href="login.html" onclick="logout()">Logout</a>
+</nav>
+</header>
+
+<div class="container">
+
+<!-- STATS -->
+<div class="stats">
+<div class="card">
+<h3>Total Shops</h3>
+<p id="totalShops">0</p>
+</div>
+
+<div class="card">
+<h3>Open Shops</h3>
+<p id="openShops">0</p>
+</div>
+</div>
+
+<!-- ADD SHOP -->
+<div class="form-box">
+<h2>Add Shop</h2>
+
+<select id="category">
+<option>electronics</option>
+<option>clothing</option>
+<option>grocery</option>
+<option>Furniture</option>
+<option>Restaurants</option>
+<option>Stationery</option>
+<option>Cosmetics</option>
+<option>Footwear</option>
+<option>Fruits</option>
+<option>Hardware</option>
+<option>Cosmetics</option>
+<option>Sweets</option>
+</select>
+
+<input type="text" id="name" placeholder="Shop Name">
+<input type="text" id="image" placeholder="Image URL">
+<input type="time" id="open">
+<input type="time" id="close">
+
+<button onclick="addShop()">Add Shop</button>
+</div>
+
+<!-- DELETE SHOP -->
+<div class="form-box">
+<h2>Delete Shop</h2>
+
+<select id="delCategory">
+<option>electronics</option>
+<option>clothing</option>
+<option>grocery</option>
+<option>Furniture</option>
+<option>Restaurants</option>
+<option>Stationery</option>
+<option>Cosmetics</option>
+<option>Footwear</option>
+<option>Fruits</option>
+<option>Hardware</option>
+<option>Cosmetics</option>
+<option>Sweets</option>
+
+</select>
+
+<input type="text" id="delName" placeholder="Shop Name">
+
+<button onclick="deleteShop()">Delete Shop</button>
+</div>
+
+</div>
+
+<script>
+
+// LOAD STATS
+function loadStats(){
+fetch("http://localhost:3000/shop-stats")
+.then(res => res.json())
+.then(data=>{
+document.getElementById("totalShops").innerText = data.total || 0;
+document.getElementById("openShops").innerText = data.open || 0;
+})
+.catch(err => console.log("Error:", err));
+}
+
+// ADD SHOP
+function addShop(){
+
+let data = {
+  category: document.getElementById("category").value,
+  name: document.getElementById("name").value,
+  image: document.getElementById("image").value,
+  open: document.getElementById("open").value,
+  close: document.getElementById("close").value
+};
+
+fetch("http://localhost:3000/add-shop", {
+  method:"POST",
+  headers:{"Content-Type":"application/json"},
+  body: JSON.stringify(data)
+})
+.then(res=>res.text())
+.then(msg=>{
+  alert(msg);
+  loadStats();
+});
+
+}
+
+// DELETE SHOP
+function deleteShop(){
+
+let data = {
+  category: document.getElementById("delCategory").value,
+  name: document.getElementById("delName").value
+};
+
+fetch("http://localhost:3000/delete-shop", {
+  method:"POST",
+  headers:{"Content-Type":"application/json"},
+  body: JSON.stringify(data)
+})
+.then(res=>res.text())
+.then(msg=>{
+  alert(msg);
+  loadStats();
+});
+
+}
+
+// LOGOUT
+function logout(){
+  localStorage.clear();
+}
+
+// INIT
+loadStats();
+
+</script>
+
+</body>
+</html>

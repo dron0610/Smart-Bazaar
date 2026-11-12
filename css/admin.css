@@ -1,0 +1,125 @@
+body{
+    margin:0;
+    font-family:Arial;
+    background:#f5f6fa;
+}
+
+/* LAYOUT */
+.container{
+    display:flex;
+}
+
+/* SIDEBAR */
+.sidebar{
+    width:220px;
+    background:#1e272e;
+    color:white;
+    height:100vh;
+    padding:20px;
+}
+
+.sidebar h2{
+    color:#ffa502;
+}
+
+.sidebar button{
+    width:100%;
+    padding:10px;
+    margin:10px 0;
+    background:none;
+    border:none;
+    color:white;
+    text-align:left;
+    cursor:pointer;
+    border-radius:6px;
+}
+
+.sidebar button:hover{
+    background:#ffa502;
+    color:black;
+}
+
+/* MAIN */
+.main{
+    flex:1;
+    padding:20px;
+}
+
+/* TOP BAR */
+.top-bar{
+    background:#ffa502;
+    padding:12px;
+    border-radius:8px;
+    color:white;
+}
+
+/* CARDS */
+.cards{
+    display:flex;
+    gap:20px;
+    margin-top:20px;
+}
+
+.card{
+    background:white;
+    padding:20px;
+    border-radius:10px;
+    width:200px;
+    text-align:center;
+    box-shadow:0 2px 5px rgba(0,0,0,0.1);
+}
+
+.card p{
+    font-size:24px;
+    font-weight:bold;
+}
+
+/* ADD BOX */
+.add-box{
+    margin-top:20px;
+}
+
+.add-box input, .add-box select{
+    padding:10px;
+    margin:5px;
+}
+
+.add-box button{
+    padding:10px 15px;
+    background:#ffa502;
+    border:none;
+    cursor:pointer;
+}
+
+/* SHOP GRID */
+.shop-grid{
+    display:flex;
+    gap:15px;
+    flex-wrap:wrap;
+    margin-top:10px;
+}
+
+/* SHOP CARD */
+.shop-card{
+    width:180px;
+    background:white;
+    border-radius:10px;
+    padding:10px;
+    box-shadow:0 2px 5px rgba(0,0,0,0.1);
+}
+
+.shop-card img{
+    width:100%;
+    height:120px;
+    object-fit:cover;
+    border-radius:8px;
+}
+
+.shop-card h4{
+    margin:8px 0;
+}
+
+.shop-card p{
+    font-size:13px;
+    color:gray;
+}

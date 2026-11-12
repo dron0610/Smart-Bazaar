@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>Future Gadgets</title>
+<link rel="stylesheet" href="../../css/product.css">
+<link rel="stylesheet" href="../../css/style.css">
+</head>
+
+<body>
+
+<header class="navbar">
+
+<div class="logo">
+<h2>Smart Bazaar</h2>
+<p>Local Market Solutions</p>
+</div>
+
+<nav>
+<ul>
+<li><a class="active" href="../../index.html">Home</a></li>
+<li><a href="../../shops/electronics-shops.html">Shops</a></li>
+
+<li><a href="../../cart.html">Cart</a></li>
+<li><a href="../../customer-dashboard.html">Dashboard</a></li>
+<li><a href="../../parking.html">Parking</a></li>
+<li><a href="../../login.html" onclick="logout()">Logout</a></li>
+</ul>
+</nav>
+</header>
+
+<section class="shop-header">
+<h1>Future Gadgets Store</h1>
+<p>Technology of Tomorrow 🚀</p>
+</section>
+
+<!-- FILTER -->
+<div class="filter-bar">
+<button class="filter-btn active" data-category="all">All</button>
+<button class="filter-btn" data-category="robot">Robots</button>
+<button class="filter-btn" data-category="ai">AI Devices</button>
+<button class="filter-btn" data-category="innovation">Innovations</button>
+</div>
+
+<div class="product-grid">
+
+<!-- ROBOTS -->
+
+<div class="product-card" data-category="robot">
+<div class="info-btn">i</div>
+<img src="https://images.unsplash.com/photo-1581091012184-5c2e1f6b8b6e?auto=format&fit=crop&w=400&q=80">
+<h3>AI Robot Assistant</h3>
+<p>₹1,50,000</p>
+<div class="btns">
+<button onclick="setCurrentProduct(this);openPricePopup()">💰 Get Best Price</button>
+<button onclick="setCurrentProduct(this);bookNow(this)">📦 Book Now</button>
+<button onclick="setCurrentProduct(this);openVisitPopup()">🏪 Visit Shop</button>
+<button onclick="setCurrentProduct(this);addToCart(this)">🛒 Add to Cart</button></div>
+<div class="popup"><div class="popup-content"><span class="close-btn">×</span><h2>AI Robot</h2><p>Voice Control | Smart AI</p></div></div>
+</div>
+
+<div class="product-card" data-category="robot">
+<div class="info-btn">i</div>
+<img src="https://images.unsplash.com/photo-1581093588401-12c3d9c3e09f?auto=format&fit=crop&w=400&q=80">
+<h3>Cleaning Robot</h3>
+<p>₹40,000</p>
+<div class="btns">
+<button onclick="setCurrentProduct(this);openPricePopup()">💰 Get Best Price</button>
+<button onclick="setCurrentProduct(this);bookNow(this)">📦 Book Now</button>
+<button onclick="setCurrentProduct(this);openVisitPopup()">🏪 Visit Shop</button>
+<button onclick="setCurrentProduct(this);addToCart(this)">🛒 Add to Cart</button></div>
+<div class="popup"><div class="popup-content"><span class="close-btn">×</span><h2>Cleaning Robot</h2><p>Auto Vacuum</p></div></div>
+</div>
+
+<div class="product-card" data-category="robot">
+<div class="info-btn">i</div>
+<img src="https://images.unsplash.com/photo-1581091870627-3cbe0f2c6a9b?auto=format&fit=crop&w=400&q=80">
+<h3>Humanoid Robot</h3>
+<p>₹3,00,000</p>
+<div class="btns">
+<button onclick="setCurrentProduct(this);openPricePopup()">💰 Get Best Price</button>
+<button onclick="setCurrentProduct(this);bookNow(this)">📦 Book Now</button>
+<button onclick="setCurrentProduct(this);openVisitPopup()">🏪 Visit Shop</button>
+<button onclick="setCurrentProduct(this);addToCart(this)">🛒 Add to Cart</button></div>
+<div class="popup"><div class="popup-content"><span class="close-btn">×</span><h2>Humanoid</h2><p>Advanced AI Interaction</p></div></div>
+</div>
+
+<!-- AI DEVICES -->
+
+<div class="product-card" data-category="ai">
+<div class="info-btn">i</div>
+<img src="https://images.unsplash.com/photo-1581092334428-2cddc1bfa1c4?auto=format&fit=crop&w=400&q=80">
+<h3>AI Smart Glasses</h3>
+<p>₹80,000</p>
+<div class="btns">
+<button onclick="setCurrentProduct(this);openPricePopup()">💰 Get Best Price</button>
+<button onclick="setCurrentProduct(this);bookNow(this)">📦 Book Now</button>
+<button onclick="setCurrentProduct(this);openVisitPopup()">🏪 Visit Shop</button>
+<button onclick="setCurrentProduct(this);addToCart(this)">🛒 Add to Cart</button></div>
+<div class="popup"><div class="popup-content"><span class="close-btn">×</span><h2>Smart Glasses</h2><p>AR Vision</p></div></div>
+</div>
+
+<div class="product-card" data-category="ai">
+<div class="info-btn">i</div>
+<img src="https://images.unsplash.com/photo-1558002038-1055907df827?auto=format&fit=crop&w=400&q=80">
+<h3>Smart AI Speaker</h3>
+<p>₹6,000</p>
+<div class="btns">
+<button onclick="setCurrentProduct(this);openPricePopup()">💰 Get Best Price</button>
+<button onclick="setCurrentProduct(this);bookNow(this)">📦 Book Now</button>
+<button onclick="setCurrentProduct(this);openVisitPopup()">🏪 Visit Shop</button>
+<button onclick="setCurrentProduct(this);addToCart(this)">🛒 Add to Cart</button></div>
+<div class="popup"><div class="popup-content"><span class="close-btn">×</span><h2>AI Speaker</h2><p>Voice Assistant</p></div></div>
+</div>
+
+<div class="product-card" data-category="ai">
+<div class="info-btn">i</div>
+<img src="https://images.unsplash.com/photo-1519744346363-dc9f4c4e0e9b?auto=format&fit=crop&w=400&q=80">
+<h3>Smart Health Watch</h3>
+<p>₹25,000</p>
+<div class="btns">
+<button onclick="setCurrentProduct(this);openPricePopup()">💰 Get Best Price</button>
+<button onclick="setCurrentProduct(this);bookNow(this)">📦 Book Now</button>
+<button onclick="setCurrentProduct(this);openVisitPopup()">🏪 Visit Shop</button>
+<button onclick="setCurrentProduct(this);addToCart(this)">🛒 Add to Cart</button></div>
+<div class="popup"><div class="popup-content"><span class="close-btn">×</span><h2>Health Watch</h2><p>AI Health Tracking</p></div></div>
+</div>
+
+<!-- INNOVATION -->
+
+<div class="product-card" data-category="innovation">
+<div class="info-btn">i</div>
+<img src="https://images.unsplash.com/photo-1581091215367-59ab6b1bba5c?auto=format&fit=crop&w=400&q=80">
+<h3>Flying Drone Camera</h3>
+<p>₹90,000</p>
+<div class="btns">
+<button onclick="setCurrentProduct(this);openPricePopup()">💰 Get Best Price</button>
+<button onclick="setCurrentProduct(this);bookNow(this)">📦 Book Now</button>
+<button onclick="setCurrentProduct(this);openVisitPopup()">🏪 Visit Shop</button>
+<button onclick="setCurrentProduct(this);addToCart(this)">🛒 Add to Cart</button></div>
+<div class="popup"><div class="popup-content"><span class="close-btn">×</span><h2>Drone</h2><p>4K Aerial Video</p></div></div>
+</div>
+
+<div class="product-card" data-category="innovation">
+<div class="info-btn">i</div>
+<img src="https://images.unsplash.com/photo-1593642632823-8f785ba67e45?auto=format&fit=crop&w=400&q=80">
+<h3>VR Gaming Kit</h3>
+<p>₹70,000</p>
+<div class="btns">
+<button onclick="setCurrentProduct(this);openPricePopup()">💰 Get Best Price</button>
+<button onclick="setCurrentProduct(this);bookNow(this)">📦 Book Now</button>
+<button onclick="setCurrentProduct(this);openVisitPopup()">🏪 Visit Shop</button>
+<button onclick="setCurrentProduct(this);addToCart(this)">🛒 Add to Cart</button></div>
+<div class="popup"><div class="popup-content"><span class="close-btn">×</span><h2>VR Kit</h2><p>Immersive Gaming</p></div></div>
+</div>
+
+<div class="product-card" data-category="innovation">
+<div class="info-btn">i</div>
+<img src="https://images.unsplash.com/photo-1585386959984-a4155224a1c1?auto=format&fit=crop&w=400&q=80">
+<h3>Wireless Charging Pad</h3>
+<p>₹3,000</p>
+<div class="btns">
+<button onclick="setCurrentProduct(this);openPricePopup()">💰 Get Best Price</button>
+<button onclick="setCurrentProduct(this);bookNow(this)">📦 Book Now</button>
+<button onclick="setCurrentProduct(this);openVisitPopup()">🏪 Visit Shop</button>
+<button onclick="setCurrentProduct(this);addToCart(this)">🛒 Add to Cart</button></div>
+<div class="popup"><div class="popup-content"><span class="close-btn">×</span><h2>Charging Pad</h2><p>Fast Wireless Charge</p></div></div>
+</div>
+
+<div class="product-card" data-category="innovation">
+<div class="info-btn">i</div>
+<img src="https://images.unsplash.com/photo-1608043152269-423dbba4e7e1?auto=format&fit=crop&w=400&q=80">
+<h3>Smart Light Panel</h3>
+<p>₹5,000</p>
+<div class="btns">
+<button onclick="setCurrentProduct(this);openPricePopup()">💰 Get Best Price</button>
+<button onclick="setCurrentProduct(this);bookNow(this)">📦 Book Now</button>
+<button onclick="setCurrentProduct(this);openVisitPopup()">🏪 Visit Shop</button>
+<button onclick="setCurrentProduct(this);addToCart(this)">🛒 Add to Cart</button></div>
+<div class="popup"><div class="popup-content"><span class="close-btn">×</span><h2>Light Panel</h2><p>Custom Lighting</p></div></div>
+</div>
+
+<div class="product-card" data-category="innovation">
+<div class="info-btn">i</div>
+<img src="https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?auto=format&fit=crop&w=400&q=80">
+<h3>Smart Ring</h3>
+<p>₹15,000</p>
+<div class="btns">
+<button onclick="setCurrentProduct(this);openPricePopup()">💰 Get Best Price</button>
+<button onclick="setCurrentProduct(this);bookNow(this)">📦 Book Now</button>
+<button onclick="setCurrentProduct(this);openVisitPopup()">🏪 Visit Shop</button>
+<button onclick="setCurrentProduct(this);addToCart(this)">🛒 Add to Cart</button></div>
+<div class="popup"><div class="popup-content"><span class="close-btn">×</span><h2>Smart Ring</h2><p>Health Tracking Ring</p></div></div>
+</div>
+
+</div>
+
+<script src="../../js/products.js"></script>
+
+<!-- PRICE POPUP -->
+<div id="pricePopup" class="popup">
+<div class="popup-content">
+<h3>Enter Your Price</h3>
+<input type="number" id="userPrice" placeholder="Enter price">
+<button onclick="submitPrice()">Submit</button>
+<button onclick="closePopup()">Close</button>
+</div>
+</div>
+
+<!-- VISIT POPUP -->
+<div id="visitPopup" class="popup">
+<div class="popup-content">
+<h3>Select Visit Time</h3>
+<input type="date" id="visitDate">
+<input type="time" id="visitTime">
+<button onclick="confirmVisit()">Confirm</button>
+<button onclick="closePopup()">Close</button>
+</div>
+<script>
+localStorage.setItem("currentShop", "Future Gadgets");
+</script>
+<script>
+// OPEN POPUP
+document.querySelectorAll(".info-btn").forEach(btn => {
+  btn.addEventListener("click", function () {
+    const card = this.closest(".product-card");
+    const popup = card.querySelector(".popup");
+    popup.style.display = "flex";
+  });
+});
+
+// CLOSE POPUP
+document.querySelectorAll(".close-btn").forEach(btn => {
+  btn.addEventListener("click", function () {
+    this.closest(".popup").style.display = "none";
+  });
+});
+</script>
+</div>
+
+</body>
+</html>

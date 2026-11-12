@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>Smart Bazaar</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<header class="navbar">
+
+<div class="logo">
+<h2>Smart Bazaar</h2>
+<p>Local Market Solutions</p>
+</div>
+
+<nav>
+<ul>
+<li><a class="active" href="index.html">Home</a></li>
+<li><a href="shops.html">Categories</a></li>
+<li><a href="cart.html">Cart</a></li>
+<li><a href="customer-dashboard.html">Dashboard</a></li>
+<li><a href="parking.html">Parking</a></li>
+<li><a href="login.html" onclick="logout()">Logout</a></li>
+</ul>
+</nav>
+
+</header>
+
+
+<!-- HERO -->
+<section class="hero">
+
+<h1>Your Smart Local Market Platform</h1>
+<p>Find Best Shops & Easy Parking in Your Local Market</p>
+
+<div class="search-box">
+<input type="text" id="searchInput" placeholder="Search for products or shops...">
+<button id="searchBtn">Search</button>
+</div>
+
+</section>
+
+
+<!-- 🔥 POPULAR SHOPS SLIDER -->
+<section class="container">
+
+<h2>Popular Shops</h2>
+
+<div class="shop-slider">
+
+<button class="arrow left" onclick="slideLeft()">❮</button>
+
+<div class="shop-track" id="shopTrack">
+
+<div class="shop-card">
+<img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=400&q=80">
+<h3>Raj Electronics</h3>
+<p>Electronics</p>
+<a href="../products/electronics/raj-electronics-products.html"><button>View Products</button></a>
+</div>
+
+<div class="shop-card">
+<img src="https://images.unsplash.com/photo-1671543565338-8b22a87b8359?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fGhhcmR3YXJlJTIwYW5kJTIwdG9vbHMlMjBzaG9wc3xlbnwwfHwwfHx8MA%3D%3D?auto=format&fit=crop&w=400&q=80">
+<h3>Construction Tools</h3>
+<p>Heavy Equipment</p>
+<a href="../products/hardware/construction-tools-products.html"><button>View Products</button></a>
+</div>
+
+<div class="shop-card">
+<img src="https://images.unsplash.com/photo-1641440615796-5302077ce9fe?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTl8fGVsZWN0cm9uaWNzJTIwc2hvcHN8ZW58MHx8MHx8fDA%3D?auto=format&fit=crop&w=400&q=80">
+<h3>Digital World</h3>
+<p>Gadgets Store</p>
+<a href="../products/electronics/digital-world-products.html">
+  <button>View Products</button>
+</a>
+</div>
+
+
+<div class="shop-card">
+<img src="https://images.unsplash.com/photo-1722934038532-b691f275f0cf?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mjd8fFNob2VzJTIwc2hvcHN8ZW58MHx8MHx8fDA%3D?auto=format&fit=crop&w=400&q=80">
+<h3>Classic Shoes</h3>
+<p>Formal Wear</p>
+<a href="../products/footwear/classic-shoes-products.html"><button>View Products</button></a>
+</div>
+
+<div class="shop-card">
+<img src="https://plus.unsplash.com/premium_photo-1663011207413-c1065a634e48?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NDV8fGZydWl0cyUyMGFuZCUyMHZlZ2V0YWJsZXMlMjBzaG9wc3xlbnwwfHwwfHx8MA%3D%3D?auto=format&fit=crop&w=400&q=80">
+<h3>Nature Market</h3>
+<p>Healthy Living</p>
+<a href="../products/fruits/nature-market-products.html"><button>View Products</button></a>
+</div>
+
+<div class="shop-card">
+<img src="https://plus.unsplash.com/premium_photo-1739350940126-a3fcee922e32?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8ZnVybml0dXJlJTIwc2hvcHN8ZW58MHx8MHx8fDA%3D?auto=format&fit=crop&w=400&q=80">
+<h3>Dream Home Furniture</h3>
+<p>Home Setup</p>
+<a href="../products/furniture/dream-home-furniture-products.html"><button>View Products</button></a>
+</div>
+
+<div class="shop-card">
+<img src="https://images.unsplash.com/photo-1757674457218-b8f68dd1522a?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NTh8fHN3ZWV0JTIwYmFrZXJ5JTIwc2hvcHN8ZW58MHx8MHx8fDA%3D?auto=format&fit=crop&w=400&q=80">
+<h3>Bakery Hub</h3>
+<p>Cakes & Snacks</p>
+<a href="../products/sweets/bakery-hub-products.html"><button>View Products</button></a>
+</div>
+
+<div class="shop-card">
+<img src="https://images.unsplash.com/photo-1702737806973-22324ac61a62?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8ZWxlY3Ryb25pY3MlMjBzaG9wc3xlbnwwfHwwfHx8MA%3D%3D?auto=format&fit=crop&w=400&q=80">
+<h3>Mobile Planet</h3>
+<p>Smartphones</p>
+<a href="../products/electronics/mobile-planet-products.html"><button>View Products</button></a>
+</div>
+
+<div class="shop-card">
+<img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=400&q=80">
+<h3>Mehta Garments</h3>
+<p>Clothing Store</p>
+<a href="../products/clothing/mehta-garments-products.html"><button>View Products</button></a>
+</div>
+
+<div class="shop-card">
+<img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=400&q=80">
+<h3>Spice Hub</h3>
+<p>Indian Spice Food</p>
+<a href="../products/restaurants/sharma-dhaba-products.html"><button>View Products</button></a>
+</div>
+
+<div class="shop-card">
+<img src="https://images.unsplash.com/photo-1498654896293-37aacf113fd9?auto=format&fit=crop&w=400&q=80">
+<h3>Food Express</h3>
+<p>Quick Bites</p>
+<a href="../products/restaurants/sharma-dhaba-products.html"><button>View Products</button></a>
+</div>
+
+<div class="shop-card">
+<img src="https://images.unsplash.com/photo-1604200657090-ae45994b2451?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTh8fGZydWl0cyUyMGFuZCUyMHZlZ2V0YWJsZXMlMjBzaG9wc3xlbnwwfHwwfHx8MA%3D%3D?auto=format&fit=crop&w=400&q=80">
+<h3>Daily Greens</h3>
+<p>Fresh Items</p>
+<a href="../products/fruits/daily-greens-products.html"><button>View Products</button></a>
+</div>
+
+<div class="shop-card">
+<img src="https://images.unsplash.com/photo-1519520104014-df63821cb6f9?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8aGFyZHdhcmUlMjBhbmQlMjB0b29scyUyMHNob3BzfGVufDB8fDB8fHww?auto=format&fit=crop&w=400&q=80">
+<h3>Hardware Hub</h3>
+<p>All Hardware</p>
+<a href="../products/hardware/hardware-hub-products.html"><button>View Products</button></a>
+</div>
+
+<div class="shop-card">
+<img src="https://images.unsplash.com/photo-1545601445-4d6a0a0565f0?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjJ8fGdyb2NlcnklMjBzaG9wc3xlbnwwfHwwfHx8MA%3D%3D?auto=format&fit=crop&w=400&q=80">
+<h3>Daily Essentials</h3>
+<p>Affordable</p>
+<a href="../products/grocery/daily-essentials-products.html"><button>View Products</button></a>
+</div>
+
+<div class="shop-card">
+<img src="https://images.unsplash.com/photo-1606373720895-3878a4b42ff3?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NjZ8fGNvc21ldGljcyUyMGFuZCUyMGJlYXV0eSUyMHNob3BzfGVufDB8fDB8fHww?auto=format&fit=crop&w=400&q=80">
+<h3>Beauty Point</h3>
+<p>Makeup & Care</p>
+<a href="../products/cosmetics/beauty-point-products.html"><button>View Products</button></a>
+</div>
+
+<div class="shop-card">
+<img src="https://images.unsplash.com/photo-1603706580932-6befcf7d8521?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8cGhhcm1hY3klMjBzaG9wc3xlbnwwfHwwfHx8MA%3D%3D?auto=format&fit=crop&w=400&q=80">
+<h3>Wellness Medico</h3>
+<p>Healthcare</p>
+<a href="../products/pharmacy/wellness-medico-products.html"><button>View Products</button></a>
+</div>
+
+<div class="shop-card">
+<img src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&w=400&q=80">
+<h3>Trendy Threads</h3>
+<p>Latest Styles</p>
+<a href="../products/clothing/trendy-threads-products.html"><button>View Products</button></a>
+</div>
+
+<div class="shop-card">
+<img src="https://images.unsplash.com/photo-1504754524776-8f4f37790ca0?auto=format&fit=crop&w=400&q=80">
+<h3>Gupta Sweets</h3>
+<p>Sweets Shop</p>
+<a href="../products/sweets/gupta-sweets-products.html"><button>View Products</button></a>
+</div>
+
+<div class="shop-card">
+<img src="https://images.unsplash.com/photo-1587854692152-cbe660dbde88?auto=format&fit=crop&w=400&q=80">
+<h3>Agarwal Medicos</h3>
+<p>Pharmacy</p>
+<a href="../products/pharmacy/agarwal-medicos-products.html"><button>View Products</button></a>
+</div>
+
+<div class="shop-card">
+<img src="https://images.unsplash.com/photo-1761494296583-99b15e9063c5?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTV8fGVsZWN0cm9uaWNzJTIwc2hvcHN8ZW58MHx8MHx8fDA%3D?auto=format&fit=crop&w=400&q=80">
+<h3>Sound World</h3>
+<p>Headphones</p>
+<p class="shop-status"></p>
+<a href="../products/electronics/sound-world-products.html"><button>View Products</button></a>
+</div>
+
+<!-- ✅ FIXED CARD -->
+<div class="shop-card">
+<img src="https://plus.unsplash.com/premium_photo-1726862590258-be23cc00b55e?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mzd8fFNob2VzJTIwc2hvcHN8ZW58MHx8MHx8fDA%3D?auto=format&fit=crop&w=400&q=80">
+<h3>Footstep Store</h3>
+<p>Daily Use</p>
+<p class="shop-status"></p>
+<a href="../products/footwear/footstep-store-products.html"><button>View Products</button></a>
+</div>
+
+
+
+<div class="shop-card">
+<img src="https://images.unsplash.com/photo-1581264669997-3f222f331aaa?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mjh8fGdyb2NlcnklMjBzaG9wc3xlbnwwfHwwfHx8MA%3D%3D?auto=format&fit=crop&w=400&q=80">
+<div class="info">
+<h3>Local Grocery Hub</h3>
+<p>Nearby Store</p>
+<p class ="shop-status"> </p>
+<a href="../products/grocery/local-grocery-hub-products.html"><button>View Products</button></a>
+</div>
+
+
+
+</div> <!-- ✅ shopTrack closed -->
+
+<button class="arrow right" onclick="scrollRight()">❯</button>
+
+</div>
+
+</section>
+
+
+<!-- PARKING -->
+<section class="container">
+
+<h2>Parking Booking</h2>
+
+<div class="grid">
+
+<div class="parking-card">
+<h3>Slot A1</h3>
+<span class="available">Available</span>
+<button class="book-slot-btn green">Book Slot</button>
+</div>
+
+<div class="parking-card">
+<h3>Slot A2</h3>
+<span class="occupied">Occupied</span>
+<button onclick="goParking()" style="background:#28a745;color:white;padding:8px 15px;border:none;border-radius:5px;cursor:pointer;">
+  Book Slot
+</button>
+</div>
+
+<div class="parking-card">
+<h3>Slot B3</h3>
+<span class="available">Available</span>
+<button onclick="goParking()" style="background:#28a745;color:white;padding:8px 15px;border:none;border-radius:5px;cursor:pointer;">
+  Book Slot
+</button>
+</div>
+
+<div class="parking-card">
+<h3>Slot B4</h3>
+<span class="occupied">Occupied</span>
+<button onclick="goParking()" style="background:#28a745;color:white;padding:8px 15px;border:none;border-radius:5px;cursor:pointer;">
+  Book Slot
+</button>
+</div>
+
+
+</div>
+
+</section>
+
+
+<!-- PRODUCTS -->
+<section class="container">
+
+<h2>Search Products</h2>
+
+<div class="shop-slider">
+
+<button class="arrow left" onclick="slideLeftProducts()">❮</button>
+
+<div class="shop-track" id="productTrack">
+
+<!-- PRODUCT CARD -->
+<div class="product-card" data-category="bed">
+<div class="info-btn">i</div>
+
+<img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=400&q=80">
+
+<h3>Single Bed</h3>
+<p>₹14,000</p>
+
+<div class="btns">
+<button onclick="openPricePopup()">💰 Get Best Price</button>
+<button onclick="bookNow(this)">📦 Book Now</button>
+<button onclick="openVisitPopup()">🏪 Visit Shop</button>
+<button onclick="addToCart(this)">🛒 Add to Cart</button>
+</div>
+
+<div class="popup">
+<div class="popup-content">
+<span class="close-btn">×</span>
+<h2>Single Bed</h2>
+<p>Compact size</p>
+</div>
+</div>
+</div>
+
+
+
+<div class="product-card" data-category="firstaid">
+<div class="info-btn">i</div>
+<img src="https://plus.unsplash.com/premium_photo-1677860447055-5ce8092c0d7e?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8Zmlyc3QlMjBhaWQlMjBraXR8ZW58MHx8MHx8fDA%3D?auto=format&fit=crop&w=400&q=80">
+<h3>First Aid Kit</h3>
+<p>₹350</p>
+<div class="btns">
+<button onclick="setCurrentProduct(this);openPricePopup()">💰 Get Best Price</button>
+<button onclick="setCurrentProduct(this);bookNow(this)">📦 Book Now</button>
+<button onclick="setCurrentProduct(this);openVisitPopup()">🏪 Visit Shop</button>
+<button onclick="setCurrentProduct(this);addToCart(this)">🛒 Add to Cart</button></div>
+<div class="popup"><div class="popup-content"><span class="close-btn">×</span><h2>First Aid</h2><p>Emergency kit</p></div></div>
+</div>
+
+<div class="product-card" data-category="chair">
+<div class="info-btn">i</div>
+<img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?auto=format&fit=crop&w=400&q=80">
+<h3>Office Chair</h3>
+<p>₹5,000</p>
+<div class="btns">
+<button onclick="openPricePopup()">💰 Get Best Price</button>
+<button onclick="bookNow(this)">📦 Book Now</button>
+<button onclick="openVisitPopup()">🏪 Visit Shop</button>
+<button onclick="addToCart(this)">🛒 Add to Cart</button></div>
+<div class="popup"><div class="popup-content"><span class="close-btn">×</span><h2>Office Chair</h2><p>Comfort seating</p></div></div>
+</div>
+
+<div class="product-card" data-category="men">
+<div class="info-btn">i</div>
+<img src="https://images.unsplash.com/photo-1621072156002-e2fccdc0b176?auto=format&fit=crop&w=400&q=80">
+<h3>Formal Shirt</h3>
+<p>₹1,400</p>
+<div class="btns">
+<button onclick="setCurrentProduct(this);openPricePopup()">💰 Get Best Price</button>
+<button onclick="setCurrentProduct(this);bookNow(this)">📦 Book Now</button>
+<button onclick="setCurrentProduct(this);openVisitPopup()">🏪 Visit Shop</button>
+<button onclick="setCurrentProduct(this);addToCart(this)">🛒 Add to Cart</button></div>
+<div class="popup"><div class="popup-content"><span class="close-btn">×</span><h2>Formal Shirt</h2><p>Office Wear | Cotton</p></div></div>
+</div>
+
+
+<div class="product-card" data-category="laptop">
+<div class="info-btn">i</div>
+<img src="https://images.unsplash.com/photo-1558864559-ed673ba3610b?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8ZGVsbHxlbnwwfHwwfHx8MA%3D%3D?auto=format&fit=crop&w=400&q=80">
+<h3>Dell Inspiron</h3>
+<p>₹60,000</p>
+<div class="btns">
+<button onclick="setCurrentProduct(this);openPricePopup()">💰 Get Best Price</button>
+<button onclick="setCurrentProduct(this);bookNow(this)">📦 Book Now</button>
+<button onclick="setCurrentProduct(this);openVisitPopup()">🏪 Visit Shop</button>
+<button onclick="setCurrentProduct(this);addToCart(this)">🛒 Add to Cart</button></div>
+<div class="popup"><div class="popup-content"><span class="close-btn">×</span><h2>Dell Inspiron</h2><p>SSD | Windows 11</p></div></div>
+</div>
+
+<div class="product-card" data-category="sandals">
+<div class="info-btn">i</div>
+<img src="https://plus.unsplash.com/premium_photo-1676234844384-82e1830af724?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8d29tZW4lMjBzYW5kYWxzfGVufDB8fDB8fHww?auto=format&fit=crop&w=400&q=80">
+<h3>Women Sandals</h3>
+<p>₹1,800</p>
+<div class="btns">
+<button onclick="openPricePopup()">💰 Get Best Price</button>
+<button onclick="bookNow(this)">📦 Book Now</button>
+<button onclick="openVisitPopup()">🏪 Visit Shop</button>
+<button onclick="addToCart(this)">🛒 Add to Cart</button></div>
+<div class="popup"><div class="popup-content"><span class="close-btn">×</span><h2>Sandals</h2><p>Stylish design</p></div></div>
+</div>
+
+<div class="product-card" data-category="safety">
+<div class="info-btn">i</div>
+<img src="https://images.unsplash.com/photo-1617118602199-d3c05ae37ed8?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8c2FmZXR5JTIwZ2xvdmVzfGVufDB8fDB8fHww?auto=format&fit=crop&w=400&q=80">
+<h3>Safety Gloves</h3>
+<p>₹200</p>
+<div class="btns">
+<button onclick="openPricePopup()">💰 Get Best Price</button>
+<button onclick="bookNow(this)">📦 Book Now</button>
+<button onclick="openVisitPopup()">🏪 Visit Shop</button>
+<button onclick="addToCart(this)">🛒 Add to Cart</button></div>
+<div class="popup"><div class="popup-content"><span class="close-btn">×</span><h2>Gloves</h2><p>Hand protection</p></div></div>
+</div>
+
+<div class="product-card" data-category="fruits">
+<div class="info-btn">i</div>
+<img src="https://plus.unsplash.com/premium_photo-1670512181061-e24282f7ee78?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8b3Jhbmdlc3xlbnwwfHwwfHx8MA%3D%3D?auto=format&fit=crop&w=400&q=80">
+<h3>Oranges (1kg)</h3>
+<p>₹120</p>
+<div class="btns">
+<button onclick="openPricePopup()">💰 Get Best Price</button>
+<button onclick="bookNow(this)">📦 Book Now</button>
+<button onclick="openVisitPopup()">🏪 Visit Shop</button>
+<button onclick="addToCart(this)">🛒 Add to Cart</button></div>
+<div class="popup"><div class="popup-content"><span class="close-btn">×</span><h2>Oranges</h2><p>Vitamin C rich</p></div></div>
+</div>
+
+<div class="product-card" data-category="accessory">
+<div class="info-btn">i</div>
+<img src="https://images.unsplash.com/photo-1580910051074-3eb694886505?auto=format&fit=crop&w=400&q=80">
+<h3>Fast Charger</h3>
+<p>₹800</p>
+<div class="btns">
+<button onclick="setCurrentProduct(this);openPricePopup()">💰 Get Best Price</button>
+<button onclick="setCurrentProduct(this);bookNow(this)">📦 Book Now</button>
+<button onclick="setCurrentProduct(this);openVisitPopup()">🏪 Visit Shop</button>
+<button onclick="setCurrentProduct(this);addToCart(this)">🛒 Add to Cart</button></div>
+<div class="popup"><div class="popup-content"><span class="close-btn">×</span><h2>Fast Charger</h2><p>30W Charging</p></div></div>
+</div>
+
+<div class="product-card" data-category="mobile">
+<div class="info-btn">i</div>
+<img src="https://images.unsplash.com/photo-1598327105666-5b89351aff97?auto=format&fit=crop&w=400&q=80">
+<h3>Oppo Reno 10</h3>
+<p>₹32,000</p>
+<div class="btns">
+<button onclick="setCurrentProduct(this);openPricePopup()">💰 Get Best Price</button>
+<button onclick="setCurrentProduct(this);bookNow(this)">📦 Book Now</button>
+<button onclick="setCurrentProduct(this);openVisitPopup()">🏪 Visit Shop</button>
+<button onclick="setCurrentProduct(this);addToCart(this)">🛒 Add to Cart</button></div>
+<div class="popup"><div class="popup-content"><span class="close-btn">×</span><h2>Oppo Reno 10</h2><p>Stylish Design</p></div></div>
+</div>
+
+<div class="product-card" data-category="cutting">
+<div class="info-btn">i</div>
+<img src="https://plus.unsplash.com/premium_photo-1682141539071-b1d12083025d?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8c3RlZWwlMjBjdXR0ZXJ8ZW58MHx8MHx8fDA%3D?auto=format&fit=crop&w=400&q=80">
+<h3>Steel Cutter</h3>
+<p>₹2800</p>
+<div class="btns">
+<button onclick="openPricePopup()">💰 Get Best Price</button>
+<button onclick="bookNow(this)">📦 Book Now</button>
+<button onclick="openVisitPopup()">🏪 Visit Shop</button>
+<button onclick="addToCart(this)">🛒 Add to Cart</button></div>
+<div class="popup"><div class="popup-content"><span class="close-btn">×</span><h2>Cutter</h2><p>Heavy cutting tool</p></div></div>
+</div>
+
+<div class="product-card" data-category="casual">
+<div class="info-btn">i</div>
+<img src="https://images.unsplash.com/photo-1603808033192-082d6919d3e1?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Y2FzdWFsJTIwc2hvZXN8ZW58MHx8MHx8fDA%3D?auto=format&fit=crop&w=400&q=80">
+<h3>Daily Casual Shoes</h3>
+<p>₹2,200</p>
+<div class="btns">
+<button onclick="openPricePopup()">💰 Get Best Price</button>
+<button onclick="bookNow(this)">📦 Book Now</button>
+<button onclick="openVisitPopup()">🏪 Visit Shop</button>
+<button onclick="addToCart(this)">🛒 Add to Cart</button></div>
+<div class="popup"><div class="popup-content"><span class="close-btn">×</span><h2>Casual Shoes</h2><p>Comfortable daily wear</p></div></div>
+</div>
+
+
+<div class="product-card" data-category="men">
+<div class="info-btn">i</div>
+<img src="https://plus.unsplash.com/premium_photo-1673356302169-574db56b52cd?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8aG9vZGllfGVufDB8fDB8fHww?auto=format&fit=crop&w=400&q=80">
+<h3>Minimal Hoodie</h3>
+<p>₹2,300</p>
+<div class="btns">
+<button onclick="setCurrentProduct(this);openPricePopup()">💰 Get Best Price</button>
+<button onclick="setCurrentProduct(this);bookNow(this)">📦 Book Now</button>
+<button onclick="setCurrentProduct(this);openVisitPopup()">🏪 Visit Shop</button>
+<button onclick="setCurrentProduct(this);addToCart(this)">🛒 Add to Cart</button></div>
+<div class="popup"><div class="popup-content"><span class="close-btn">×</span><h2>Hoodie</h2><p>Clean Design</p></div></div>
+</div>
+
+<div class="product-card" data-category="skincare">
+<div class="info-btn">i</div>
+<img src="https://images.unsplash.com/photo-1612817288484-6f916006741a?auto=format&fit=crop&w=400&q=80">
+<h3>Vitamin C Serum</h3>
+<p>₹1,300</p>
+<div class="btns">
+<button onclick="setCurrentProduct(this);openPricePopup()">💰 Get Best Price</button>
+<button onclick="setCurrentProduct(this);bookNow(this)">📦 Book Now</button>
+<button onclick="setCurrentProduct(this);openVisitPopup()">🏪 Visit Shop</button>
+<button onclick="setCurrentProduct(this);addToCart(this)">🛒 Add to Cart</button></div>
+<div class="popup"><div class="popup-content"><span class="close-btn">×</span><h2>Serum</h2><p>Brightening & glow boost</p></div></div>
+</div>
+
+<div class="product-card" data-category="ethnic">
+<div class="info-btn">i</div>
+<img src="https://images.unsplash.com/photo-1724856605022-106d6dd6e842?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8bGVoZW5nYXxlbnwwfHwwfHx8MA%3D%3D?auto=format&fit=crop&w=400&q=80">
+<h3>Lehenga</h3>
+<p>₹5,800</p>
+<div class="btns">
+<button onclick="setCurrentProduct(this);openPricePopup()">💰 Get Best Price</button>
+<button onclick="setCurrentProduct(this);bookNow(this)">📦 Book Now</button>
+<button onclick="setCurrentProduct(this);openVisitPopup()">🏪 Visit Shop</button>
+<button onclick="setCurrentProduct(this);addToCart(this)">🛒 Add to Cart</button></div>
+<div class="popup"><div class="popup-content"><span class="close-btn">×</span><h2>Lehenga</h2><p>Wedding Wear</p></div></div>
+</div>
+
+<div class="product-card" data-category="accessory">
+<div class="info-btn">i</div>
+<img src="https://images.unsplash.com/photo-1583394838336-acd977736f90?auto=format&fit=crop&w=400&q=80">
+<h3>Headphones</h3>
+<p>₹3,000</p>
+<div class="btns">
+<button onclick="setCurrentProduct(this);openPricePopup()">💰 Get Best Price</button>
+<button onclick="setCurrentProduct(this);bookNow(this)">📦 Book Now</button>
+<button onclick="setCurrentProduct(this);openVisitPopup()">🏪 Visit Shop</button>
+<button onclick="setCurrentProduct(this);addToCart(this)">🛒 Add to Cart</button></div>
+<div class="popup"><div class="popup-content"><span class="close-btn">×</span><h2>Headphones</h2><p>Noise Cancellation</p></div></div>
+</div>
+
+<!-- बाकी cards same रहने दो -->
+
+</div>
+
+<button class="arrow right" onclick="slideRightProducts()">❯</button>
+
+</div>
+
+</section>
+
+<!-- FOOTER -->
+<footer>
+<p>Smart Bazaar - Your One Stop Solution for Local Market Needs</p>
+</footer>
+
+
+<script src="js/main.js"></script>
+<script>
+function logout(){
+  localStorage.clear();
+  alert("Logged out");
+}
+</script>
+<script>
+function goParking(){
+  window.location.href = "parking.html";
+}
+</script>
+
+<script>
+
+function slideLeftProducts(){
+  document.getElementById("productTrack").scrollBy({
+    left: -300,
+    behavior: "smooth"
+  });
+}
+
+function slideRightProducts(){
+  document.getElementById("productTrack").scrollBy({
+    left: 300,
+    behavior: "smooth"
+  });
+}
+
+</script>
+
+</body>
+</html>

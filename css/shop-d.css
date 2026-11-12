@@ -1,0 +1,216 @@
+/* ===== PAGE ===== */
+body{
+font-family: 'Segoe UI', sans-serif;
+background: #f4f6f9;
+margin: 0;
+}
+
+/* ===== HEADER ===== */
+#shopName{
+background: linear-gradient(90deg, #df9310, #df9310);
+color: white;
+padding: 15px 20px;
+font-size: 20px;
+font-weight: 600;
+}
+
+/* ===== MAIN ===== */
+.main{
+padding: 20px;
+}
+
+/* ===== SECTION LIST ===== */
+#priceRequests,
+#bookOrders,
+#visitRequests,
+#acceptedList{
+display: flex;
+flex-direction: column;
+gap: 15px;
+}
+
+/* ===== CARD ===== */
+.order-card{
+background: white;
+padding: 15px 18px;
+border-radius: 12px;
+box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+border-left: 5px solid #d9982a;
+transition: 0.3s;
+}
+
+.order-card:hover{
+transform: translateY(-3px);
+}
+
+/* ===== TEXT ===== */
+.order-card h3{
+margin-bottom: 8px;
+font-size: 16px;
+font-weight: 600;
+color: #333;
+}
+
+/* ===== ROW ===== */
+.order-row{
+display: flex;
+justify-content: space-between;
+align-items: center;
+gap: 15px;
+flex-wrap: wrap;
+}
+
+/* ===== ITEM ===== */
+.order-row span{
+font-size: 14px;
+color: #444;
+}
+
+/* ===== BUTTONS ===== */
+.actions{
+margin-top: 10px;
+display: flex;
+gap: 10px;
+}
+
+/* ACCEPT */
+.accept{
+background: #28a745;
+color: white;
+border: none;
+padding: 6px 14px;
+border-radius: 6px;
+cursor: pointer;
+font-size: 13px;
+}
+
+.accept:hover{
+background: #218838;
+}
+
+/* REJECT */
+.reject{
+background: #dc3545;
+color: white;
+border: none;
+padding: 6px 14px;
+border-radius: 6px;
+cursor: pointer;
+font-size: 13px;
+}
+
+.reject:hover{
+background: #c82333;
+}
+
+/* ===== STATUS COLORS ===== */
+span:contains("Accepted"){
+color: green;
+font-weight: bold;
+}
+
+span:contains("Rejected"){
+color: red;
+font-weight: bold;
+}
+
+/* ===== RESPONSIVE ===== */
+@media(max-width:600px){
+.order-row{
+flex-direction: column;
+align-items: flex-start;
+}
+}
+
+/* ===== HEADER (TOP BAR FIX) ===== */
+#shopName{
+background: linear-gradient(90deg, #df9310, #ff8c00);
+color: #fff;
+padding: 18px 25px;
+font-size: 22px;
+font-weight: bold;
+border-radius: 8px;
+margin-bottom: 10px;
+box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* ===== MAIN ===== */
+.main{
+padding: 20px;
+}
+
+/* ===== SECTION CONTAINER ===== */
+#priceRequests,
+#bookOrders,
+#visitRequests,
+#acceptedList{
+display: flex;
+flex-direction: column;
+align-items: flex-start;   /* 🔥 LEFT SHIFT FIX */
+gap: 15px;
+}
+
+/* ===== CARD ===== */
+.order-card{
+background: white;
+padding: 15px 20px;
+border-radius: 10px;
+box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+width: 70%;   /* 🔥 LEFT SIDE WIDTH */
+border-left: 6px solid #df9310;
+}
+
+/* ===== TEXT ===== */
+.order-card{
+font-size: 15px;
+color: #333;
+line-height: 1.6;
+}
+
+/* ===== BUTTONS (YELLOW + BLACK) ===== */
+.actions{
+margin-top: 10px;
+display: flex;
+gap: 10px;
+}
+
+/* ACCEPT BUTTON */
+.actions button:first-child{
+background: #df9310;
+color: black;
+border: none;
+padding: 6px 14px;
+border-radius: 6px;
+cursor: pointer;
+font-weight: 500;
+}
+
+.actions button:first-child:hover{
+background: #ff9800;
+}
+
+/* REJECT BUTTON */
+.actions button:last-child{
+background: black;
+color: white;
+border: none;
+padding: 6px 14px;
+border-radius: 6px;
+cursor: pointer;
+}
+
+.actions button:last-child:hover{
+background: #333;
+}
+
+/* ===== STATUS ===== */
+.order-card span{
+font-weight: 500;
+}
+
+/* ===== RESPONSIVE ===== */
+@media(max-width:768px){
+.order-card{
+width: 100%;
+}
+}

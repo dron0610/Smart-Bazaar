@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>Footwear Hub</title>
+
+<!-- ✅ CSS -->
+<link rel="stylesheet" href="../../css/product.css">
+<link rel="stylesheet" href="../../css/style.css">
+
+</head>
+
+<body>
+
+<header class="navbar">
+
+<div class="logo">
+<h2>Smart Bazaar</h2>
+<p>Local Market Solutions</p>
+</div>
+
+<nav>
+<ul>
+<li><a class="active" href="../../index.html">Home</a></li>
+<li><a href="../../shops/footwear-shops.html">Shops</a></li>
+
+<li><a href="../../cart.html">Cart</a></li>
+<li><a href="../../customer-dashboard.html">Dashboard</a></li>
+<li><a href="../../parking.html">Parking</a></li>
+<li><a href="../../login.html" onclick="logout()">Logout</a></li>
+</ul>
+</nav>
+</header>
+
+<section class="shop-header">
+<h1>Footwear Hub</h1>
+<p>All Your Footwear Needs in One Place 👟✨</p>
+</section>
+
+<!-- FILTER -->
+<div class="filter-bar">
+<button class="filter-btn active" data-category="all">All</button>
+<button class="filter-btn" data-category="sneakers">Sneakers</button>
+<button class="filter-btn" data-category="formal">Formal</button>
+<button class="filter-btn" data-category="sports">Sports</button>
+<button class="filter-btn" data-category="sandals">Sandals</button>
+<button class="filter-btn" data-category="slippers">Slippers</button>
+</div>
+
+<div class="product-grid">
+
+<!-- SNEAKERS -->
+
+<div class="product-card" data-category="sneakers">
+<div class="info-btn">i</div>
+<img src="https://images.unsplash.com/photo-1614252235316-8c857d38b5f4?auto=format&fit=crop&w=400&q=80">
+<h3>White Sneakers</h3>
+<p>₹2,900</p>
+<div class="btns">
+<button onclick="openPricePopup()">💰 Get Best Price</button>
+<button onclick="bookNow(this)">📦 Book Now</button>
+<button onclick="openVisitPopup()">🏪 Visit Shop</button>
+<button onclick="addToCart(this)">🛒 Add to Cart</button></div>
+<div class="popup"><div class="popup-content"><span class="close-btn">×</span><h2>Sneakers</h2><p>Trendy & stylish</p></div></div>
+</div>
+
+<div class="product-card" data-category="sneakers">
+<div class="info-btn">i</div>
+<img src="https://images.unsplash.com/photo-1528701800489-20be3c1cfd86?auto=format&fit=crop&w=400&q=80">
+<h3>Black Sneakers</h3>
+<p>₹2,800</p>
+<div class="btns">
+<button onclick="openPricePopup()">💰 Get Best Price</button>
+<button onclick="bookNow(this)">📦 Book Now</button>
+<button onclick="openVisitPopup()">🏪 Visit Shop</button>
+<button onclick="addToCart(this)">🛒 Add to Cart</button></div>
+<div class="popup"><div class="popup-content"><span class="close-btn">×</span><h2>Sneakers</h2><p>Daily wear</p></div></div>
+</div>
+
+<!-- FORMAL -->
+
+<div class="product-card" data-category="formal">
+<div class="info-btn">i</div>
+<img src="https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?auto=format&fit=crop&w=400&q=80">
+<h3>Leather Formal Shoes</h3>
+<p>₹3,800</p>
+<div class="btns">
+<button onclick="openPricePopup()">💰 Get Best Price</button>
+<button onclick="bookNow(this)">📦 Book Now</button>
+<button onclick="openVisitPopup()">🏪 Visit Shop</button>
+<button onclick="addToCart(this)">🛒 Add to Cart</button></div>
+<div class="popup"><div class="popup-content"><span class="close-btn">×</span><h2>Formal Shoes</h2><p>Premium leather</p></div></div>
+</div>
+
+<div class="product-card" data-category="formal">
+<div class="info-btn">i</div>
+<img src="https://images.unsplash.com/photo-1614252369475-531eba835eb1?auto=format&fit=crop&w=400&q=80">
+<h3>Office Shoes</h3>
+<p>₹3,200</p>
+<div class="btns">
+<button onclick="openPricePopup()">💰 Get Best Price</button>
+<button onclick="bookNow(this)">📦 Book Now</button>
+<button onclick="openVisitPopup()">🏪 Visit Shop</button>
+<button onclick="addToCart(this)">🛒 Add to Cart</button></div>
+<div class="popup"><div class="popup-content"><span class="close-btn">×</span><h2>Office Wear</h2><p>Elegant style</p></div></div>
+</div>
+
+<!-- SPORTS -->
+
+<div class="product-card" data-category="sports">
+<div class="info-btn">i</div>
+<img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=400&q=80">
+<h3>Running Shoes</h3>
+<p>₹3,300</p>
+<div class="btns">
+<button onclick="openPricePopup()">💰 Get Best Price</button>
+<button onclick="bookNow(this)">📦 Book Now</button>
+<button onclick="openVisitPopup()">🏪 Visit Shop</button>
+<button onclick="addToCart(this)">🛒 Add to Cart</button></div>
+<div class="popup"><div class="popup-content"><span class="close-btn">×</span><h2>Running Shoes</h2><p>Lightweight</p></div></div>
+</div>
+
+<div class="product-card" data-category="sports">
+<div class="info-btn">i</div>
+<img src="https://images.unsplash.com/photo-1606813907291-d86efa9b94db?auto=format&fit=crop&w=400&q=80">
+<h3>Gym Shoes</h3>
+<p>₹3,000</p>
+<div class="btns">
+<button onclick="openPricePopup()">💰 Get Best Price</button>
+<button onclick="bookNow(this)">📦 Book Now</button>
+<button onclick="openVisitPopup()">🏪 Visit Shop</button>
+<button onclick="addToCart(this)">🛒 Add to Cart</button></div>
+<div class="popup"><div class="popup-content"><span class="close-btn">×</span><h2>Gym Shoes</h2><p>Strong grip</p></div></div>
+</div>
+
+<!-- SANDALS -->
+
+<div class="product-card" data-category="sandals">
+<div class="info-btn">i</div>
+<img src="https://images.unsplash.com/photo-1605733513597-a8f8341084e6?auto=format&fit=crop&w=400&q=80">
+<h3>Men Sandals</h3>
+<p>₹1,500</p>
+<div class="btns">
+<button onclick="openPricePopup()">💰 Get Best Price</button>
+<button onclick="bookNow(this)">📦 Book Now</button>
+<button onclick="openVisitPopup()">🏪 Visit Shop</button>
+<button onclick="addToCart(this)">🛒 Add to Cart</button></div>
+<div class="popup"><div class="popup-content"><span class="close-btn">×</span><h2>Sandals</h2><p>Comfort wear</p></div></div>
+</div>
+
+<div class="product-card" data-category="sandals">
+<div class="info-btn">i</div>
+<img src="https://images.unsplash.com/photo-1582582429416-5b8a9f9d2b1f?auto=format&fit=crop&w=400&q=80">
+<h3>Women Sandals</h3>
+<p>₹1,800</p>
+<div class="btns">
+<button onclick="openPricePopup()">💰 Get Best Price</button>
+<button onclick="bookNow(this)">📦 Book Now</button>
+<button onclick="openVisitPopup()">🏪 Visit Shop</button>
+<button onclick="addToCart(this)">🛒 Add to Cart</button></div>
+<div class="popup"><div class="popup-content"><span class="close-btn">×</span><h2>Sandals</h2><p>Stylish design</p></div></div>
+</div>
+
+<!-- SLIPPERS -->
+
+<div class="product-card" data-category="slippers">
+<div class="info-btn">i</div>
+<img src="https://images.unsplash.com/photo-1582582429416-5b8a9f9d2b1f?auto=format&fit=crop&w=400&q=80">
+<h3>Flip Flops</h3>
+<p>₹700</p>
+<div class="btns">
+<button onclick="openPricePopup()">💰 Get Best Price</button>
+<button onclick="bookNow(this)">📦 Book Now</button>
+<button onclick="openVisitPopup()">🏪 Visit Shop</button>
+<button onclick="addToCart(this)">🛒 Add to Cart</button></div>
+<div class="popup"><div class="popup-content"><span class="close-btn">×</span><h2>Flip Flops</h2><p>Daily wear</p></div></div>
+</div>
+
+<div class="product-card" data-category="slippers">
+<div class="info-btn">i</div>
+<img src="https://images.unsplash.com/photo-1605733513597-a8f8341084e6?auto=format&fit=crop&w=400&q=80">
+<h3>Comfort Slippers</h3>
+<p>₹900</p>
+<div class="btns">
+<button onclick="openPricePopup()">💰 Get Best Price</button>
+<button onclick="bookNow(this)">📦 Book Now</button>
+<button onclick="openVisitPopup()">🏪 Visit Shop</button>
+<button onclick="addToCart(this)">🛒 Add to Cart</button></div>
+<div class="popup"><div class="popup-content"><span class="close-btn">×</span><h2>Slippers</h2><p>Soft sole</p></div></div>
+</div>
+
+<!-- EXTRA -->
+
+<div class="product-card" data-category="sports">
+<div class="info-btn">i</div>
+<img src="https://images.unsplash.com/photo-1575537302964-96cd47c06b1b?auto=format&fit=crop&w=400&q=80">
+<h3>Training Shoes</h3>
+<p>₹3,200</p>
+<div class="btns">
+<button onclick="openPricePopup()">💰 Get Best Price</button>
+<button onclick="bookNow(this)">📦 Book Now</button>
+<button onclick="openVisitPopup()">🏪 Visit Shop</button>
+<button onclick="addToCart(this)">🛒 Add to Cart</button></div>
+<div class="popup"><div class="popup-content"><span class="close-btn">×</span><h2>Training</h2><p>Durable use</p></div></div>
+</div>
+
+<div class="product-card" data-category="casual">
+<div class="info-btn">i</div>
+<img src="https://images.unsplash.com/photo-1588361861040-ac9b1018f6d5?auto=format&fit=crop&w=400&q=80">
+<h3>Canvas Shoes</h3>
+<p>₹2,200</p>
+<div class="btns">
+<button onclick="openPricePopup()">💰 Get Best Price</button>
+<button onclick="bookNow(this)">📦 Book Now</button>
+<button onclick="openVisitPopup()">🏪 Visit Shop</button>
+<button onclick="addToCart(this)">🛒 Add to Cart</button></div>
+<div class="popup"><div class="popup-content"><span class="close-btn">×</span><h2>Canvas</h2><p>Lightweight</p></div></div>
+</div>
+
+</div>
+
+<script src="../../js/products.js"></script>
+
+<!-- PRICE POPUP -->
+<div id="pricePopup" class="popup">
+<div class="popup-content">
+<h3>Enter Your Price</h3>
+<input type="number" id="userPrice" placeholder="Enter price">
+<button onclick="submitPrice()">Submit</button>
+<button onclick="closePopup()">Close</button>
+</div>
+</div>
+
+<!-- VISIT POPUP -->
+<div id="visitPopup" class="popup">
+<div class="popup-content">
+<h3>Select Visit Time</h3>
+<input type="date" id="visitDate">
+<input type="time" id="visitTime">
+<button onclick="confirmVisit()">Confirm</button>
+<button onclick="closePopup()">Close</button>
+</div>
+</div>
+<script>
+localStorage.setItem("currentShop", "Footwear Hub");
+</script>
+</body>
+</html>

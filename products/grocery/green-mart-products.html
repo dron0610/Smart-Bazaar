@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>Green Mart</title>
+
+<!-- ✅ CSS -->
+<link rel="stylesheet" href="../../css/product.css">
+<link rel="stylesheet" href="../../css/style.css">
+
+</head>
+
+<body>
+
+<header class="navbar">
+
+<div class="logo">
+<h2>Smart Bazaar</h2>
+<p>Local Market Solutions</p>
+</div>
+
+<nav>
+<ul>
+<li><a class="active" href="../../index.html">Home</a></li>
+<li><a href="../../shops/grocery-shops.html">Shops</a></li>
+
+<li><a href="../../cart.html">Cart</a></li>
+<li><a href="../../customer-dashboard.html">Dashboard</a></li>
+<li><a href="../../parking.html">Parking</a></li>
+<li><a href="../../login.html" onclick="logout()">Logout</a></li>
+</ul>
+</nav>
+
+</header>
+
+<section class="shop-header">
+<h1>Green Mart</h1>
+<p>Organic & Healthy Living 🌱🥦</p>
+</section>
+
+<!-- FILTER -->
+<div class="filter-bar">
+<button class="filter-btn active" data-category="all">All</button>
+<button class="filter-btn" data-category="fruits">Fruits</button>
+<button class="filter-btn" data-category="vegetables">Vegetables</button>
+<button class="filter-btn" data-category="grains">Grains</button>
+<button class="filter-btn" data-category="dairy">Dairy</button>
+<button class="filter-btn" data-category="organic">Organic</button>
+</div>
+
+<div class="product-grid">
+
+<!-- FRUITS -->
+
+<div class="product-card" data-category="fruits">
+<div class="info-btn">i</div>
+<img src="https://images.unsplash.com/photo-1574226516831-e1dff420e37b?auto=format&fit=crop&w=400&q=80">
+<h3>Organic Apples</h3>
+<p>₹150/kg</p>
+<div class="btns">
+<button onclick="setCurrentProduct(this);openPricePopup()">💰 Get Best Price</button>
+<button onclick="setCurrentProduct(this);bookNow(this)">📦 Book Now</button>
+<button onclick="setCurrentProduct(this);openVisitPopup()">🏪 Visit Shop</button>
+<button onclick="setCurrentProduct(this);addToCart(this)">🛒 Add to Cart</button></div>
+<div class="popup"><div class="popup-content"><span class="close-btn">×</span><h2>Apples</h2><p>100% organic & fresh</p></div></div>
+</div>
+
+<div class="product-card" data-category="fruits">
+<div class="info-btn">i</div>
+<img src="https://images.unsplash.com/photo-1610832958506-aa56368176cf?auto=format&fit=crop&w=400&q=80">
+<h3>Mangoes</h3>
+<p>₹200/kg</p>
+<div class="btns">
+<button onclick="setCurrentProduct(this);openPricePopup()">💰 Get Best Price</button>
+<button onclick="setCurrentProduct(this);bookNow(this)">📦 Book Now</button>
+<button onclick="setCurrentProduct(this);openVisitPopup()">🏪 Visit Shop</button>
+<button onclick="setCurrentProduct(this);addToCart(this)">🛒 Add to Cart</button></div>
+<div class="popup"><div class="popup-content"><span class="close-btn">×</span><h2>Mangoes</h2><p>Sweet seasonal fruit</p></div></div>
+</div>
+
+<!-- VEGETABLES -->
+
+<div class="product-card" data-category="vegetables">
+<div class="info-btn">i</div>
+<img src="https://images.unsplash.com/photo-1540420773420-3366772f4999?auto=format&fit=crop&w=400&q=80">
+<h3>Tomatoes</h3>
+<p>₹55/kg</p>
+<div class="btns">
+<button onclick="setCurrentProduct(this);openPricePopup()">💰 Get Best Price</button>
+<button onclick="setCurrentProduct(this);bookNow(this)">📦 Book Now</button>
+<button onclick="setCurrentProduct(this);openVisitPopup()">🏪 Visit Shop</button>
+<button onclick="setCurrentProduct(this);addToCart(this)">🛒 Add to Cart</button></div>
+<div class="popup"><div class="popup-content"><span class="close-btn">×</span><h2>Tomatoes</h2><p>Farm fresh</p></div></div>
+</div>
+
+<div class="product-card" data-category="vegetables">
+<div class="info-btn">i</div>
+<img src="https://images.unsplash.com/photo-1582515073490-39981397c445?auto=format&fit=crop&w=400&q=80">
+<h3>Potatoes</h3>
+<p>₹40/kg</p>
+<div class="btns">
+<button onclick="setCurrentProduct(this);openPricePopup()">💰 Get Best Price</button>
+<button onclick="setCurrentProduct(this);bookNow(this)">📦 Book Now</button>
+<button onclick="setCurrentProduct(this);openVisitPopup()">🏪 Visit Shop</button>
+<button onclick="setCurrentProduct(this);addToCart(this)">🛒 Add to Cart</button></div>
+<div class="popup"><div class="popup-content"><span class="close-btn">×</span><h2>Potatoes</h2><p>Organic produce</p></div></div>
+</div>
+
+<!-- GRAINS -->
+
+<div class="product-card" data-category="grains">
+<div class="info-btn">i</div>
+<img src="https://images.unsplash.com/photo-1603048297172-c92544798d5a?auto=format&fit=crop&w=400&q=80">
+<h3>Organic Rice</h3>
+<p>₹400</p>
+<div class="btns">
+<button onclick="setCurrentProduct(this);openPricePopup()">💰 Get Best Price</button>
+<button onclick="setCurrentProduct(this);bookNow(this)">📦 Book Now</button>
+<button onclick="setCurrentProduct(this);openVisitPopup()">🏪 Visit Shop</button>
+<button onclick="setCurrentProduct(this);addToCart(this)">🛒 Add to Cart</button></div>
+<div class="popup"><div class="popup-content"><span class="close-btn">×</span><h2>Rice</h2><p>Healthy grains</p></div></div>
+</div>
+
+<div class="product-card" data-category="grains">
+<div class="info-btn">i</div>
+<img src="https://images.unsplash.com/photo-1627485937980-221c88ac04f9?auto=format&fit=crop&w=400&q=80">
+<h3>Whole Wheat Flour</h3>
+<p>₹280</p>
+<div class="btns">
+<button onclick="setCurrentProduct(this);openPricePopup()">💰 Get Best Price</button>
+<button onclick="setCurrentProduct(this);bookNow(this)">📦 Book Now</button>
+<button onclick="setCurrentProduct(this);openVisitPopup()">🏪 Visit Shop</button>
+<button onclick="setCurrentProduct(this);addToCart(this)">🛒 Add to Cart</button></div>
+<div class="popup"><div class="popup-content"><span class="close-btn">×</span><h2>Flour</h2><p>Organic atta</p></div></div>
+</div>
+
+<!-- DAIRY -->
+
+<div class="product-card" data-category="dairy">
+<div class="info-btn">i</div>
+<img src="https://images.unsplash.com/photo-1580910051074-3eb694886505?auto=format&fit=crop&w=400&q=80">
+<h3>Organic Milk</h3>
+<p>₹70</p>
+<div class="btns">
+<button onclick="setCurrentProduct(this);openPricePopup()">💰 Get Best Price</button>
+<button onclick="setCurrentProduct(this);bookNow(this)">📦 Book Now</button>
+<button onclick="setCurrentProduct(this);openVisitPopup()">🏪 Visit Shop</button>
+<button onclick="setCurrentProduct(this);addToCart(this)">🛒 Add to Cart</button></div>
+<div class="popup"><div class="popup-content"><span class="close-btn">×</span><h2>Milk</h2><p>Pure dairy</p></div></div>
+</div>
+
+<div class="product-card" data-category="dairy">
+<div class="info-btn">i</div>
+<img src="https://images.unsplash.com/photo-1604908176997-4317c0b9a2b6?auto=format&fit=crop&w=400&q=80">
+<h3>Paneer</h3>
+<p>₹300</p>
+<div class="btns">
+<button onclick="setCurrentProduct(this);openPricePopup()">💰 Get Best Price</button>
+<button onclick="setCurrentProduct(this);bookNow(this)">📦 Book Now</button>
+<button onclick="setCurrentProduct(this);openVisitPopup()">🏪 Visit Shop</button>
+<button onclick="setCurrentProduct(this);addToCart(this)">🛒 Add to Cart</button></div>
+<div class="popup"><div class="popup-content"><span class="close-btn">×</span><h2>Paneer</h2><p>Fresh cottage cheese</p></div></div>
+</div>
+
+<!-- ORGANIC -->
+
+<div class="product-card" data-category="organic">
+<div class="info-btn">i</div>
+<img src="https://images.unsplash.com/photo-1606787366850-de6330128bfc?auto=format&fit=crop&w=400&q=80">
+<h3>Spinach</h3>
+<p>₹60</p>
+<div class="btns">
+<button onclick="setCurrentProduct(this);openPricePopup()">💰 Get Best Price</button>
+<button onclick="setCurrentProduct(this);bookNow(this)">📦 Book Now</button>
+<button onclick="setCurrentProduct(this);openVisitPopup()">🏪 Visit Shop</button>
+<button onclick="setCurrentProduct(this);addToCart(this)">🛒 Add to Cart</button></div>
+<div class="popup"><div class="popup-content"><span class="close-btn">×</span><h2>Spinach</h2><p>Leafy greens</p></div></div>
+</div>
+
+<div class="product-card" data-category="organic">
+<div class="info-btn">i</div>
+<img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=400&q=80">
+<h3>Carrots</h3>
+<p>₹70</p>
+<div class="btns">
+<button onclick="setCurrentProduct(this);openPricePopup()">💰 Get Best Price</button>
+<button onclick="setCurrentProduct(this);bookNow(this)">📦 Book Now</button>
+<button onclick="setCurrentProduct(this);openVisitPopup()">🏪 Visit Shop</button>
+<button onclick="setCurrentProduct(this);addToCart(this)">🛒 Add to Cart</button></div>
+<div class="popup"><div class="popup-content"><span class="close-btn">×</span><h2>Carrots</h2><p>Rich in vitamins</p></div></div>
+</div>
+
+<!-- EXTRA -->
+
+<div class="product-card" data-category="fruits">
+<div class="info-btn">i</div>
+<img src="https://images.unsplash.com/photo-1584270354949-1b8c84c8dcaf?auto=format&fit=crop&w=400&q=80">
+<h3>Bananas</h3>
+<p>₹65</p>
+<div class="btns">
+<button onclick="setCurrentProduct(this);openPricePopup()">💰 Get Best Price</button>
+<button onclick="setCurrentProduct(this);bookNow(this)">📦 Book Now</button>
+<button onclick="setCurrentProduct(this);openVisitPopup()">🏪 Visit Shop</button>
+<button onclick="setCurrentProduct(this);addToCart(this)">🛒 Add to Cart</button></div>
+<div class="popup"><div class="popup-content"><span class="close-btn">×</span><h2>Bananas</h2><p>Energy fruit</p></div></div>
+</div>
+
+<div class="product-card" data-category="vegetables">
+<div class="info-btn">i</div>
+<img src="https://images.unsplash.com/photo-1603048297172-c92544798d5a?auto=format&fit=crop&w=400&q=80">
+<h3>Onions</h3>
+<p>₹45</p>
+<div class="btns">
+<button onclick="setCurrentProduct(this);openPricePopup()">💰 Get Best Price</button>
+<button onclick="setCurrentProduct(this);bookNow(this)">📦 Book Now</button>
+<button onclick="setCurrentProduct(this);openVisitPopup()">🏪 Visit Shop</button>
+<button onclick="setCurrentProduct(this);addToCart(this)">🛒 Add to Cart</button></div>
+<div class="popup"><div class="popup-content"><span class="close-btn">×</span><h2>Onions</h2><p>Daily essential</p></div></div>
+</div>
+
+</div>
+
+<script src="../../js/products.js"></script>
+
+<!-- PRICE POPUP -->
+<div id="pricePopup" class="popup">
+<div class="popup-content">
+<h3>Enter Your Price</h3>
+<input type="number" id="userPrice" placeholder="Enter price">
+<button onclick="submitPrice()">Submit</button>
+<button onclick="closePopup()">Close</button>
+</div>
+</div>
+
+<!-- VISIT POPUP -->
+<div id="visitPopup" class="popup">
+<div class="popup-content">
+<h3>Select Visit Time</h3>
+<input type="date" id="visitDate">
+<input type="time" id="visitTime">
+<button onclick="confirmVisit()">Confirm</button>
+<button onclick="closePopup()">Close</button>
+</div>
+</div>
+<script>
+localStorage.setItem("currentShop", "Green Mart");
+</script>
+</body>
+</html>

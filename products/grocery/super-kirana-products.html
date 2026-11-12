@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>Super Kirana</title>
+
+<!-- ✅ CSS -->
+<link rel="stylesheet" href="../../css/product.css">
+<link rel="stylesheet" href="../../css/style.css">
+
+</head>
+
+<body>
+
+<header class="navbar">
+
+<div class="logo">
+<h2>Smart Bazaar</h2>
+<p>Local Market Solutions</p>
+</div>
+
+<nav>
+<ul>
+<li><a class="active" href="../../index.html">Home</a></li>
+<li><a href="../../shops/grocery-shops.html">Shops</a></li>
+
+<li><a href="../../cart.html">Cart</a></li>
+<li><a href="../../customer-dashboard.html">Dashboard</a></li>
+<li><a href="../../parking.html">Parking</a></li>
+<li><a href="../../login.html" onclick="logout()">Logout</a></li>
+</ul>
+</nav>
+
+</header>
+
+<section class="shop-header">
+<h1>Super Kirana</h1>
+<p>Traditional Store, Smart Shopping 🏪🛒</p>
+</section>
+
+<!-- FILTER -->
+<div class="filter-bar">
+<button class="filter-btn active" data-category="all">All</button>
+<button class="filter-btn" data-category="grains">Grains</button>
+<button class="filter-btn" data-category="dairy">Dairy</button>
+<button class="filter-btn" data-category="snacks">Snacks</button>
+<button class="filter-btn" data-category="beverages">Beverages</button>
+<button class="filter-btn" data-category="household">Household</button>
+</div>
+
+<div class="product-grid">
+
+<!-- GRAINS -->
+<div class="product-card" data-category="grains">
+<div class="info-btn">i</div>
+<img src="https://images.unsplash.com/photo-1615485737451-47b5a6a9c4e1?auto=format&fit=crop&w=400&q=80">
+<h3>Rice 10kg Pack</h3>
+<p>₹650</p>
+<div class="btns">
+<button onclick="setCurrentProduct(this);openPricePopup()">💰 Get Best Price</button>
+<button onclick="setCurrentProduct(this);bookNow(this)">📦 Book Now</button>
+<button onclick="setCurrentProduct(this);openVisitPopup()">🏪 Visit Shop</button>
+<button onclick="setCurrentProduct(this);addToCart(this)">🛒 Add to Cart</button></div>
+<div class="popup"><div class="popup-content"><span class="close-btn">×</span><h2>Rice</h2><p>Family pack savings</p></div></div>
+</div>
+
+<div class="product-card" data-category="grains">
+<div class="info-btn">i</div>
+<img src="https://images.unsplash.com/photo-1627485937980-221c88ac04f9?auto=format&fit=crop&w=400&q=80">
+<h3>Atta 10kg</h3>
+<p>₹420</p>
+<div class="btns">
+<button onclick="setCurrentProduct(this);openPricePopup()">💰 Get Best Price</button>
+<button onclick="setCurrentProduct(this);bookNow(this)">📦 Book Now</button>
+<button onclick="setCurrentProduct(this);openVisitPopup()">🏪 Visit Shop</button>
+<button onclick="setCurrentProduct(this);addToCart(this)">🛒 Add to Cart</button></div>
+<div class="popup"><div class="popup-content"><span class="close-btn">×</span><h2>Atta</h2><p>Daily use bulk pack</p></div></div>
+</div>
+
+<!-- DAIRY -->
+<div class="product-card" data-category="dairy">
+<div class="info-btn">i</div>
+<img src="https://images.unsplash.com/photo-1580910051074-3eb694886505?auto=format&fit=crop&w=400&q=80">
+<h3>Milk 1L</h3>
+<p>₹60</p>
+<div class="btns">
+<button onclick="setCurrentProduct(this);openPricePopup()">💰 Get Best Price</button>
+<button onclick="setCurrentProduct(this);bookNow(this)">📦 Book Now</button>
+<button onclick="setCurrentProduct(this);openVisitPopup()">🏪 Visit Shop</button>
+<button onclick="setCurrentProduct(this);addToCart(this)">🛒 Add to Cart</button></div>
+<div class="popup"><div class="popup-content"><span class="close-btn">×</span><h2>Milk</h2><p>Fresh supply</p></div></div>
+</div>
+
+<div class="product-card" data-category="dairy">
+<div class="info-btn">i</div>
+<img src="https://images.unsplash.com/photo-1604908176997-4317c0b9a2b6?auto=format&fit=crop&w=400&q=80">
+<h3>Ghee 500g</h3>
+<p>₹320</p>
+<div class="btns">
+<button onclick="setCurrentProduct(this);openPricePopup()">💰 Get Best Price</button>
+<button onclick="setCurrentProduct(this);bookNow(this)">📦 Book Now</button>
+<button onclick="setCurrentProduct(this);openVisitPopup()">🏪 Visit Shop</button>
+<button onclick="setCurrentProduct(this);addToCart(this)">🛒 Add to Cart</button></div>
+<div class="popup"><div class="popup-content"><span class="close-btn">×</span><h2>Ghee</h2><p>Pure desi ghee</p></div></div>
+</div>
+
+<!-- SNACKS -->
+<div class="product-card" data-category="snacks">
+<div class="info-btn">i</div>
+<img src="https://images.unsplash.com/photo-1599490659213-e2b9527bd087?auto=format&fit=crop&w=400&q=80">
+<h3>Chips Pack</h3>
+<p>₹20</p>
+<div class="btns">
+<button onclick="setCurrentProduct(this);openPricePopup()">💰 Get Best Price</button>
+<button onclick="setCurrentProduct(this);bookNow(this)">📦 Book Now</button>
+<button onclick="setCurrentProduct(this);openVisitPopup()">🏪 Visit Shop</button>
+<button onclick="setCurrentProduct(this);addToCart(this)">🛒 Add to Cart</button></div>
+<div class="popup"><div class="popup-content"><span class="close-btn">×</span><h2>Chips</h2><p>Crunchy snack</p></div></div>
+</div>
+
+<div class="product-card" data-category="snacks">
+<div class="info-btn">i</div>
+<img src="https://images.unsplash.com/photo-1604909053193-3d08d92c51c3?auto=format&fit=crop&w=400&q=80">
+<h3>Namkeen Pack</h3>
+<p>₹50</p>
+<div class="btns">
+<button onclick="setCurrentProduct(this);openPricePopup()">💰 Get Best Price</button>
+<button onclick="setCurrentProduct(this);bookNow(this)">📦 Book Now</button>
+<button onclick="setCurrentProduct(this);openVisitPopup()">🏪 Visit Shop</button>
+<button onclick="setCurrentProduct(this);addToCart(this)">🛒 Add to Cart</button></div>
+<div class="popup"><div class="popup-content"><span class="close-btn">×</span><h2>Namkeen</h2><p>Spicy mix</p></div></div>
+</div>
+
+<!-- BEVERAGES -->
+<div class="product-card" data-category="beverages">
+<div class="info-btn">i</div>
+<img src="https://images.unsplash.com/photo-1551024709-8f23befc6f87?auto=format&fit=crop&w=400&q=80">
+<h3>Soft Drink</h3>
+<p>₹40</p>
+<div class="btns">
+<button onclick="setCurrentProduct(this);openPricePopup()">💰 Get Best Price</button>
+<button onclick="setCurrentProduct(this);bookNow(this)">📦 Book Now</button>
+<button onclick="setCurrentProduct(this);openVisitPopup()">🏪 Visit Shop</button>
+<button onclick="setCurrentProduct(this);addToCart(this)">🛒 Add to Cart</button></div>
+<div class="popup"><div class="popup-content"><span class="close-btn">×</span><h2>Drink</h2><p>Refreshing</p></div></div>
+</div>
+
+<div class="product-card" data-category="beverages">
+<div class="info-btn">i</div>
+<img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=400&q=80">
+<h3>Tea 1kg</h3>
+<p>₹450</p>
+<div class="btns">
+<button onclick="setCurrentProduct(this);openPricePopup()">💰 Get Best Price</button>
+<button onclick="setCurrentProduct(this);bookNow(this)">📦 Book Now</button>
+<button onclick="setCurrentProduct(this);openVisitPopup()">🏪 Visit Shop</button>
+<button onclick="setCurrentProduct(this);addToCart(this)">🛒 Add to Cart</button></div>
+<div class="popup"><div class="popup-content"><span class="close-btn">×</span><h2>Tea</h2><p>Strong flavor</p></div></div>
+</div>
+
+<!-- HOUSEHOLD -->
+<div class="product-card" data-category="household">
+<div class="info-btn">i</div>
+<img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=400&q=80">
+<h3>Detergent Powder</h3>
+<p>₹140</p>
+<div class="btns">
+<button onclick="setCurrentProduct(this);openPricePopup()">💰 Get Best Price</button>
+<button onclick="setCurrentProduct(this);bookNow(this)">📦 Book Now</button>
+<button onclick="setCurrentProduct(this);openVisitPopup()">🏪 Visit Shop</button>
+<button onclick="setCurrentProduct(this);addToCart(this)">🛒 Add to Cart</button></div>
+<div class="popup"><div class="popup-content"><span class="close-btn">×</span><h2>Detergent</h2><p>Deep clean</p></div></div>
+</div>
+
+<div class="product-card" data-category="household">
+<div class="info-btn">i</div>
+<img src="https://images.unsplash.com/photo-1581574202860-9c4a7bb1c9c5?auto=format&fit=crop&w=400&q=80">
+<h3>Dishwash Liquid</h3>
+<p>₹100</p>
+<div class="btns">
+<button onclick="setCurrentProduct(this);openPricePopup()">💰 Get Best Price</button>
+<button onclick="setCurrentProduct(this);bookNow(this)">📦 Book Now</button>
+<button onclick="setCurrentProduct(this);openVisitPopup()">🏪 Visit Shop</button>
+<button onclick="setCurrentProduct(this);addToCart(this)">🛒 Add to Cart</button></div>
+<div class="popup"><div class="popup-content"><span class="close-btn">×</span><h2>Dishwash</h2><p>Power clean</p></div></div>
+</div>
+
+<!-- EXTRA -->
+<div class="product-card" data-category="grains">
+<div class="info-btn">i</div>
+<img src="https://images.unsplash.com/photo-1606788075761-72f6e0b37b9b?auto=format&fit=crop&w=400&q=80">
+<h3>Pulses Pack</h3>
+<p>₹210</p>
+<div class="btns">
+<button onclick="setCurrentProduct(this);openPricePopup()">💰 Get Best Price</button>
+<button onclick="setCurrentProduct(this);bookNow(this)">📦 Book Now</button>
+<button onclick="setCurrentProduct(this);openVisitPopup()">🏪 Visit Shop</button>
+<button onclick="setCurrentProduct(this);addToCart(this)">🛒 Add to Cart</button></div>
+<div class="popup"><div class="popup-content"><span class="close-btn">×</span><h2>Pulses</h2><p>Protein rich</p></div></div>
+</div>
+
+<div class="product-card" data-category="snacks">
+<div class="info-btn">i</div>
+<img src="https://images.unsplash.com/photo-1604909053193-3d08d92c51c3?auto=format&fit=crop&w=400&q=80">
+<h3>Biscuits</h3>
+<p>₹30</p>
+<div class="btns">
+<button onclick="setCurrentProduct(this);openPricePopup()">💰 Get Best Price</button>
+<button onclick="setCurrentProduct(this);bookNow(this)">📦 Book Now</button>
+<button onclick="setCurrentProduct(this);openVisitPopup()">🏪 Visit Shop</button>
+<button onclick="setCurrentProduct(this);addToCart(this)">🛒 Add to Cart</button></div>
+<div class="popup"><div class="popup-content"><span class="close-btn">×</span><h2>Biscuits</h2><p>Tea time snack</p></div></div>
+</div>
+
+</div>
+
+<script src="../../js/products.js"></script>
+<!-- PRICE POPUP -->
+<div id="pricePopup" class="popup">
+<div class="popup-content">
+<h3>Enter Your Price</h3>
+<input type="number" id="userPrice" placeholder="Enter price">
+<button onclick="submitPrice()">Submit</button>
+<button onclick="closePopup()">Close</button>
+</div>
+</div>
+
+<!-- VISIT POPUP -->
+<div id="visitPopup" class="popup">
+<div class="popup-content">
+<h3>Select Visit Time</h3>
+<input type="date" id="visitDate">
+<input type="time" id="visitTime">
+<button onclick="confirmVisit()">Confirm</button>
+<button onclick="closePopup()">Close</button>
+</div>
+</div>
+<script>
+localStorage.setItem("currentShop", "Super Kirana");
+</script>
+</body>
+</html>

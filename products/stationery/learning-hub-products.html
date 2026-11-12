@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>Learning Hub</title>
+
+<link rel="stylesheet" href="../../css/product.css">
+<link rel="stylesheet" href="../../css/style.css">
+
+</head>
+
+<body>
+
+<header class="navbar">
+
+<div class="logo">
+<h2>Smart Bazaar</h2>
+<p>Local Market Solutions</p>
+</div>
+
+<nav>
+<ul>
+<li><a class="active" href="../../index.html">Home</a></li>
+<li><a href="../../shops/stationery-shops.html">Shops</a></li>
+
+<li><a href="../../cart.html">Cart</a></li>
+<li><a href="../../customer-dashboard.html">Dashboard</a></li>
+<li><a href="../../parking.html">Parking</a></li>
+<li><a href="../../login.html" onclick="logout()">Logout</a></li>
+</ul>
+</nav>
+
+</header>
+<section class="shop-header">
+<h1>Learning Hub</h1>
+<p>Upgrade Your Knowledge 📚💡</p>
+</section>
+
+<!-- FILTER -->
+<div class="filter-bar">
+<button class="filter-btn active" data-category="all">All</button>
+<button class="filter-btn" data-category="books">Books</button>
+<button class="filter-btn" data-category="courses">Courses</button>
+<button class="filter-btn" data-category="notes">Notes</button>
+<button class="filter-btn" data-category="stationery">Stationery</button>
+<button class="filter-btn" data-category="digital">Digital Tools</button>
+</div>
+
+<div class="product-grid">
+
+<!-- BOOKS -->
+<div class="product-card" data-category="books">
+<img src="https://source.unsplash.com/400x400/?study-books">
+<h3>Study Books Set</h3>
+<p>₹600</p>
+<div class="btns">
+<button onclick="setCurrentProduct(this);openPricePopup()">💰 Get Best Price</button>
+<button onclick="setCurrentProduct(this);bookNow(this)">📦 Book Now</button>
+<button onclick="setCurrentProduct(this);openVisitPopup()">🏪 Visit Shop</button>
+<button onclick="setCurrentProduct(this);addToCart(this)">🛒 Add to Cart</button></div>
+</div>
+
+<div class="product-card" data-category="books">
+<img src="https://source.unsplash.com/400x400/?library-books">
+<h3>Reference Books</h3>
+<p>₹750</p>
+<div class="btns">
+<button onclick="setCurrentProduct(this);openPricePopup()">💰 Get Best Price</button>
+<button onclick="setCurrentProduct(this);bookNow(this)">📦 Book Now</button>
+<button onclick="setCurrentProduct(this);openVisitPopup()">🏪 Visit Shop</button>
+<button onclick="setCurrentProduct(this);addToCart(this)">🛒 Add to Cart</button></div>
+</div>
+
+<!-- COURSES -->
+<div class="product-card" data-category="courses">
+<img src="https://source.unsplash.com/400x400/?online-learning">
+<h3>Online Course Pack</h3>
+<p>₹1200</p>
+<div class="btns">
+<button class="price-btn">Get Best Price</button>
+<button class="book-btn">Enroll Now</button>
+</div>
+</div>
+
+<div class="product-card" data-category="courses">
+<img src="https://source.unsplash.com/400x400/?coding-course">
+<h3>Coding Course</h3>
+<p>₹1500</p>
+<div class="btns">
+<button class="price-btn">Get Best Price</button>
+<button class="book-btn">Enroll Now</button>
+</div>
+</div>
+
+<!-- NOTES -->
+<div class="product-card" data-category="notes">
+<img src="https://source.unsplash.com/400x400/?study-notes">
+<h3>Study Notes</h3>
+<p>₹300</p>
+<div class="btns">
+<button onclick="setCurrentProduct(this);openPricePopup()">💰 Get Best Price</button>
+<button onclick="setCurrentProduct(this);bookNow(this)">📦 Book Now</button>
+<button onclick="setCurrentProduct(this);openVisitPopup()">🏪 Visit Shop</button>
+<button onclick="setCurrentProduct(this);addToCart(this)">🛒 Add to Cart</button></div>
+</div>
+
+<div class="product-card" data-category="notes">
+<img src="https://source.unsplash.com/400x400/?revision-notes">
+<h3>Quick Notes</h3>
+<p>₹250</p>
+<div class="btns">
+<button onclick="setCurrentProduct(this);openPricePopup()">💰 Get Best Price</button>
+<button onclick="setCurrentProduct(this);bookNow(this)">📦 Book Now</button>
+<button onclick="setCurrentProduct(this);openVisitPopup()">🏪 Visit Shop</button>
+<button onclick="setCurrentProduct(this);addToCart(this)">🛒 Add to Cart</button></div>
+</div>
+
+<!-- STATIONERY -->
+<div class="product-card" data-category="stationery">
+<img src="https://source.unsplash.com/400x400/?notebook">
+<h3>Notebook Set</h3>
+<p>₹200</p>
+<div class="btns">
+<button onclick="setCurrentProduct(this);openPricePopup()">💰 Get Best Price</button>
+<button onclick="setCurrentProduct(this);bookNow(this)">📦 Book Now</button>
+<button onclick="setCurrentProduct(this);openVisitPopup()">🏪 Visit Shop</button>
+<button onclick="setCurrentProduct(this);addToCart(this)">🛒 Add to Cart</button></div>
+</div>
+
+<div class="product-card" data-category="stationery">
+<img src="https://source.unsplash.com/400x400/?study-supplies">
+<h3>Study Supplies Kit</h3>
+<p>₹180</p>
+<div class="btns">
+<button onclick="setCurrentProduct(this);openPricePopup()">💰 Get Best Price</button>
+<button onclick="setCurrentProduct(this);bookNow(this)">📦 Book Now</button>
+<button onclick="setCurrentProduct(this);openVisitPopup()">🏪 Visit Shop</button>
+<button onclick="setCurrentProduct(this);addToCart(this)">🛒 Add to Cart</button></div>
+</div>
+
+<!-- DIGITAL -->
+<div class="product-card" data-category="digital">
+<img src="https://source.unsplash.com/400x400/?laptop-study">
+<h3>Learning Laptop</h3>
+<p>₹35000</p>
+<div class="btns">
+<button onclick="setCurrentProduct(this);openPricePopup()">💰 Get Best Price</button>
+<button onclick="setCurrentProduct(this);bookNow(this)">📦 Book Now</button>
+<button onclick="setCurrentProduct(this);openVisitPopup()">🏪 Visit Shop</button>
+<button onclick="setCurrentProduct(this);addToCart(this)">🛒 Add to Cart</button></div>
+</div>
+
+<div class="product-card" data-category="digital">
+<img src="https://source.unsplash.com/400x400/?tablet-study">
+<h3>Study Tablet</h3>
+<p>₹18000</p>
+<div class="btns">
+<button onclick="setCurrentProduct(this);openPricePopup()">💰 Get Best Price</button>
+<button onclick="setCurrentProduct(this);bookNow(this)">📦 Book Now</button>
+<button onclick="setCurrentProduct(this);openVisitPopup()">🏪 Visit Shop</button>
+<button onclick="setCurrentProduct(this);addToCart(this)">🛒 Add to Cart</button></div>
+</div>
+
+</div>
+
+<script src="../../js/products.js"></script>
+
+<!-- PRICE POPUP -->
+<div id="pricePopup" class="popup">
+<div class="popup-content">
+<h3>Enter Your Price</h3>
+<input type="number" id="userPrice" placeholder="Enter price">
+<button onclick="submitPrice()">Submit</button>
+<button onclick="closePopup()">Close</button>
+</div>
+</div>
+
+<!-- VISIT POPUP -->
+<div id="visitPopup" class="popup">
+<div class="popup-content">
+<h3>Select Visit Time</h3>
+<input type="date" id="visitDate">
+<input type="time" id="visitTime">
+<button onclick="confirmVisit()">Confirm</button>
+<button onclick="closePopup()">Close</button>
+</div>
+</div>
+<script>
+localStorage.setItem("currentShop", "Learning Hub");
+</script>
+</body>
+</html>

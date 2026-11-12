@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>Shop Categories</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<header class="navbar">
+
+<div class="logo">
+<h2>Smart Bazaar</h2>
+<p>Local Market Solutions</p>
+</div>
+
+<nav>
+<ul>
+<li><a class="active" href="index.html">Home</a></li>
+
+<li><a href="cart.html">Cart</a></li>
+<li><a href="customer-dashboard.html">Dashboard</a></li>
+<li><a href="parking.html">Parking</a></li>
+<li><a href="login.html" onclick="logout()">Logout</a></li>
+</ul>
+</nav>
+
+</header>
+
+
+<!-- HEADER -->
+<section class="shop-header">
+<h1>Explore Market Categories</h1>
+<p>Select a category to view shops</p>
+</section>
+
+
+<!-- CATEGORY GRID -->
+<section class="category-container">
+
+<div class="category-grid">
+
+<!-- ELECTRONICS -->
+<div class="category-card">
+<img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=400&q=80">
+<div class="overlay">
+<h3>Electronics</h3>
+<button class="category-btn" data-category="electronics">View Shops</button>
+</div>
+</div>
+
+<!-- CLOTHING -->
+<div class="category-card">
+<img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=400&q=80">
+<div class="overlay">
+<h3>Clothing & Fashion</h3>
+<button class="category-btn" data-category="Clothing">View Shops</button>
+</div>
+</div>
+
+<!-- GROCERY -->
+<div class="category-card">
+<img src="https://images.unsplash.com/photo-1586201375761-83865001e31c?auto=format&fit=crop&w=400&q=80">
+<div class="overlay">
+<h3>Grocery & Kirana</h3>
+<button class="category-btn" data-category="Grocery">View Shops</button>
+</div>
+</div>
+
+<!-- VEGETABLES -->
+<div class="category-card">
+<img src="https://images.unsplash.com/photo-1506806732259-39c2d0268443?auto=format&fit=crop&w=400&q=80">
+<div class="overlay">
+<h3>Fruits & Vegetables</h3>
+<button class="category-btn" data-category="Fruits">View Shops</button>
+</div>
+</div>
+
+<!-- PHARMACY -->
+<div class="category-card">
+<img src="https://images.unsplash.com/photo-1587854692152-cbe660dbde88?auto=format&fit=crop&w=400&q=80">
+<div class="overlay">
+<h3>Pharmacy</h3>
+<button class="category-btn" data-category="Pharmacy">View Shops</button>
+</div>
+</div>
+
+<!-- SWEETS -->
+<div class="category-card">
+<img src="https://images.unsplash.com/photo-1504754524776-8f4f37790ca0?auto=format&fit=crop&w=400&q=80">
+<div class="overlay">
+<h3>Sweets & Bakery</h3>
+<button class="category-btn" data-category="Sweets">View Shops</button>
+</div>
+</div>
+
+<!-- FOOTWEAR -->
+<div class="category-card">
+<img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=400&q=80?auto=format&fit=crop&w=400&q=80">
+<div class="overlay">
+<h3>Footwear</h3>
+<button class="category-btn" data-category="Footwear">View Shops</button>
+</div>
+</div>
+
+<!-- COSMETICS -->
+<div class="category-card">
+<img src="https://images.unsplash.com/photo-1596462502278-27bfdc403348?auto=format&fit=crop&w=400&q=80">
+<div class="overlay">
+<h3>Cosmetics & Beauty</h3>
+<button class="category-btn" data-category="Cosmetics">View Shops</button>
+</div>
+</div>
+
+<!-- STATIONERY -->
+<div class="category-card">
+<img src="https://images.unsplash.com/photo-1516979187457-637abb4f9353?auto=format&fit=crop&w=400&q=80">
+<div class="overlay">
+<h3>Stationery & Books</h3>
+<button class="category-btn" data-category="Stationery">View Shops</button>
+</div>
+</div>
+
+<!-- HARDWARE -->
+<div class="category-card">
+<img src="https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?auto=format&fit=crop&w=400&q=80">
+<div class="overlay">
+<h3>Hardware & Tools</h3>
+<button class="category-btn" data-category="Hardware">View Shops</button>
+</div>
+</div>
+
+<!-- FURNITURE -->
+<div class="category-card">
+<img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?auto=format&fit=crop&w=400&q=80">
+<div class="overlay">
+<h3>Furniture & Decor</h3>
+<button class="category-btn" data-category="Furniture">View Shops</button>
+</div>
+</div>
+
+<!-- RESTAURANTS -->
+<div class="category-card">
+<img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=400&q=80">
+<div class="overlay">
+<h3>Restaurants & Food</h3>
+<button class="category-btn" data-category="Restaurants">View Shops</button>
+</div>
+</div>
+
+</div>
+
+</section>
+
+
+<!-- JS -->
+<script>
+
+document.querySelectorAll(".category-btn").forEach(btn => {
+
+    btn.addEventListener("click", function(){
+
+        let category = this.getAttribute("data-category").toLowerCase();
+
+        // correct file mapping
+        window.location.href = "shops/" + category + "-shops.html";
+
+    });
+
+});
+
+
+
+
+</script>
+</script>
+<script>
+function logout(){
+  localStorage.clear();
+  alert("Logged out");
+}
+</script>
+</body>
+</html>

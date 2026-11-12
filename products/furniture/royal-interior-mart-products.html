@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>Royal Interior</title>
+
+<!-- ✅ CSS -->
+<link rel="stylesheet" href="../../css/product.css">
+<link rel="stylesheet" href="../../css/style.css">
+
+</head>
+
+<body>
+
+<header class="navbar">
+
+<div class="logo">
+<h2>Smart Bazaar</h2>
+<p>Local Market Solutions</p>
+</div>
+
+<nav>
+<ul>
+<li><a class="active" href="../../index.html">Home</a></li>
+<li><a href="../../shops/furniture-shops.html">Shops</a></li>
+
+<li><a href="../../cart.html">Cart</a></li>
+<li><a href="../../customer-dashboard.html">Dashboard</a></li>
+<li><a href="../../parking.html">Parking</a></li>
+<li><a href="../../login.html" onclick="logout()">Logout</a></li>
+</ul>
+</nav>
+
+</header>
+
+<section class="shop-header">
+<h1>Royal Interior</h1>
+<p>Luxury Living Redefined 👑✨</p>
+</section>
+
+<!-- FILTER -->
+<div class="filter-bar">
+<button class="filter-btn active" data-category="all">All</button>
+<button class="filter-btn" data-category="sofa">Sofas</button>
+<button class="filter-btn" data-category="bed">Beds</button>
+<button class="filter-btn" data-category="lighting">Lighting</button>
+<button class="filter-btn" data-category="decor">Decor</button>
+<button class="filter-btn" data-category="storage">Storage</button>
+</div>
+
+<div class="product-grid">
+
+<!-- SOFAS -->
+
+<div class="product-card" data-category="sofa">
+<div class="info-btn">i</div>
+<img src="https://images.unsplash.com/photo-1616628182504-6a2b2d7f0f3b?auto=format&fit=crop&w=400&q=80">
+<h3>Royal Sofa Set</h3>
+<p>₹45,000</p>
+<div class="btns">
+<button onclick="openPricePopup()">💰 Get Best Price</button>
+<button onclick="bookNow(this)">📦 Book Now</button>
+<button onclick="openVisitPopup()">🏪 Visit Shop</button>
+<button onclick="addToCart(this)">🛒 Add to Cart</button></div>
+<div class="popup"><div class="popup-content"><span class="close-btn">×</span><h2>Royal Sofa</h2><p>Premium luxury comfort</p></div></div>
+</div>
+
+<div class="product-card" data-category="sofa">
+<div class="info-btn">i</div>
+<img src="https://images.unsplash.com/photo-1582582429416-5b8a9f9d2b1f?auto=format&fit=crop&w=400&q=80">
+<h3>Velvet Sofa</h3>
+<p>₹38,000</p>
+<div class="btns">
+<button onclick="openPricePopup()">💰 Get Best Price</button>
+<button onclick="bookNow(this)">📦 Book Now</button>
+<button onclick="openVisitPopup()">🏪 Visit Shop</button>
+<button onclick="addToCart(this)">🛒 Add to Cart</button></div>
+<div class="popup"><div class="popup-content"><span class="close-btn">×</span><h2>Velvet Sofa</h2><p>Soft luxury seating</p></div></div>
+</div>
+
+<!-- BEDS -->
+
+<div class="product-card" data-category="bed">
+<div class="info-btn">i</div>
+<img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=400&q=80">
+<h3>Luxury King Bed</h3>
+<p>₹40,000</p>
+<div class="btns">
+<button onclick="openPricePopup()">💰 Get Best Price</button>
+<button onclick="bookNow(this)">📦 Book Now</button>
+<button onclick="openVisitPopup()">🏪 Visit Shop</button>
+<button onclick="addToCart(this)">🛒 Add to Cart</button></div>
+<div class="popup"><div class="popup-content"><span class="close-btn">×</span><h2>King Bed</h2><p>Royal design</p></div></div>
+</div>
+
+<div class="product-card" data-category="bed">
+<div class="info-btn">i</div>
+<img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=400&q=80">
+<h3>Designer Bed</h3>
+<p>₹32,000</p>
+<div class="btns">
+<button onclick="openPricePopup()">💰 Get Best Price</button>
+<button onclick="bookNow(this)">📦 Book Now</button>
+<button onclick="openVisitPopup()">🏪 Visit Shop</button>
+<button onclick="addToCart(this)">🛒 Add to Cart</button></div>
+<div class="popup"><div class="popup-content"><span class="close-btn">×</span><h2>Designer Bed</h2><p>Modern luxury</p></div></div>
+</div>
+
+<!-- LIGHTING -->
+
+<div class="product-card" data-category="lighting">
+<div class="info-btn">i</div>
+<img src="https://images.unsplash.com/photo-1540574163026-643ea20ade25?auto=format&fit=crop&w=400&q=80">
+<h3>Crystal Chandelier</h3>
+<p>₹8,000</p>
+<div class="btns">
+<button onclick="openPricePopup()">💰 Get Best Price</button>
+<button onclick="bookNow(this)">📦 Book Now</button>
+<button onclick="openVisitPopup()">🏪 Visit Shop</button>
+<button onclick="addToCart(this)">🛒 Add to Cart</button></div>
+<div class="popup"><div class="popup-content"><span class="close-btn">×</span><h2>Chandelier</h2><p>Elegant lighting</p></div></div>
+</div>
+
+<div class="product-card" data-category="lighting">
+<div class="info-btn">i</div>
+<img src="https://images.unsplash.com/photo-1519710164239-da123dc03ef4?auto=format&fit=crop&w=400&q=80">
+<h3>Designer Lamp</h3>
+<p>₹2,500</p>
+<div class="btns">
+<button onclick="openPricePopup()">💰 Get Best Price</button>
+<button onclick="bookNow(this)">📦 Book Now</button>
+<button onclick="openVisitPopup()">🏪 Visit Shop</button>
+<button onclick="addToCart(this)">🛒 Add to Cart</button></div>
+<div class="popup"><div class="popup-content"><span class="close-btn">×</span><h2>Lamp</h2><p>Luxury table lamp</p></div></div>
+</div>
+
+<!-- DECOR -->
+
+<div class="product-card" data-category="decor">
+<div class="info-btn">i</div>
+<img src="https://images.unsplash.com/photo-1600566752229-250ed79470df?auto=format&fit=crop&w=400&q=80">
+<h3>Luxury Wall Art</h3>
+<p>₹3,500</p>
+<div class="btns">
+<button onclick="openPricePopup()">💰 Get Best Price</button>
+<button onclick="bookNow(this)">📦 Book Now</button>
+<button onclick="openVisitPopup()">🏪 Visit Shop</button>
+<button onclick="addToCart(this)">🛒 Add to Cart</button></div>
+<div class="popup"><div class="popup-content"><span class="close-btn">×</span><h2>Wall Art</h2><p>Premium decor</p></div></div>
+</div>
+
+<div class="product-card" data-category="decor">
+<div class="info-btn">i</div>
+<img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?auto=format&fit=crop&w=400&q=80">
+<h3>Decor Vase</h3>
+<p>₹1,800</p>
+<div class="btns">
+<button onclick="openPricePopup()">💰 Get Best Price</button>
+<button onclick="bookNow(this)">📦 Book Now</button>
+<button onclick="openVisitPopup()">🏪 Visit Shop</button>
+<button onclick="addToCart(this)">🛒 Add to Cart</button></div>
+<div class="popup"><div class="popup-content"><span class="close-btn">×</span><h2>Vase</h2><p>Elegant decor piece</p></div></div>
+</div>
+
+<!-- STORAGE -->
+
+<div class="product-card" data-category="storage">
+<div class="info-btn">i</div>
+<img src="https://images.unsplash.com/photo-1598300056393-4aac492f4344?auto=format&fit=crop&w=400&q=80">
+<h3>Luxury Wardrobe</h3>
+<p>₹30,000</p>
+<div class="btns">
+<button onclick="openPricePopup()">💰 Get Best Price</button>
+<button onclick="bookNow(this)">📦 Book Now</button>
+<button onclick="openVisitPopup()">🏪 Visit Shop</button>
+<button onclick="addToCart(this)">🛒 Add to Cart</button></div>
+<div class="popup"><div class="popup-content"><span class="close-btn">×</span><h2>Wardrobe</h2><p>Premium storage</p></div></div>
+</div>
+
+<div class="product-card" data-category="storage">
+<div class="info-btn">i</div>
+<img src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?auto=format&fit=crop&w=400&q=80">
+<h3>Storage Cabinet</h3>
+<p>₹12,000</p>
+<div class="btns">
+<button onclick="openPricePopup()">💰 Get Best Price</button>
+<button onclick="bookNow(this)">📦 Book Now</button>
+<button onclick="openVisitPopup()">🏪 Visit Shop</button>
+<button onclick="addToCart(this)">🛒 Add to Cart</button></div>
+<div class="popup"><div class="popup-content"><span class="close-btn">×</span><h2>Cabinet</h2><p>Stylish storage</p></div></div>
+</div>
+
+<!-- EXTRA -->
+
+<div class="product-card" data-category="sofa">
+<div class="info-btn">i</div>
+<img src="https://images.unsplash.com/photo-1616628182504-6a2b2d7f0f3b?auto=format&fit=crop&w=400&q=80">
+<h3>Recliner Sofa</h3>
+<p>₹50,000</p>
+<div class="btns">
+<button onclick="openPricePopup()">💰 Get Best Price</button>
+<button onclick="bookNow(this)">📦 Book Now</button>
+<button onclick="openVisitPopup()">🏪 Visit Shop</button>
+<button onclick="addToCart(this)">🛒 Add to Cart</button></div>
+<div class="popup"><div class="popup-content"><span class="close-btn">×</span><h2>Recliner</h2><p>Ultimate comfort</p></div></div>
+</div>
+
+<div class="product-card" data-category="decor">
+<div class="info-btn">i</div>
+<img src="https://images.unsplash.com/photo-1600566752355-35792bedcfea?auto=format&fit=crop&w=400&q=80">
+<h3>Indoor Plant Decor</h3>
+<p>₹1,500</p>
+<div class="btns">
+<button onclick="openPricePopup()">💰 Get Best Price</button>
+<button onclick="bookNow(this)">📦 Book Now</button>
+<button onclick="openVisitPopup()">🏪 Visit Shop</button>
+<button onclick="addToCart(this)">🛒 Add to Cart</button></div>
+<div class="popup"><div class="popup-content"><span class="close-btn">×</span><h2>Plant Decor</h2><p>Natural touch</p></div></div>
+</div>
+
+</div>
+
+<script src="../../js/products.js"></script>
+
+<!-- PRICE POPUP -->
+<div id="pricePopup" class="popup">
+<div class="popup-content">
+<h3>Enter Your Price</h3>
+<input type="number" id="userPrice" placeholder="Enter price">
+<button onclick="submitPrice()">Submit</button>
+<button onclick="closePopup()">Close</button>
+</div>
+</div>
+
+<!-- VISIT POPUP -->
+<div id="visitPopup" class="popup">
+<div class="popup-content">
+<h3>Select Visit Time</h3>
+<input type="date" id="visitDate">
+<input type="time" id="visitTime">
+<button onclick="confirmVisit()">Confirm</button>
+<button onclick="closePopup()">Close</button>
+</div>
+</div>
+<script>
+localStorage.setItem("currentShop", "Royal Interior Mart");
+</script>
+</body>
+</html>

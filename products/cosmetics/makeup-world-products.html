@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>Makeup World</title>
+
+<!-- ✅ CSS -->
+<link rel="stylesheet" href="../../css/product.css">
+<link rel="stylesheet" href="../../css/style.css">
+
+</head>
+
+<body>
+<header class="navbar">
+
+<div class="logo">
+<h2>Smart Bazaar</h2>
+<p>Local Market Solutions</p>
+</div>
+
+<nav>
+<ul>
+<li><a class="active" href="../../index.html">Home</a></li>
+<li><a href="../../shops/cosmetics-shops.html">Shops</a></li>
+
+<li><a href="../../cart.html">Cart</a></li>
+<li><a href="../../customer-dashboard.html">Dashboard</a></li>
+<li><a href="../../parking.html">Parking</a></li>
+<li><a href="../../login.html" onclick="logout()">Logout</a></li>
+</ul>
+</nav>
+
+</header>
+
+<section class="shop-header">
+<h1>Makeup World</h1>
+<p>Unleash Your Beauty 💄✨</p>
+</section>
+
+<!-- FILTER -->
+<div class="filter-bar">
+<button class="filter-btn active" data-category="all">All</button>
+<button class="filter-btn" data-category="face">Face</button>
+<button class="filter-btn" data-category="eyes">Eyes</button>
+<button class="filter-btn" data-category="lips">Lips</button>
+<button class="filter-btn" data-category="tools">Tools</button>
+</div>
+
+<div class="product-grid">
+
+<!-- FACE -->
+
+<div class="product-card" data-category="face">
+<div class="info-btn">i</div>
+<img src="https://images.unsplash.com/photo-1612817288484-8c90d9f3d2c1?auto=format&fit=crop&w=400&q=80">
+<h3>Liquid Foundation</h3>
+<p>₹1,200</p>
+<div class="btns">
+<button onclick="setCurrentProduct(this);openPricePopup()">💰 Get Best Price</button>
+<button onclick="setCurrentProduct(this);bookNow(this)">📦 Book Now</button>
+<button onclick="setCurrentProduct(this);openVisitPopup()">🏪 Visit Shop</button>
+<button onclick="setCurrentProduct(this);addToCart(this)">🛒 Add to Cart</button></div>
+<div class="popup"><div class="popup-content"><span class="close-btn">×</span><h2>Foundation</h2><p>Full coverage glow finish</p></div></div>
+</div>
+
+<div class="product-card" data-category="face">
+<div class="info-btn">i</div>
+<img src="https://images.unsplash.com/photo-1607604276583-3f7b3d9e6f6c?auto=format&fit=crop&w=400&q=80">
+<h3>Compact Powder</h3>
+<p>₹700</p>
+<div class="btns">
+<button onclick="setCurrentProduct(this);openPricePopup()">💰 Get Best Price</button>
+<button onclick="setCurrentProduct(this);bookNow(this)">📦 Book Now</button>
+<button onclick="setCurrentProduct(this);openVisitPopup()">🏪 Visit Shop</button>
+<button onclick="setCurrentProduct(this);addToCart(this)">🛒 Add to Cart</button></div>
+<div class="popup"><div class="popup-content"><span class="close-btn">×</span><h2>Compact</h2><p>Matte finish</p></div></div>
+</div>
+
+<div class="product-card" data-category="face">
+<div class="info-btn">i</div>
+<img src="https://images.unsplash.com/photo-1599733589046-10c005739d39?auto=format&fit=crop&w=400&q=80">
+<h3>Blush Palette</h3>
+<p>₹1,300</p>
+<div class="btns">
+<button onclick="setCurrentProduct(this);openPricePopup()">💰 Get Best Price</button>
+<button onclick="setCurrentProduct(this);bookNow(this)">📦 Book Now</button>
+<button onclick="setCurrentProduct(this);openVisitPopup()">🏪 Visit Shop</button>
+<button onclick="setCurrentProduct(this);addToCart(this)">🛒 Add to Cart</button></div>
+<div class="popup"><div class="popup-content"><span class="close-btn">×</span><h2>Blush</h2><p>Natural glow</p></div></div>
+</div>
+
+<div class="product-card" data-category="face">
+<div class="info-btn">i</div>
+<img src="https://images.unsplash.com/photo-1583241800698-6db3e43b4e2e?auto=format&fit=crop&w=400&q=80">
+<h3>Makeup Primer</h3>
+<p>₹900</p>
+<div class="btns">
+<button onclick="setCurrentProduct(this);openPricePopup()">💰 Get Best Price</button>
+<button onclick="setCurrentProduct(this);bookNow(this)">📦 Book Now</button>
+<button onclick="setCurrentProduct(this);openVisitPopup()">🏪 Visit Shop</button>
+<button onclick="setCurrentProduct(this);addToCart(this)">🛒 Add to Cart</button></div>
+<div class="popup"><div class="popup-content"><span class="close-btn">×</span><h2>Primer</h2><p>Smooth base</p></div></div>
+</div>
+
+<!-- EYES -->
+
+<div class="product-card" data-category="eyes">
+<div class="info-btn">i</div>
+<img src="https://images.unsplash.com/photo-1607604276583-eef5d076aa5f?auto=format&fit=crop&w=400&q=80">
+<h3>Eyeshadow Palette</h3>
+<p>₹1,600</p>
+<div class="btns">
+<button onclick="setCurrentProduct(this);openPricePopup()">💰 Get Best Price</button>
+<button onclick="setCurrentProduct(this);bookNow(this)">📦 Book Now</button>
+<button onclick="setCurrentProduct(this);openVisitPopup()">🏪 Visit Shop</button>
+<button onclick="setCurrentProduct(this);addToCart(this)">🛒 Add to Cart</button></div>
+<div class="popup"><div class="popup-content"><span class="close-btn">×</span><h2>Eyeshadow</h2><p>Multi color shades</p></div></div>
+</div>
+
+<div class="product-card" data-category="eyes">
+<div class="info-btn">i</div>
+<img src="https://images.unsplash.com/photo-1586495777744-4413f21062fa?auto=format&fit=crop&w=400&q=80">
+<h3>Kajal Pencil</h3>
+<p>₹300</p>
+<div class="btns">
+<button onclick="setCurrentProduct(this);openPricePopup()">💰 Get Best Price</button>
+<button onclick="setCurrentProduct(this);bookNow(this)">📦 Book Now</button>
+<button onclick="setCurrentProduct(this);openVisitPopup()">🏪 Visit Shop</button>
+<button onclick="setCurrentProduct(this);addToCart(this)">🛒 Add to Cart</button></div>
+<div class="popup"><div class="popup-content"><span class="close-btn">×</span><h2>Kajal</h2><p>Smudge proof</p></div></div>
+</div>
+
+<div class="product-card" data-category="eyes">
+<div class="info-btn">i</div>
+<img src="https://images.unsplash.com/photo-1611930022073-b7a4ba5fcccd?auto=format&fit=crop&w=400&q=80">
+<h3>Mascara</h3>
+<p>₹800</p>
+<div class="btns">
+<button onclick="setCurrentProduct(this);openPricePopup()">💰 Get Best Price</button>
+<button onclick="setCurrentProduct(this);bookNow(this)">📦 Book Now</button>
+<button onclick="setCurrentProduct(this);openVisitPopup()">🏪 Visit Shop</button>
+<button onclick="setCurrentProduct(this);addToCart(this)">🛒 Add to Cart</button></div>
+<div class="popup"><div class="popup-content"><span class="close-btn">×</span><h2>Mascara</h2><p>Volume boost</p></div></div>
+</div>
+
+<!-- LIPS -->
+
+<div class="product-card" data-category="lips">
+<div class="info-btn">i</div>
+<img src="https://images.unsplash.com/photo-1629198735660-e39ea93f5f3f?auto=format&fit=crop&w=400&q=80">
+<h3>Matte Lipstick</h3>
+<p>₹750</p>
+<div class="btns">
+<button onclick="setCurrentProduct(this);openPricePopup()">💰 Get Best Price</button>
+<button onclick="setCurrentProduct(this);bookNow(this)">📦 Book Now</button>
+<button onclick="setCurrentProduct(this);openVisitPopup()">🏪 Visit Shop</button>
+<button onclick="setCurrentProduct(this);addToCart(this)">🛒 Add to Cart</button></div>
+<div class="popup"><div class="popup-content"><span class="close-btn">×</span><h2>Lipstick</h2><p>Long lasting</p></div></div>
+</div>
+
+<div class="product-card" data-category="lips">
+<div class="info-btn">i</div>
+<img src="https://images.unsplash.com/photo-1596462502278-27bfdc403348?auto=format&fit=crop&w=400&q=80">
+<h3>Lip Gloss</h3>
+<p>₹600</p>
+<div class="btns">
+<button onclick="setCurrentProduct(this);openPricePopup()">💰 Get Best Price</button>
+<button onclick="setCurrentProduct(this);bookNow(this)">📦 Book Now</button>
+<button onclick="setCurrentProduct(this);openVisitPopup()">🏪 Visit Shop</button>
+<button onclick="setCurrentProduct(this);addToCart(this)">🛒 Add to Cart</button></div>
+<div class="popup"><div class="popup-content"><span class="close-btn">×</span><h2>Lip Gloss</h2><p>Shiny finish</p></div></div>
+</div>
+
+<div class="product-card" data-category="lips">
+<div class="info-btn">i</div>
+<img src="https://images.unsplash.com/photo-1619451688673-1b8c5c4b7e3d?auto=format&fit=crop&w=400&q=80">
+<h3>Lip Liner</h3>
+<p>₹400</p>
+<div class="btns">
+<button onclick="setCurrentProduct(this);openPricePopup()">💰 Get Best Price</button>
+<button onclick="setCurrentProduct(this);bookNow(this)">📦 Book Now</button>
+<button onclick="setCurrentProduct(this);openVisitPopup()">🏪 Visit Shop</button>
+<button onclick="setCurrentProduct(this);addToCart(this)">🛒 Add to Cart</button></div>
+<div class="popup"><div class="popup-content"><span class="close-btn">×</span><h2>Liner</h2><p>Perfect shape</p></div></div>
+</div>
+
+<!-- TOOLS -->
+
+<div class="product-card" data-category="tools">
+<div class="info-btn">i</div>
+<img src="https://images.unsplash.com/photo-1583241800698-6db3e43b4e2e?auto=format&fit=crop&w=400&q=80">
+<h3>Brush Set</h3>
+<p>₹1,300</p>
+<div class="btns">
+<button onclick="setCurrentProduct(this);openPricePopup()">💰 Get Best Price</button>
+<button onclick="setCurrentProduct(this);bookNow(this)">📦 Book Now</button>
+<button onclick="setCurrentProduct(this);openVisitPopup()">🏪 Visit Shop</button>
+<button onclick="setCurrentProduct(this);addToCart(this)">🛒 Add to Cart</button></div>
+<div class="popup"><div class="popup-content"><span class="close-btn">×</span><h2>Brush</h2><p>Professional tools</p></div></div>
+</div>
+
+<div class="product-card" data-category="tools">
+<div class="info-btn">i</div>
+<img src="https://images.unsplash.com/photo-1619451688673-1b8c5c4b7e3d?auto=format&fit=crop&w=400&q=80">
+<h3>Beauty Blender</h3>
+<p>₹300</p>
+<div class="btns">
+<button onclick="setCurrentProduct(this);openPricePopup()">💰 Get Best Price</button>
+<button onclick="setCurrentProduct(this);bookNow(this)">📦 Book Now</button>
+<button onclick="setCurrentProduct(this);openVisitPopup()">🏪 Visit Shop</button>
+<button onclick="setCurrentProduct(this);addToCart(this)">🛒 Add to Cart</button></div>
+<div class="popup"><div class="popup-content"><span class="close-btn">×</span><h2>Blender</h2><p>Soft sponge</p></div></div>
+</div>
+
+</div>
+
+<script src="../../js/products.js"></script>
+
+<!-- PRICE POPUP -->
+<div id="pricePopup" class="popup">
+<div class="popup-content">
+<h3>Enter Your Price</h3>
+<input type="number" id="userPrice" placeholder="Enter price">
+<button onclick="submitPrice()">Submit</button>
+<button onclick="closePopup()">Close</button>
+</div>
+</div>
+
+<!-- VISIT POPUP -->
+<div id="visitPopup" class="popup">
+<div class="popup-content">
+<h3>Select Visit Time</h3>
+<input type="date" id="visitDate">
+<input type="time" id="visitTime">
+<button onclick="confirmVisit()">Confirm</button>
+<button onclick="closePopup()">Close</button>
+</div>
+</div>
+<script>
+localStorage.setItem("currentShop", "Makeup World");
+</script>
+</body>
+</html>
